@@ -1,0 +1,125 @@
+<div class="panel-body">
+  <form data-form-key="${formKey}" data-instance-id="${id}" id="${formName}" name="${formName}" role="form">
+    <div id="patient-history-medication-list"></div>
+    <div class="clearfix">
+    <div class="pull-right">
+      <div id="new-resource-btn-placeholder"></div>
+    </div>
+   </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="control-label">Past Surgeries Or Medical Conditions</label> 
+          <textarea class="form-control input-sm input-field" id="${formPrefix}-past-s-m" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label class="sub-title">Family History</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="form-group">
+          <div class="checkbox">
+            <label><input name="${formPrefix}-fam-hist" type="checkbox" class="input-checkbox-group" value="cancer">Cancer</label>
+          </div>
+          <div class="checkbox">
+            <label><input name="${formPrefix}-fam-hist" type="checkbox" class="input-checkbox-group" value="rrbetes">Diabetes</label>
+          </div>
+          <div class="checkbox">
+            <label><input name="${formPrefix}-fam-hist" type="checkbox" class="input-checkbox-group" value="heart_problems">Heart problems</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <div class="form-group">
+          <div class="checkbox">
+            <label><input name="${formPrefix}-fam-hist" type="checkbox" class="input-checkbox-group" value="hepatitis">Hepatitis</label>
+          </div>
+          <div class="checkbox">
+            <label><input name="${formPrefix}-fam-hist" type="checkbox" class="input-checkbox-group" value="high_bp">High BP</label>
+          </div>
+          <div class="checkbox">
+            <label><input name="${formPrefix}-fam-hist" type="checkbox" class="input-checkbox-group" value="hiv">HIV</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <div class="form-group">
+          <div class="checkbox">
+            <label><input name="${formPrefix}-fam-hist" type="checkbox" class="input-checkbox-group" value="tb">Tuberculosis</label>
+          </div>
+          <div class="checkbox">
+            <label><input name="${formPrefix}-fam-hist" type="checkbox" class="input-checkbox-group" value="other">Other-specify</label>
+          </div>
+        </div><input class="form-control input-sm input-field input-sm" id="fam-hist-other" type="text">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="control-label">Family History Notes</label> 
+          <textarea class="form-control input-sm input-field" id="${formPrefix}-fam-hist-notes" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label class="sub-title">Allergies</label>
+        <div class="form-group">
+          <label class="control-label">Food</label> <input class="form-control input-sm input-field" id="${formPrefix}-allerg-food" type="text">
+        </div>
+        <div class="form-group">
+          <label class="control-label">Drug</label> <input class="form-control input-sm input-field" id="${formPrefix}-allerg-drug" type="text">
+        </div>
+        <div class="form-group">
+          <label class="control-label">Enviro</label> <input class="form-control input-sm input-field" id="${formPrefix}-allerg-env" type="text">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label class="sub-title">Vaccinations</label>
+        <div class="form-group">
+          <label class="control-label">Completed FD Vaccination Record?</label> <label class="radio-inline"><input name="${formPrefix}-vacc" type="radio" class="input-checkbox" value="true">Yes</label> <label class="radio-inline"><input name="${formPrefix}-vacc" type="radio" class="input-checkbox" value="false">No</label>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Notes</label> 
+          <textarea class="form-control input-sm input-field" id="${formPrefix}-vacc-notes" rows="4"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label class="sub-title">Substances</label>
+        <div class="form-group">
+          <label>Currently</label> <label class="checkbox-inline"><input name="${formPrefix}-subst" type="checkbox" class="input-checkbox-group" value="smoke"> Smoke</label> <label class="checkbox-inline"><input name="${formPrefix}-subst" type="checkbox" class="input-checkbox-group" value="drink"> Drink</label> <label class="checkbox-inline"><input name="${formPrefix}-subst" type="checkbox" class="input-checkbox-group" value="drugs"> Drugs</label>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label">smoke packs / day</label> <input class="form-control input-sm input-field" id="${formPrefix}-smoke-pks-day" type="text">
+              </div>
+              <div class="form-group">
+                <label class="control-label">Years smoked</label> <input class="form-control input-sm input-field" id="${formPrefix}-years-smoked" type="text">
+              </div>
+              <div class="form-group">
+                <label class="control-label">Years Quit smoking</label> <input class="form-control input-sm input-field" id="${formPrefix}-smoke-years-quit" type="text">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label">EtOH units / week</label> <input class="form-control input-sm input-field" id="${formPrefix}-etoh-units-week" type="text">
+              </div>
+              <div class="form-group">
+                <label class="control-label">Drugs currently used</label> 
+                <textarea class="form-control input-sm input-field" id="${formPrefix}-current-drugs" rows="5"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-sm-12">
+    {{if readonly === false}}
+      <img id="patient-medication-placeholder" src="assets/images/placeholder/medication.jpg" class="img-responsive ${list && list.length > 0 ? 'initially-no-display' : ''}">
+    {{else}}
+      <div class="jumbotron ${list && list.length > 0 ? 'initially-no-display' : ''}"> <h3 class="text-center">No Medications</h3> </div>
+    {{/if}}
+    </div>
+</div>
+
+ <div class="list-item-wrapper" data-item-class="${itemClass}" data-item-prefix="${resource}" data-parent-id="${parentId}" data-parent-id-name="${parentIdName}">
+{{each(i, item) list}}
+<div id="medication-${id}" class="medication">
+  <div class="panel panel-default health-issue-panel">
+    <div class="clearfix">
+    {{if readonly != true}}
+      <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete medication-delete-control pull-right"><i class="fa fa-times"></i></button>
+    {{/if}}
+  </div>
+    <div class="panel-body">
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label>Medication</label>
+        <input data-id="${id}" type="text" class="form-control list-item-field"  id="${resource}-medication--id${id}">
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label>Dose/Freq</label>
+        <input data-id="${id}" type="text" class="form-control list-item-field"  id="${resource}-dose--id${id}">
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label>Condition</label>
+        <input data-id="${id}" type="text" class="form-control list-item-field"  id="${resource}-condition--id${id}">
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+{{/each}}
+</div>

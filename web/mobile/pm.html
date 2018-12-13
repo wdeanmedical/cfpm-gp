@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PMD - Consultant Mobile Lead Form</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
+
+  </head>
+  <style type="text/css">
+    body {
+      margin-top: 15px;
+    }
+    .panel-title {
+      font-size: 1.5em;
+    }
+  </style>  
+  <body>
+  
+  <!-- SIGN-IN SCREEN --> 
+    <div id="signin-screen" class="container">
+      <div class="col-sm-3 col-sm-offset-4">
+        <div class="panel member_signin">
+          <div class="panel-body">
+            <img src="../assets/images/WDM-icon120.png" alt="..." class="img-responsive center-block">
+            <br>
+            <p class="member">User Login</p>
+            <form role="form" class="login-form">
+              <div class="form-group">
+                <label for="app-signin-username" class="sr-only">Username</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Username" id="app-signin-username" name="username">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="app-signin-password" class="sr-only">Password</label>
+                <div class="input-group">
+                   <input type="password" class="form-control" placeholder="Password" id="app-signin-password" name="password">
+                </div>
+              </div>
+              <button type="button" id="app-signin-submit" class="btn btn-primary btn-md login">Sign In</button>
+              <p class="navbar-text wdm-notification"><span class='wdm-notification-text'></span></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SIGN-IN SCREEN --> 
+    
+    
+    <!-- SALES LEAD SCREEN -->
+    <div id="sales-lead-screen" class="initially-no-display">
+     <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <h3 class="panel-title">Consultant Lead Form</h3>
+        </div>
+        <div class="panel-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="consultant-name">Consultant Name</label>
+              <div id="consultant-name"></div>
+            </div>
+            <div class="form-group">
+              <label for="network">Network</label>
+              <div id="network"></div>
+            </div>
+            <div class="form-group">
+              <label for="location">Location</label>
+              <div id="location"></div>
+            </div>
+            <div class="form-group">
+              <label for="patient-first-name">* Client First Name</label>
+              <input type="text" class="form-control input-sm" id="patient-first-name" placeholder="First Name">
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="patient-middle-name">Client Middle Name</label>
+              <input type="text" class="form-control input-sm" id="patient-middle-name" placeholder="Middle Name">
+            </div>
+            <div class="form-group">
+              <label for="patient-last-name">* Client Last Name</label>
+              <input type="text" class="form-control input-sm" id="patient-last-name" placeholder="Last Name">
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="patient-gender">* Client Gender</label>
+              <select id="patient-gender" class="form-control input-sm">
+                <option value="">Choose</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="patient-age-range">* Client Age</label>
+              <select id="patient-age-range" class="form-control input-sm">
+                <option value="">Choose</option>
+                <option value="1">20-29</option>
+                <option value="2">30-39</option>
+                <option value="3">40-49</option>
+                <option value="4">50-59</option>
+                <option value="5">60+</option>
+              </select>
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="patient-phone">Client Phone</label>
+              <input type="text" class="form-control input-sm" id="patient-phone" placeholder="(000) 000-0000">
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="patient-email">Client Email</label>
+              <input type="text" class="form-control input-sm" id="patient-email">
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <label for="best-time">Best Time To Contact</label>
+              <input type="text" class="form-control input-sm" id="best-time" placeholder="Day / Night">
+            </div>
+            <div class="form-group">
+              <label for="note">Note</label>
+              <textarea class="form-control" id="patient-note" rows="3"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary btn-block" id="patient-submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+     </div>
+    </div>
+    <div id="sales-lead-saved" class="initially-no-display">
+    <div class="container">
+      <div class="panel panel-primary">
+        <div class="panel-heading text-center">
+          <h3 class="panel-title">New Client sucessfully saved.</h3>
+        </div>
+        <div class="panel-body">
+          <form role="form">
+          	<button type="button" class="btn btn-primary btn-block" id="add-another-patient-btn">Add another Client</button>
+          </form>
+        </div>
+      </div>
+     </div>
+    </div>
+    <!-- SALES LEAD SCREEN -->
+    
+    
+    <script src="../js/lib/jquery.min.js"></script>    
+    <script src="../js/lib/bootstrap.min.js"></script>    
+    <script src="../js/lib/underscore-min.js"></script>
+    <script src="../js/lib/jquery.tmpl.js"></script>
+    <script src="../js/util/RenderUtil.js"></script>
+    <script src="../js/util/util.js"></script>
+    <script src="../js/mobile_lead_mgmt.js"></script>
+  </body>
+</html>

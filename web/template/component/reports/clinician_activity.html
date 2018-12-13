@@ -1,0 +1,44 @@
+<table class="table table-bordered table-hover table-condensed">
+  <thead class="text-center">
+  <tr>
+     <td>${title}</td>
+  </tr>
+  </thead>
+  <tbody>
+  {{each(i, clinicianActivity) cliniciansActivity}}
+  <tr id="${tableId}-${clinicianActivity.id}" name="${clinicianActivity.id}" data-row-key="${clinicianActivity.id}" data-table-name="${tableName}">
+    <td>${clinicianActivity.clinicianName}</td>
+  </tr>  
+  <tr>  
+    <td colspan='6'>
+      <table class="table table-bordered table-hover table-condensed">
+      <thead class="text-center">
+      <tr>
+        <td>Time Performed</td>
+        <td>Activity</td>
+        <td>Module</td>
+      </tr>
+      </thead>
+      {{each(j, activityLog) clinicianActivity.activityLogs}}       
+      <tr
+       id="${tableId}-${activityLog.id}" 
+       name="${activityLog.id}"
+       data-row-key="${activityLog.id}" 
+       data-table-name="${tableName}" 
+      >
+        <td>${activityLog.timePerformed}</td>
+        <td>${activityLog.activity}</td>
+        <td>${activityLog.module}</td>        
+      </tr>
+      {{/each}}
+      </table>
+    </td>  
+  </tr>
+  {{/each}}
+  <tr class="simple-data-table-footer">
+    <td class="simple-data-table-footer" colspan='6'>
+      <p><span>${title} ${cliniciansActivity.length == 0 ? '0' : '1'}-<wbr>${cliniciansActivity.length}</span></p>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,107 @@
+<div class="modal fade" id="modal-patient-search" tabindex="-1" role="dialog" aria-labelledby="modal-patient-search" aria-hidden="true">
+  <div class="modal-dialog default-modal-width">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <a id="btn-patient-search-new-patient" href="#" class="btn btn-lg btn-success pull-right initially-no-display">New ${app_practiceClientProperties['app.patient_label']}</a>
+        <h4 class="modal-title">${app_practiceClientProperties['app.patient_label']} Search</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+	        <div class="row">
+	          <div class="col-sm-2">
+	            <h3>Search By:</h3>
+	          </div>
+	          <div class="col-sm-4">
+	            <div class="form-group">
+	              <label for="patient-search-first-name" class="col-sm-3 control-label">First Name</label>
+	              <div class="col-sm-7">
+	                <input type="text" class="form-control input-sm patient-search-field" id="patient-search-first-name">
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label for="patient-search-middle-name" class="col-sm-3 control-label">Middle</label>
+	              <div class="col-sm-7">
+	                <input type="text" class="form-control input-sm patient-search-field" id="patient-search-middle-name">
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label for="patient-search-last-name" class="col-sm-3 control-label">Last Name</label>
+	              <div class="col-sm-7">
+	                <input type="text" class="form-control input-sm patient-search-field" id="patient-search-last-name">
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label for="patient-search-mrn" class="col-sm-3 control-label">MRN</label>
+	              <div class="col-sm-7">
+	                <input type="text" class="form-control input-sm patient-search-field" id="patient-search-mrn">
+	              </div>
+	            </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Status</label>
+                <div class="col-sm-7">
+                  <select class="form-control patient-search-field" id="patient-search-status">
+                    <option value="">Choose</option>
+                    <option value="5">Wait List</option>
+                    <option value="1">Active</option>
+                    <option value="2">Inactive</option>
+                    <option value="3">Deceased</option>
+                  </select>  
+                </div>
+              </div>
+	          </div>
+	          <div class="col-sm-4">
+	            <div class="form-group">
+	              <label for="patient-search-gender" class="col-sm-3 control-label">Gender</label>
+	              <div class="col-sm-7">
+	                <select class="form-control patient-search-field" id="patient-search-gender">
+	                  <option value="">Choose</option>
+	                  <option value="M">Male</option>
+	                  <option value="F">Female</option>
+	                </select>
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label for="patient-search-dob" class="col-sm-3 control-label">Date of Birth</label>
+	              <div class="col-sm-7">
+	                <input type="text" class="form-control input-sm patient-search-field" id="patient-search-dob">
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label for="patient-search-city" class="col-sm-3 control-label">City</label>
+	              <div class="col-sm-7">
+	                <input type="text" class="form-control input-sm patient-search-field" id="patient-search-city">
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label for="patient-search-phone" class="col-sm-3 control-label">Phone</label>
+	              <div class="col-sm-7">
+	                <input type="text" class="form-control input-sm patient-search-field" id="patient-search-phone">
+	                <div class="pull-right search-btn">
+	                  <a id="btn-patient-search-clear" class="btn btn-default">Clear</a>
+	                  <a id="btn-patient-search" class="btn btn-primary"> <i class="fa fa-search"></i> Search</a>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="col-sm-2">
+	            <div class="thumbnail">
+	              <img src="assets/images/practice/${PRACTICE}/${app_practiceClientProperties['app.image.practice_logo_med_square']}" 
+                     alt="..." class="img-responsive center-block">
+	            </div>
+	          </div>
+	        </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="panel-top" id="patient-search-results-title">Search Results</div>
+              <div id="patient-search-results" class="table-responsive"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a id="btn-patient-search-cancel" href="#" class="app-dashboard-link btn btn-default" data-dismiss="modal">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

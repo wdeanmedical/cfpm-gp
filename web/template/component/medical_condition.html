@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-sm-12">
+    {{if readonly === false}}
+      <img id="medical-condition-placeholder" src="assets/images/placeholder/medical_condition.jpg" class="img-responsive ${list && list.length > 0 ? 'initially-no-display' : ''}">
+    {{else}}
+      <div class="jumbotron ${list && list.length > 0 ? 'initially-no-display' : ''}"> <h3 class="text-center">No Surgeries, Hospitalizations And Serious Illnesses</h3> </div>
+    {{/if}}
+    </div>
+</div>
+
+ <div class="list-item-wrapper" data-item-class="${itemClass}" data-item-prefix="${resource}" data-parent-id="${parentId}" data-parent-id-name="${parentIdName}">
+{{each(i, item) list}}
+<div id="medical-condition-${id}">
+  <div class="panel panel-default health-issue-panel">
+    <div class="clearfix">
+      {{if readonly != true}}
+      <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete medical-condition-delete-control pull-right"><i class="fa fa-times"></i></button>
+      {{/if}}
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="form-group">
+            <label>Previous Surgeries, Hospitalizations Or Serious Illnesses</label>
+            <input data-id="${id}" type="text" class="form-control list-item-field"  id="${resource}-desc--id${id}">
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label>Date</label>
+             <input data-id="${id}" type="text" class="form-control list-item-field input-masked" id="${resource}-date--id${id}" data-mask-type="date" data-field-type="date">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+</div>

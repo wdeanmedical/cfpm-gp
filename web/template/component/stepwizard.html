@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="stepwizard-${i} stepwizard">
+        <div class="stepwizard-row">
+          {{each(i, item) intakeFormIndices}}
+            <div class="stepwizard-step"> <a name="${i}" class="btn btn-success stepwizard-btn-circle">${i}</a></div>
+          {{/each}}
+         </div>
+       </div>
+     </div>
+  </div>
+</div>

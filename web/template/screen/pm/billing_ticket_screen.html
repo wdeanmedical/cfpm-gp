@@ -1,0 +1,44 @@
+ <div id="billing-ticket-screen" class="container">
+   <div class="row">
+     <div class="col-sm-12">
+       <div class="panel panel-primary">
+         <div class="panel-heading hidden-xs">Billing Ticket</div>
+         <div class="panel-heading panel-heading-sm visible-xs">Billing Ticket</div>
+         <div class="panel-body">
+            <form id="${formPrefix}-form" role="form" data-instance-id="" data-form-key="">
+             <div class="row">
+               <div class="col-sm-4">
+                 <div class="form-group">
+                   <label>Clinician Name</label>
+                   <input type="text" class="form-control input-sm" id="${formPrefix}-clinician-name" readonly="readonly">
+                 </div>
+               </div>
+               <div class="col-sm-2">
+                 <div class="form-group">
+                   <label>Week Of</label>
+                   <input type="text" class="form-control input-field input-sm" id="${formPrefix}-week-of" data-property="${formClassName}.weekOf" data-field-type="date" placeholder="mm/dd/yyyy">
+                 </div>
+               </div>
+             </div>
+           <div class="row"> 
+            <hr>          
+            <div class="col-sm-12"> 
+              <h3>Billing Entries</h3> 
+              </div> 
+           </div>
+          <div id="billing-ticket-entries"></div>
+          <div class="row">
+            <div class="col-sm-2 col-sm-offset-10">
+              <button type="button" id="new-entry-btn" class="btn btn-success new-list-item-btn">New Entry</button>
+            </div>
+          </div>
+          <br>
+         </form>
+         </div>
+         <div class="panel-footer text-right">
+           <button type="button" id="${formPrefix}-print-btn" class="btn btn-success btn-lg">Print</button>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>    

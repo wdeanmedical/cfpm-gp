@@ -1,0 +1,32 @@
+<div id="letters-screen">
+  <div class="container">
+    <div class="panel-top">Letters</div>
+    <div id="app-letters-list" class="table-responsive"></div>
+    <div class="row">
+      <div class="col-sm-2">
+        <a id="app-new-letter-btn" class="btn btn-success btn-block">New Letter</a>
+     </div>
+      <div class="col-sm-3 form-group">
+        <select id="app-new-letter-type" class="form-control">
+          <option value=''>Choose Letter Type</option>
+          <option value='missed_appt'>Missed Appointment</option>
+        </select>
+        <div class="help-block with-errors"></div>
+     </div>
+     <div id="letter-buttons" class="col-sm-7">
+       <button id="letter-cancel-btn" type="button" class="btn btn-danger initially-no-display letters-button">Cancel</button>
+       <button id="letter-save-btn" type="button" class="btn btn-primary initially-no-display letters-button">Save</button>
+       <button id="letter-send-btn" type="button" class="btn btn-success initially-no-display letters-button">Send</button>
+       <button id="letter-delete-btn" type="button" class="btn btn-danger initially-no-display letters-button">Delete</button>
+     </div>
+   </div>
+   <br>
+   <br>
+   <div id="letter-form" class="panel panel-primary initially-no-display">
+     <div class="panel-heading"><span id="letter-title"></span></div>
+     <div class="panel-body">
+       <div id="letter-content"></div>
+     </div>
+   </div>
+ </div>
+</div>

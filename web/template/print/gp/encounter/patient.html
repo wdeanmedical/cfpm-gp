@@ -1,0 +1,223 @@
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      DEMOGRAPHICS
+    </div>
+  </div>
+  <table class="form-table">
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TODAY'S DATE</span>
+          <div class="basic-info-input">
+            ${currentDate ? currentDate : '___ /___ /___'}
+          </div>
+          <div class="item-date-input-legend" style="visibility:${currentDate ? 'hidden' : 'visible'}">
+            <span class="date-legend-month">month</span> <span class="date-legend-day">day</span> <span class="date-legend-year">year</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">MRN</span>
+          <div class="basic-info-input">
+            ${form.mrn}
+          </div>
+        </div>
+      </td>
+       <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SSN</span>
+          <div class="basic-info-input">
+            ${form.govtId}
+          </div>
+        </div>
+      </td>
+       <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DOB</span>
+          <div class="basic-info-input">
+            ${form.dob ? dateFormat(form.dob, 'mm/dd/yyyy') : '___ /___ /___'}
+          </div>
+          <div class="item-date-input-legend" style="visibility:${form.dob ? 'hidden' : 'visible'}">
+            <span class="date-legend-month">month</span> <span class="date-legend-day">day</span> <span class="date-legend-year">year</span>
+          </div>
+        </div>
+      </td>
+      </tr>
+      <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">FIRST NAME</span>
+           <div class="basic-info-input">
+            ${form.firstName}
+          </div> 
+        </div>
+        </td>
+        <td>
+         <div class="item-wrapper-basic-info">
+          <span class="item-label">MIDDLE NAME</span>
+           <div class="basic-info-input">
+            ${form.middleName}
+          </div> 
+        </div>
+        </td>
+        <td>
+         <div class="item-wrapper-basic-info">
+          <span class="item-label">LAST NAME</span>
+           <div class="basic-info-input">
+            ${form.lastName}
+          </div> 
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">GENDER</span>
+          <div class="basic-info-input">
+            ${form.gender.code}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">MARITAL STATUS</span>
+          <div class="basic-info-input">
+            ${form.maritalStatus? form.maritalStatus.name : ''}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">RACE</span>
+          <div class="basic-info-input">
+            ${form.race ? form.race.name : ''}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">ETHNICITY</span>
+          <div class="basic-info-input">
+            ${form.ethnicity ? form.ethnicity.name : ''}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">STREET ADDRESS</span>
+          <div class="basic-info-input">
+            ${form.streetAddress}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">CITY</span>
+          <div class="basic-info-input">
+            ${form.city}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">STATE</span>
+          <div class="basic-info-input">
+            ${form.usState ? form.usState.code : ''}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">ZIP</span>
+          <div class="basic-info-input">
+            ${form.postalCode}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PRIMARY PHONE</span>
+          <div class="basic-info-input">
+            ${form.primaryPhone}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SECONDARY PHONE</span>
+          <div class="basic-info-input">
+            ${form.secondaryPhone}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">EMAIL</span>
+          <div class="basic-info-input">
+            ${form.email}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">OCCUPATION</span>
+          <div class="basic-info-input">
+            ${form.occupation}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">EMPLOYMENT STATUS</span>
+          <div class="basic-info-input">
+            ${form.employmentStatus}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">EMPLOYER</span>
+          <div class="basic-info-input">
+            ${form.employer}
+          </div>
+        </div>
+      </td>
+      </tr>
+      <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">EDUCATION STATUS</span>
+          <div class="basic-info-input">
+            ${form.educationStatus}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SCHOOL NAME</span>
+          <div class="basic-info-input">
+            ${form.schoolName}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">NOTES</span>
+          <div class="basic-info-input">
+            ${app_currentEncounter.notes}
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

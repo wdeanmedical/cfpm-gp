@@ -1,0 +1,85 @@
+<div class="modal fade" id="modal-new-guardian" tabindex="-1" role="dialog" aria-labelledby="modal-new-guardian" aria-hidden="true">
+  <div class="modal-dialog medium-modal-width">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Create Guardian</h4>
+      </div>
+      <div class="modal-body">
+       <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="guardian-last-name">* Last Name</label>
+          <div class="col-sm-6">
+            <input id="guardian-last-name" class="form-control input-sm" type="text"> 
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="guardian-first-name">* First Name</label>
+          <div class="col-sm-3">
+            <input id="guardian-first-name" class="form-control input-sm" type="text"> 
+            <div class="help-block with-errors"></div>
+          </div>
+          <label class="col-sm-1 control-label" for="guardian-middle-name">MI</label>
+          <div class="col-sm-2">
+            <input id="guardian-middle-name" class="form-control input-sm" type="text"> 
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for= "guardian-address1">Address</label>
+          <div class="col-sm-6">
+            <input id="guardian-address1" class="form-control input-sm" type="text"> 
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="guardian-city">City</label> 
+          <div class="col-sm-6">
+            <input id="guardian-city" class="form-control input-sm" type="text"> 
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="guardian-state">State</label>
+          <div class="col-sm-5">
+            <select id="guardian-state" class="form-control"></select>  
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="guardian-postal-code">Zip</label>
+          <div class="col-sm-3">
+            <input id="guardian-postal-code" class="form-control input-sm" placeholder="00000" type="text"> 
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="guardian-phone">Phone</label> 
+          <div class="col-sm-6">
+            <input id="guardian-phone" class="form-control input-sm" type="text"> 
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="patient-email">* Email</label>
+          <div class="col-sm-6">
+            <input id="guardian-email" class="form-control input-sm" type="text"> 
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="guardian-rel">Relationship To ${app_practiceClientProperties['app.patient_label']}</label> 
+          <div class="col-sm-6">
+            <input id="guardian-rel" class="form-control input-sm" type="text"> 
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button id="app-create-guardian-submit" type="button" class="btn btn-primary">Submit</button>
+        <button id="app-create-guardian-cancel" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

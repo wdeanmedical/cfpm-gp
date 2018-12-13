@@ -1,0 +1,94 @@
+<div aria-hidden="true" aria-labelledby="modal-encounter" class="modal fade" data-backdrop="static" data-keyboard="false" id="modal-encounter" role="dialog" tabindex="-1">
+  <div class="modal-dialog default-modal-width" id="${formName}">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-hidden="true" class="close" data-dismiss="modal" type="button">&times;</button> <button class="btn btn-default encounter-navbar-btn pull-right" id="${formPrefix}-print-btn" type="button"><i class="icon-print icon-lg"></i> Print All</button>
+        {{if !isClosed}}
+         <a class="btn btn-default encounter-navbar-btn pull-right" id="${formName}-close-record-btn"><i class="icon-file-text icon-lg"></i> Complete Encounter</a>
+       {{/if}}  
+        <h4 class="modal-title"><i class="icon-user icon-2x"></i> Encounter</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel-top" data-target="#demographics-screen" data-toggle="collapse">
+                Demographics <i class="fa fa-chevron-down pull-right collapse-arrow"></i>
+              </div>
+              <div class="panel panel-default collapse in" id="demographics-screen">
+                <div id="form-placeholder"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel-top" data-target="#vital-sign-screen" data-toggle="collapse">
+                Vitals<i class="fa fa-chevron-down pull-right collapse-arrow"></i>
+              </div>
+              <div class="panel panel-default collapse in" id="vital-sign-screen">
+                <div id="form-placeholder"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel-top" data-target="#soap-note-screen" data-toggle="collapse">
+                SOAP Note <i class="fa fa-chevron-down pull-right collapse-arrow"></i>
+              </div>
+              <div class="panel panel-default collapse in" id="soap-note-screen">
+                <div id="form-placeholder"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel-top" data-target="#chief-complaint-screen" data-toggle="collapse">
+                Chief Complaint<i class="fa fa-chevron-down pull-right collapse-arrow"></i>
+              </div>
+              <div class="panel panel-default collapse in" id="chief-complaint-screen">
+                <div id="form-placeholder"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="panel-top" data-target="#obgyn-screen" data-toggle="collapse" id="obgyn-header">
+                OBGYN (to be completed by provider) <i class="fa fa-chevron-down pull-right collapse-arrow"></i>
+              </div>
+              <div class="panel panel-default collapse in" id="obgyn-screen">
+                <div id="form-placeholder"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel-top" data-target="#medical-history-screen" data-toggle="collapse">
+                Medical History<i class="fa fa-chevron-down pull-right collapse-arrow"></i>
+              </div>
+              <div class="panel panel-default collapse in" id="medical-history-screen">
+                <div id="form-placeholder"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="panel-top" data-target="#family-history-screen" data-toggle="collapse">
+                Social & Family History<i class="fa fa-chevron-down pull-right collapse-arrow"></i>
+              </div>
+              <div class="panel panel-default collapse in" id="family-history-screen">
+                <div id="form-placeholder"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="panel-top" data-target="#exam-screen" data-toggle="collapse">
+              Exam<i class="fa fa-chevron-down pull-right collapse-arrow"></i>
+            </div>
+            <div class="panel panel-default collapse in" id="exam-screen">
+              <div id="form-placeholder"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" id="patient-form-close-btn" type="button">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

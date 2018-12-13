@@ -1,0 +1,75 @@
+<div class="modal fade" id="modal-chart-summary" tabindex="-1" role="dialog" aria-labelledby="modal-chart-summary" aria-hidden="true">
+  <div class="modal-dialog default-modal-width">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><i class="icon-bar-chart icon-2x"></i> Chart Summary</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row hidden-xs">
+          <div class="col-md-12">
+            <div id="place_template"></div>
+            <script>
+              (function(){
+                RenderUtil.render('patient_chart_header', {}, function(s) {
+                  $('#place_template').html(s);
+                  app_loadPatientChartHeaderInfo();
+                });
+              })();
+            </script>
+          </div>
+        </div>
+        <div class="row visible-xs">
+          <div class="panel panel-default chartheader">
+            <div class="panel-body">
+              <div class="col-xs-12">
+                <div class="col-xs-6">
+                  <p class="patient-chart-full-name"></p>
+                  <p><label>Next Appointment:</label><span class="patient-chart-next-appt"></span></p>
+                  <p><label>Gender:</label><span class="patient-chart-gender"></span></p> 
+                  <p><label>ID#:</label> <span class="patient-chart-mrn"></span></p>
+                  <p><label>DOB:</label><span class="patient-chart-dob"></span></p> 
+                </div>
+                <div id="headshot-div6" class="col-xs-6">
+                  <p><label>Active <i class="icon-check-sign icon-2x"></i></label>
+                  <img src="assets/images/headshot_placeholder_sm.jpg" class="patient-chart-headshot img-responsive img-rounded" alt="Patient Photo"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="panel-top">Visits</div>
+            <div id="patient-chart-summary-visits" class="table-responsive container-scroll-200"></div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel-top">Vital Signs</div>
+            <div id="patient-chart-summary-vital-signs" class="table-responsive container-scroll-200"></div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel-top">Health Maintenance</div>
+            <div id="patient-chart-summary-hm" class="table-responsive container-scroll-200"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="panel-top">Allergens</div>
+            <div id="patient-chart-summary-allergens" class="table-responsive container-scroll-200"></div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel-top">Medication</div>
+            <div id="patient-chart-summary-medication" class="table-responsive container-scroll-200"></div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel-top">Procedures</div>
+            <div id="patient-chart-summary-procedures" class="table-responsive container-scroll-200"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" id="btn-chart-summary-close" class="btn btn-default btn-lg" data-dismiss="modal">Close</a>
+      </div>
+    </div>
+  </div>
+</div>

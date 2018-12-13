@@ -1,0 +1,124 @@
+ <div class="container-fluid">
+   <div class="row">
+     <div class="col-sm-12">
+       <div class="panel-top"><i class="fa fa-inbox fa-lg"></i></div>
+       <div class="panel panel-default">
+         <div class="panel-body">                
+         
+           <div class="col-sm-2">
+             <a id="message-compose-btn" href="#msg-compose" data-toggle="tab" class="btn btn-success btn-lg btn-block">Compose New</a>
+             <ul class="nav nav-pills nav-stacked msg-sidebar">
+               <li id="msg-inbox-link"><a id="inbox" class="mailbox-tab-btn" href="#msg-inbox" data-toggle="tab"><i class="fa fa-inbox fa-lg fa-fw"></i> Inbox</a></li>
+               <li id="msg-sent-link"><a id="sent" class="mailbox-tab-btn" href="#msg-sent" data-toggle="tab"><i class="fa fa-paper-plane fa-lg fa-fw"></i> Sent</a></li>
+               <li id="msg-draft-link"><a id="draft" class="mailbox-tab-btn" href="#msg-draft" data-toggle="tab"><i class="fa fa-pencil-square-o fa-lg fa-fw"></i> Draft</a></li>
+               <li id="msg-saved-link"><a id="saved" class="mailbox-tab-btn" href="#msg-saved" data-toggle="tab"><i class="fa fa-folder fa-lg fa-fw"></i> Saved</a></li>
+             </ul>
+           </div>
+           
+           <div class="col-sm-10">
+             <div id="messages-mailboxes" class="tab-content">
+             
+               <div id="msg-inbox" class="tab-pane active">
+                 <h3 id="messages-inbox-header">Inbox</h3>
+                 <div id="messages-inbox" class="table-responsive container-scroll-250"></div>
+               </div>
+               
+               <div id="msg-compose" class="tab-pane">
+                 <h3>New Message</h3>
+                   <div class="panel panel-default table-responsive">
+                     <div class="panel-body">
+                       <div class="row indent-2px">
+                         <label class="col-sm-1">To:</label>
+                         <div class="form-group col-sm-7">
+                           <input type="text" id="message-primary-recipients">
+                           <div class="help-block with-errors"></div>
+                         </div>
+                         <div class="col-sm-2">
+                           <input type="checkbox" id="message-notify-recipients" class="input-checkbox" value="true">
+                           <label>notify</label>
+                         </div>
+                       </div>
+                       <div class="row indent-2px">
+                         <label class="col-sm-1">cc:</label>
+                         <div class="form-group col-sm-7">
+                           <input type="text" id="message-cc-recipients">
+                           <div class="help-block with-errors"></div>
+                         </div>
+                         <div class="col-sm-2">
+                           <input type="checkbox" id="message-notify-cc-recipients" class="input-checkbox" value="true">
+                           <label>notify</label>
+                         </div>
+                       </div>
+                       <div class="row indent-2px">
+                         <label class="col-sm-1">bcc:</label>
+                         <div class="form-group col-sm-7">
+                           <input type="text" id="message-bcc-recipients">
+                           <div class="help-block with-errors"></div>
+                         </div>
+                         <div class="col-sm-2">
+                           <input type="checkbox" id="message-notify-bcc-recipients" class="input-checkbox" value="true">
+                           <label>notify</label>
+                         </div>
+                       </div>
+                       <div class="row indent-2px">
+                         <label class="col-sm-1">Subject</label>
+                         <div class="form-group col-sm-9">
+                           <input type="text" class="form-control input-sm" id="message-subject">  
+                           <div class="help-block with-errors"></div>
+                         </div>
+                     </div>
+                     <div class="form-group col-sm-12">
+                       <label>Message</label>
+                       <textarea id="message-content-text" class="form-control" rows="8" ></textarea> 
+                       <div class="help-block with-errors"></div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               
+               <div id="msg-saved" class="tab-pane">
+                 <h3 id="messages-saved-header">Saved</h3>
+                 <div id="messages-saved" class="table-responsive container-scroll-250""></div>
+               </div>
+               
+               <div id="msg-sent" class="tab-pane">
+                 <h3 id="messages-sent-header">Sent</h3>
+                 <div id="messages-sent" class="table-responsive container-scroll-250""></div>
+               </div>
+               
+               <div id="msg-draft" class="tab-pane">
+                 <h3 id="messages-draft-header">Drafts</h3>
+                 <div id="messages-draft" class="table-responsive container-scroll-250""></div>
+               </div>
+
+            </div>
+             
+           <div id="messages-message" class="initially-no-display">
+             <div id="message-message-header" class="panel-top">Message: <span id="messages-message-subject"></span></div>
+               <div class="panel panel-default table-responsive container-scroll-250">
+                 <div id="message-content-panel" class="panel-body printable-screen">
+                   <div id="message-message-date" class="pull-right"></div>
+                   <div id="message-content" class="message-content"></div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <br>
+           <div id="message-buttons" class="margin-top-10px pull-right">                 
+             <button id="message-reply-btn" type="button" class="btn btn-default messages-button initially-no-display">Reply</button>
+             <button id="message-forward-btn" type="button" class="btn btn-default messages-button initially-no-display">Forward</button>
+             <button id="message-close-btn" type="button" class="btn btn-default messages-button initially-no-display">Close</button>
+             <button id="message-cancel-btn" type="button" class="btn btn-default messages-button initially-no-display">Cancel</button>
+             <button id="message-save-btn" type="button" class="btn btn-default messages-button initially-no-display">Save</button>
+             <button id="message-print-btn" type="button" class="btn btn-default  messages-button initially-no-display">Print</button>
+             <button id="message-send-btn" type="button" class="btn btn-success messages-button initially-no-display">Send</button>
+             <button id="message-delete-btn" type="button" class="btn btn-danger messages-button initially-no-display">Delete</button>
+             <button id="message-draft-btn" type="button" class="btn btn-default messages-button initially-no-display">Save Draft</button>
+             <button id="message-edit-btn" type="button" class="btn btn-default messages-button initially-no-display">Edit</button>
+          </div>
+         </div>
+        </div>
+       </div>
+     </div>
+   </div>
+</div>

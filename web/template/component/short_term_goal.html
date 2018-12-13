@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-sm-10">
+  {{each(i, item) list}}
+    <div class="panel panel-default well short-term-goal" id="short-term-goal-${id}">
+      <div class="panel-body">
+        {{if readonly == false}}
+          <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete-top short-term-goal-delete-control pull-right">x</button>
+        {{/if}}
+        <div class="row">
+          <label class="indent-10px">Goal ${(typeof ordinal === "undefined") ? i+1 : ordinal} </label>
+        {{if readonly == false}}
+          <input type="text" class="input-sm goal-bank-search-field" id="stg-goal-bank-search-${id}" placeholder="goal bank..." style="width:600px">
+    <script>
+    $('#stg-goal-bank-search-${id}').typeahead (
+      { hint: true, highlight: true, minLength: 3 },
+      { name: 'descriptions', displayKey: 'value', source: util_substringMatcher(app_stgDescriptions) }); 
+    $('.twitter-typeahead').css({ "display": "inline"});
+    $('#stg-goal-bank-search-${id}').on('typeahead:selected', function(ev, suggestion) {
+      $('#stg-desc-${id}').val(suggestion.value);  
+      $('#stg-goal-bank-search-${id}').typeahead('val', '');  
+      form_updateListItem($('#stg-desc-${id}'));
+    });
+    </script>
+        {{/if}}
+    <p>
+          <div class="col-sm-11">
+            <div class="form-group">
+              {{if isTreatmentNote == true}}
+                <div class="stg-goal-desc">${description}</div>
+                <textarea data-id="${noteId}" rows="6" class="form-control input-sm list-item-field" data-property="pot-entity-form-ShortTermGoalNote.note" {{if readonly == true}}readonly="readonly"{{/if}}>${note}</textarea>
+              {{else}}
+                <textarea id="stg-desc-${id}" data-id="${id}" rows="6" class="form-control input-sm list-item-field" data-property="${instanceName}.description" {{if readonly == true}}readonly="readonly"{{/if}}>${description}</textarea>
+              {{/if}}
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+   {{/each}}
+  </div>
+</div>

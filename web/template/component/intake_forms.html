@@ -1,0 +1,15 @@
+<form data-instance-id="">
+{{each(i, form) intakeForms}}
+{{if i%7 == 0}}
+  <div class="col-sm-6">
+{{/if}}
+{{if saved.indexOf(form.value) != -1}}
+<div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="${form.value}" checked disabled="disabled">${form.label}</label></div>
+{{else}}
+<div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="${form.value}" disabled="disabled">${form.label}</label></div>
+{{/if}}
+{{if (i +1)%7 == 0}}
+  </div>
+{{/if}}
+{{/each}}
+</form>

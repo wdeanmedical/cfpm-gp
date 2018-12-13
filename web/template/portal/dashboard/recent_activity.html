@@ -1,0 +1,17 @@
+<strong>Client ID#:</strong><br>
+${clientId}<br>
+<strong>Next Appointment:</strong><br>
+{{if typeof recentActivity.nextAppointment != 'undefined'}}
+  ${dateFormat(recentActivity.nextAppointment.startTime, "h:MM TT, mmmm dd, yyyy")}<br>
+  <strong>For:</strong> ${recentActivity.nextAppointment.apptType}
+{{else}}
+    <strong>For:</strong>
+{{/if}}
+<br>
+<strong>Last Appointment was:</strong><br>
+{{if typeof recentActivity.lastAppointment != 'undefined'}}
+  ${dateFormat(recentActivity.lastAppointment.startTime,  "h:MM TT, mmmm dd, yyyy")}<br>
+  <strong>For:</strong> ${recentActivity.lastAppointment.apptType}
+{{else}}
+    <strong>For:</strong><br>
+{{/if}}

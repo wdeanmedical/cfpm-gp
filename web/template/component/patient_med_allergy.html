@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1">
+    {{if readonly === false}}
+      <img id="medical-allergy-placeholder" src="assets/images/placeholder/medical_allergy.jpg" class="img-responsive ${list && list.length > 0 ? 'initially-no-display' : ''}">
+    {{else}}
+      <div class="jumbotron ${list && list.length > 0 ? 'initially-no-display' : ''}"> <h3 class="text-center">No Medical Allergies</h3> </div>
+    {{/if}}
+  </div>
+</div>
+
+ <div class="list-item-wrapper" data-item-class="${itemClass}" data-item-prefix="${resource}" data-parent-id="${parentId}" data-parent-id-name="${parentIdName}">
+{{each(i, item) list}}
+<div class="panel-body well col-sm-10 col-sm-offset-1" >
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-3 form-group">
+        <label>Medication</label>
+        <input data-id="${id}" type="text" class="form-control list-item-field"  id="${resource}-desc--id${id}" maxlength="200">
+      </div>
+      <div class="col-sm-3 form-group">
+        <label>Level</label>
+        <br>
+        <div class="btn-group radio-btn-group">
+          <a class="btn btn-primary btn-sm ${typeof level !== 'undefined' && level == 1 ? 'active' : 'not-active'}" data-toggle="${resource}-level--id${id}" data-title="1">Low</a>
+          <a class="btn btn-primary btn-sm ${typeof level !== 'undefined' && level == 2 ? 'active' : 'not-active'}" data-toggle="${resource}-level--id${id}" data-title="2">Medium</a>
+          <a class="btn btn-primary btn-sm ${typeof level !== 'undefined' && level == 3 ? 'active' : 'not-active'}" data-toggle="${resource}-level--id${id}" data-title="3">Severe</a>
+          <input type="hidden" class="list-item-field" data-id="${id}" id="${resource}-level--id${id}" data-field-type="integer">
+        </div>
+      </div>
+      <div class="col-sm-5 form-group">
+        <label>Notes</label>
+        <textarea data-id="${id}" class="form-control list-item-field" rows="2" id="${resource}-notes--id${id}" maxlength="200">${notes}</textarea>
+      </div>
+      <div class="col-sm-1">
+        <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete ${resource}y-delete-control pull-right">x</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+</div>

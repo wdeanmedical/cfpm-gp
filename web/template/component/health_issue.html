@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-sm-12">
+    {{if readonly === false}}
+      <img id="health-issue-placeholder" src="assets/images/placeholder/health_issue.jpg" class="img-responsive ${list && list.length > 0 ? 'initially-no-display' : ''}">
+    {{else}}
+      <div class="jumbotron ${list && list.length > 0 ? 'initially-no-display' : ''}"> <h3 class="text-center">No Health Issues</h3> </div>
+    {{/if}}
+    </div>
+</div>
+ <div class="list-item-wrapper" data-item-class="${itemClass}" data-item-prefix="${resource}" data-parent-id="${parentId}" data-parent-id-name="${parentIdName}">
+{{each(i, item) list}}
+  <div id="health-issue-${id}">
+    <div class="panel panel-default health-issue-panel">
+      <div class="clearfix">
+      {{if readonly != true}}
+        <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete health-issue-delete-control pull-right"><i class="fa fa-times"></i></button>
+      {{/if}}
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-7">
+            <div class="form-group">
+              <label>What Are The Main Symptoms / Problems For Which You Are Seeking Treatment?</label>
+              <input id="${resource}-symptoms--id${id}"  data-id="${id}" type="text" class="form-control input-sm list-item-field">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="form-group">
+              <label>How Long Have You Had This?</label>
+              <input  data-id="${id}" type="text" class="form-control input-sm list-item-field" id="${resource}-duration--id${id}">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label>The Onset Was</label>
+              <select id="${resource}-onset--id${id}" data-id="${id}" class="form-control list-item-select list-item-field input-sm">
+                <option value=''>Choose</option>
+                <option value='Sudden'>Sudden</option>
+                <option value='Gradual'>Gradual</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="form-group">
+              <label>What Diagnosis / Treatment Have You Received?</label>
+              <input id="${resource}-dxtx--id${id}" data-id="${id}" type="text" class="form-control input-sm list-item-field">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
+</div>

@@ -1,0 +1,251 @@
+
+<style>
+ body.signin-pm {
+  background-image: url(assets/images/specialty/${SPECIALTY}/signin-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  vertical-align: top;
+} 
+</style>
+  
+  <div id="pm-module">
+  
+    <!-- HEADER --> 
+    <nav id="app-header" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.wdeanmedical.com" target="_blank">
+            <img src="assets/images/CF-Header.png" class="img-responsive">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><p class="version-string"></p></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><p class='wdm-notification'><span class='wdm-notification-text'></span></p></li>
+            <li id="app-dropdown-settings" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog fa-lg"></i> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li id="app-dropdown-logout"><a href="#" class="app-exit">Log Out</a></li>
+                <li><a id="about" href="#">About</a></li>
+                <li id="app-dropdown-park"><a href="#">Park</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <nav id="app-sub-navbar" class="navbar navbar-default navbar-fixed-top sub-navbar" role="navigation" id='section-notification'>
+      <div class="container-fluid">
+        <div class="clear-stop">
+          <a id="app-back-to-chart" class="btn btn-default navbar-link patient-navbar-btn patient-button-group">
+            <i class="fa fa-list fa-lg"></i> Back To Chart
+          </a>
+          <a id="app-change-patient" class="btn btn-default navbar-link patient-navbar-btn"><i class="fa fa-user fa-lg">
+            </i> Change ${app_practiceClientProperties['app.patient_label']}
+          </a>
+          <a id="app-close-chart" class="btn btn-default navbar-link patient-navbar-btn"><i class="fa fa-remove fa-lg"></i> Close Chart</a>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER --> 
+    
+    <!-- MAIN-NAVIGATION -->                
+    <nav id="main-navigation" class="container-fluid">
+      <div class="row">     
+        <div id="main-nav-exit" class="col-sm-2 col-md-1">
+           <a href="#" class="btn btn-default btn-block app-exit hidden-xs nav"><p><i class="fa fa-remove fa-2x"></i></p><p>Exit</p></a>
+           <a href="#" class="app-exit visible-xs nav-xm"><i class="fa fa-remove fa-2x"></i> Exit<i class="fa fa-chevron-right fa-2x pull-right"></i></a>
+        </div>
+        <div id="main-nav-dashboard" class="col-sm-2 col-md-1">
+          <a href="#" class="btn btn-default btn-block toggle-selectable hidden-xs app-dashboard-link nav"> <p><i class="fa fa-dashboard fa-2x"></i></p> <p>Dash</p> </a>
+          <a href="#" class="toggle-selectable visible-xs app-dashboard-link nav-xm"><i class="fa fa-dashboard fa-2x"></i> Dash<i class="fa fa-chevron-right fa-2x pull-right"></i></a>
+        </div>
+        <div id="main-nav-patient" class="col-sm-2 col-md-1 patient-button-group">
+          <a href="#" class="btn btn-default btn-block toggle-selectable hidden-xs nav"> <p><i class="fa fa-users fa-2x"></i></p> <p>${app_practiceClientProperties['app.patient_label']}s</p> </a>
+          <a href="#" class="toggle-selectable visible-xs nav-xm"><i class="fa fa-users fa-2x"></i> Clients <i class="fa fa-chevron-right fa-2x pull-right"></i></a>
+        </div>
+        <div id="main-nav-schedule" class="col-sm-2 col-md-1">
+          <a href="#" class="btn btn-default btn-block toggle-selectable hidden-xs app-schedule-link nav"> <p><i class="fa fa-calendar fa-2x"></i></p> <p>Schedule</p> </a>
+          <a href="#" class="toggle-selectable visible-xs app-schedule-link nav-xm"><i class="fa fa-calendar fa-2x"></i> Schedule<i class="fa fa-chevron-right fa-2x pull-right"></i></a>
+        </div>
+        <div id="main-nav-messages" class="col-sm-2 col-md-1">
+          <a href="#" class="btn btn-default btn-block toggle-selectable hidden-xs app-messages-link nav"> <p><i class="fa fa-envelope fa-2x"></i></p> <p>Messages</p> </a>
+          <a href="#" class="toggle-selectable visible-xs app-messages-link nav-xm"><i class="fa fa-envelope fa-2x"></i> Messages<i class="fa fa-chevron-right fa-2x pull-right"></i></a>
+        </div>
+        <div id="main-nav-reports" class="col-sm-2 col-md-1">
+          <a href="#" class="btn btn-default btn-block toggle-selectable hidden-xs app-reports-link nav"> <p><i class="fa fa-list-ul fa-2x"></i></p> <p>Reports</p> </a>
+          <a href="#" class="toggle-selectable visible-xs app-reports-link nav-xm"><i class="fa fa-list-ul fa-2x"></i> Reports<i class="fa fa-chevron-right fa-2x pull-right"></i></a>
+        </div>
+        <div id="main-nav-admin" class="col-sm-2 col-md-1 initially-no-display">
+          <a  href="#" class="btn btn-default btn-block app-admin-link hidden-xs nav toggle-selectable"> <p><i class="fa fa-lock fa-2x"></i></p> <p>Admin</p> </a>
+          <a  href="#" class="app-admin-link visible-xs nav-xm"><i class="fa fa-lock fa-2x"></i> Admin <i class="fa fa-chevron-right fa-2x pull-right"></i></a>
+        </div>
+         <div id="main-nav-print" class="col-sm-2 col-md-1">
+          <a  href="#" class="btn btn-default btn-block app-print-link hidden-xs nav toggle-selectable"> <p><i class="fa fa-print fa-2x"></i></p> <p>Print</p> </a>
+          <a  href="#" class="app-print-link visible-xs nav-xm"><i class="fa fa-print fa-2x"></i> Print <i class="fa fa-chevron-right fa-2x pull-right"></i></a>
+        </div>
+        <div id="main-nav-help" class="col-sm-2 col-md-1">
+          <a href="help/${SPECIALTY}/doc.html" target="_blank" class="btn btn-default btn-block toggle-selectable hidden-xs app-help-link nav"> <p><i class="fa fa-question fa-2x"></i></p> <p>Documentation</p> </a>
+          <a href="#" class="toggle-selectable visible-xs app-help-link nav-xm"><i class="fa fa-question-sign fa-2x"></i> Docs<i class="fa fa-chevron-right fa-2x pull-right"></i></a>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <h3 class="page-name pull-right"><span id="app-screen-name"></span></h3>
+        </div>
+      </div>
+    </nav>
+    <!-- MAIN-NAVIGATION -->     
+
+    <!-- SIGN IN SCREEN -->
+    <div id="signin-screen" class="container">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+          <div class="panel member_signin">
+            <div class="panel-body">
+              <img src="assets/images/CF-icon.png" alt="..." class="img-responsive center-block">
+              <br>
+              <h1 class="member">User Login</h1>
+              <form role="form" class="login-form">
+                <div class="form-group">
+                  <label for="app-signin-username" class="sr-only">Username</label>
+                  <input type="text" class="form-control input-sm" placeholder="Username" id="app-signin-username" name="username">
+                </div>
+                <div class="form-group">
+                  <label for="app-signin-password" class="sr-only">Password</label>
+                  <input type="password" class="form-control input-sm" placeholder="Password" id="app-signin-password" name="password">
+                </div>
+                <button type="button" id="app-signin-submit" class="btn btn-primary login">Sign In</button>
+                <button type="button" id="app-retrieve-credentials" class="btn btn-default btn-md login margin-top-10px">Forgot Credentials?</button>
+                <p class="version-string text-center"></p>
+                <p class="wdm-notification text-center"><span class='wdm-notification-text'></span></p>
+                <p>
+                <a href="http://www.wdeanmedical.com" target="_blank">
+                  <img src="assets/images/wdm-powered.png" alt="..." class="img-responsive center-block">
+                </a>
+              </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SIGN IN SCREEN -->
+    
+
+    <!-- DASHBOARD SCREEN -->
+    <div id="dashboard-screen" class="initially-no-display">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="panel-top">Schedule</div>
+            <div id="clinician-dashboard-schedule" class="container-scroll-300">
+              <div id="dash-calendar" class="dash-calendar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel-top">Messages</div>
+            <div id="clinician-dashboard-messages" class="table-responsive container-scroll-200"></div>
+          </div>    
+          <div class="col-sm-6">
+            <div class="panel-top">To Do</div>
+            <div id="clinician-dashboard-to-do-notes" class="table-responsive container-scroll-200"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel-top">Lab Review</div>
+            <div id="clinician-dashboard-lab-review" class="table-responsive container-scroll-200"></div>
+          </div>      
+          <div class="col-sm-6">
+            <div class="panel-top">Note Review</div>
+            <div id="clinician-dashboard-progress-notes" class="table-responsive container-scroll-200"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- DASHBOARD SCREEN -->
+    
+   <!-- PATIENT CHART HEADER -->
+   <div id="app-chart-header" class="initially-no-display"></div> 
+   <!-- PATIENT CHART HEADER -->     
+   
+   <!-- PATIENT CHART SCREEN -->
+   <div id="patient-chart-screen" class="initially-no-display"></div> 
+   <!-- PATIENT CHART SCREEN --> 
+
+   <!-- PATIENT CHART ITEM SCREEN -->
+   <div id="patient-chart-item-screen" class="initially-no-display"></div> 
+   <!-- PATIENT CHART ITEM SCREEN -->    
+  
+	<!-- SCHEDULE SCREEN -->
+	<div id="schedule-screen" class="initially-no-display">
+	  <div class="container-fluid">
+	    <div class="row">
+	      <div class="col-sm-12">
+	        <div class="panel-top">Calendar</div>
+	        <div class="panel panel-default">
+	          <div class="panel-body">    
+	            <div id='app-calendar' class="app-calendar"></div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>     
+	  </div>
+	</div>
+	<!-- SCHEDULE SCREEN -->        
+  
+    <!-- MESSAGES SCREEN -->
+    <div id="messages-screen" class="initially-no-display"></div>
+    <!-- MESSAGES SCREEN -->
+    
+    <!-- LETTERS SCREEN -->
+    <div id="letters-screen" class="initially-no-display"></div>
+    <!-- LETTERS SCREEN -->
+    
+   <!-- REPORTS SCREEN -->
+   <div id="reports-screen" class="initially-no-display"></div>  
+   <!-- REPORTS SCREEN -->
+ 
+    <!-- FILES SCREEN -->
+    <div id="patient-files-screen" class="initially-no-display"></div>  
+    <!-- FILES SCREEN -->
+    
+    <!-- ADMIN SCREEN -->
+    <div id="admin-screen" class="initially-no-display"></div>  
+    <!-- ADMIN SCREEN -->
+    
+    <!-- ADMIN ITEM SCREEN -->
+    <div id="admin-item-screen" class="initially-no-display"></div> 
+    <!-- ADMIN ITEM SCREEN --> 
+
+    <!-- FOOTER -->
+    <nav id="app-bottom-nav" class="navbar navbar-default navbar-fixed-bottom noPrint" role="navigation">
+      <div class="container-fluid">
+        <p class="navbar-text">
+          <a target="_blank" href="https://www.facebook.com/WDeanMedical"><i class="icon-facebook-sign icon-2x"></i></a> 
+          <a target="_blank" href="https://twitter.com/WDeanMedical"><i class="icon-twitter-sign icon-2x"></i></a> 
+          <a target="_blank" href="http://www.linkedin.com/company/wdean-medical"><i class="icon-linkedin-sign icon-2x"></i></a>
+        </p>
+        <a class="navbar-right" href="http://www.wdeanmedical.com" target="_blank">
+          <p class="navbar-text powered-by-wdm"><img src="assets/images/WDM-Header.png" class="img-responsive" alt="wdm-icon"></p>
+        </a>
+      </div>
+    </nav>
+    <!-- FOOTER -->
+    
+    <!-- MODALS -->
+    <div id="modals-placement"></div>
+    <!-- MODALS -->
+    
+  </div>

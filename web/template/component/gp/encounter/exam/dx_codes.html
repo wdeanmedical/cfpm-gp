@@ -1,0 +1,17 @@
+<div id="${resource}-list" class="col-md-12">
+  <div class="list-item-wrapper" data-item-class="${itemClass}" data-parent-id="${parentId}" data-item-prefix="${resource}" data-parent-id-name="${parentIdName}">
+    {{each(i, item) items}}
+      <div class="form-group" id="dx-code-${id}">
+        <div class="col-md-10">
+          <div class="form-group">
+            <label for="${resource}-icd9">DX Code</label> <input class="form-control list-item-field icd9-typeahead" id="${resource}-icd9" data-id="${id}" data-updater="exam_updateDxCode"  data-field-type=
+            "icd9" placeholder="ICD-9 Code" type="text">
+          </div>
+        </div>
+        <div class="col-md-1">
+          <button type="button" data-id="${id}" style="display:none" class="btn btn-danger btn-sm list-item-delete">x</button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

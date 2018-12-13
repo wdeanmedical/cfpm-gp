@@ -1,0 +1,142 @@
+<div id="forms-subscreen-0" class="forms-subscreen initially-no-display">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3 class="text-center">Welcome To ${app_practiceClientProperties['app.business_name']}</h3>
+            <form role="form">
+              <div class="row">
+                <div class="col-sm-4 text-center">
+                  <p class="business-address"></p>
+                </div>
+                <div class="col-sm-4">
+                  <br>
+                  <img class="img-responsive center-block practice-logo" alt="practice-logo">
+                </div>
+                <div class="col-sm-4 text-center">
+                  <p>${app_practiceClientProperties['app.practitioner']}<br>
+                    Phone: ${app_practiceClientProperties['app.business_phone']}</p>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                  <div class="row quote-picture">
+                    <div class="col-sm-3 col-md-2">
+                      <img id="pi-doctor-profile-image" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="col-sm-9 col-md-10">
+                      <br><br>
+                      <h4>Welcome to ${app_practiceClientProperties['app.business_name']}<br>
+                      <small>Our mission is to assist you with the information and resources you need<br>
+                      to exceed your expectations, to achieve the ultimate... results.</small></h4>
+                    </div>
+                  </div>
+                  <br>
+                  <p>To prepare for your personal program you are required to review the attached Initial Agreement form and Costs. Accepting the Patient Agreement is a requirement for medical services by the staff of Performance MD. We request that you print, sign, and return the form to us by email, or you may sign it on arrival for the Consultation. You need to call us to make set a date and time for the consultation appointment, and to make the prepayment using a credit card.</p>
+                  <p>Our intention is to make your Initial Appointment medically accurate, revealing, and empowering. We want you to be relaxed and ask all relevant questions needed for you to understand the medical facts and to describe your concerns and goals, and to carefully weigh your options allowing you to take positive action.</p>
+                  <p>We will review your personal lifestyle, occupational, and relevant medical and social history. We will complete a Physical Examination and review the findings. Results of baseline laboratory testing will also be discussed. The consultation with our medical practitioner will include recommendations specific for you to achieve your goals including healthy nutrition, Nutraceutical supplementation, effective exercise, and hormone optimization to the upper range of normal for a young adult. Your Initial Consultation will conclude only when you clearly understand your health options, all of your questions have been answered to your satisfaction, and you are ready to make the best choice for you.</p>
+                  <p>Please call our office if you have any questions completing this Practice Enrollment Packet. This packet must be completed in full and brought to your appointment.</p> 
+                  <p>To your personal best,<br>
+                  ${app_practiceClientProperties['app.practitioner']}</p>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                  <div class="well clearfix get-started">
+                    <h4 class="pull-left">Please follow our form wizard to get started >>></h4>
+                    <div class="pull-right">
+                      <a href="#" name="1" class="intake-forms-step-btn intake-forms-step-1-btn btn btn-success btn-lg">Start Here</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 text-center">
+                  <h5>&copy;${app_practiceClientProperties['app.practitioner']}, ${app_practiceClientProperties['app.business_name']}, all rights reserved.</h5>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<!-- INTAKE RECORDS  -->
+<div id="intake-forms"></div>
+<!-- INTAKE RECORDS  -->
+
+<div id="forms-subscreen-${lastScreenNum}" class="forms-subscreen initially-no-display">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel-top">Submit Client Intake Forms</div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-4 text-center">
+                <p class="business-address">Mind &amp; Body Healing Center<br>40 Willard Street<br>Quincy MA 02109<br>857-239-9120</p>
+              </div>
+              <div class="col-sm-4">
+                <br>
+                <img class="img-responsive center-block practice-logo" alt="practice-logo" src="assets/images/practice/10003/batson-logo-sm.png">
+              </div>
+              <div class="col-sm-4 text-center">
+                <p>Susan Batson<br>
+                Phone: 857 239-9120
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1">
+                <div class="well">
+                  <h1 id="pi-no-errors">Thank You!<br> <small>for taking the time to complete our intake forms.</small></h1>
+                  <div id="pi-with-errors" class="initially-no-display">
+                    <h1>Please Review<br> <small>One or more required fields are either missing or have invalid input.</small></h1>
+                    <div id="pi-missing-fields"></div>
+                  </div>
+                </div>
+                <!-- STEPWIZARD -->
+                <div id="stepwizard-${app_intakeFormIndices.length}" class="stepwizard"></div>
+                <script>
+                  (function() {
+                   RenderUtil.render('component/stepwizard', {intakeFormIndices:app_intakeFormIndices}, function(s) {
+                     $('#step-wizard-${app_intakeFormIndices.length}').html(s);
+                     $('.intake-forms-step-btn, .stepwizard-btn-circle').off('click').on('click', function(){app_handlePatientIntakeWizardNavigation($(this).attr('name'))});
+                    });
+                  })();
+                </script>
+                <!-- STEPWIZARD -->
+                <p>If you are ready and you are sure everything is accurate, please summit the completed forms by clicking in the submit button below.</p>
+                <p>If you are not ready and would like to make any changes or corrections, you can come back to this form wizard anytime as long as you have not already submitted your information.</p>
+                <p>Once you have summited your forms, you will receive a confirmation email which will give you the information you will need to log into our patient portal. You will also be contacted by one of our representatives to confirm your information.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <a href="#" name="${lastScreenNum-1}" class="intake-forms-step-btn intake-forms-step-${lastScreenNum-1}-btn btn btn-default btn-lg"><<< Back</a>
+      </div>
+      <div class="col-sm-6">
+        <div class="clearfix">
+          <a href="#" name="${lastScreenNum+1}" class="intake-forms-step-btn intake-forms-step-${lastScreenNum+1}-btn btn btn-success btn-lg pull-right disabled">Submit</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1 text-center">
+        <h5>&copy;${app_practiceClientProperties['app.practitioner']}, ${app_practiceClientProperties['app.business_name']}, all rights reserved.</h5>
+      </div>
+    </div>
+  </div>
+</div>

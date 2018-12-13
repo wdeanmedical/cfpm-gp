@@ -1,0 +1,136 @@
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      OBGYN
+    </div>
+  </div>
+  <table class="form-table">
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">G</span> <span class="item-label" style="left:80px">P</span> <span class="item-label" style="left:160px">T</span> <span class="item-label" style="left:240px">A</span> <span class="item-label" style="left:320px">L</span><br>
+          <span class="basic-info-input">${form.g}</span> <span class="basic-info-input" style="left:80px">${form.p}</span> <span class="basic-info-input" style="left:160px">${form.t}</span> <span class="basic-info-input" style="left:240px">${form.a}</span> <span class="basic-info-input" style="left:320px">${form.l}</span>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">WHEN WAS THE LAST PERIOD?</span>
+          <div class="basic-info-input">
+            ${form.lastPeriod}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">AGE AT FIRST PERIOD</span>
+          <div class="basic-info-input">
+            ${form.ageFirstPeriod}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PREGNANT</span>
+          <div style="margin-top:20px">
+            <div class="form-radio">
+              <input class="input-checkbox" name="${formPrefix}-preg-status" type="radio" value="yes"><label class="checkbox-label">Yes</label>
+            </div>
+            <div class="form-radio">
+              <input class="input-checkbox" name="${formPrefix}-preg-status" type="radio" value="no"><label class="checkbox-label">No</label>
+            </div>
+            <div class="form-radio">
+              <input class="input-checkbox" name="${formPrefix}-preg-status" type="radio" value="dk"><label class="checkbox-label">DK</label>
+            </div>
+            <div class="form-radio">
+              <input class="input-checkbox" name="${formPrefix}-preg-status" type="radio" value="post_partum"><label class="checkbox-label">Post Partum</label>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">BREASTFEEDING</span>
+          <div class="basic-info-input">
+            ${form.breastfeeding}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">MONTHS</span>
+          <div class="basic-info-input">
+            ${form.breastfeedingMonths}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PAP SMEAR EVER</span>
+          <div class="basic-info-input">
+            ${form.papSmearStatus}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">BIRTH CONTROL</span>
+          <div class="basic-info-input">
+            ${form.birthControlStatus}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TYPE</span>
+          <div class="basic-info-input">
+            ${form.birthControlType}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">OTHER PAST GYNECOLOGICAL HISTORY</span>
+          <div style="margin-top:20px">
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="venereal_warts"><label class="checkbox-label">Venereal Warts</label>
+            </div>
+            <div class="form-checkbox">
+             <input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="herpes_genital"><label class="checkbox-label">Herpes Genital</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="syphilis"><label class="checkbox-label">Syphilis</label>
+            </div>
+          </div>
+          <div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="pid"><label class="checkbox-label">PID</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="endometriosis"><label class="checkbox-label">Endometriosis</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="chlamyrr"><label class="checkbox-label">Chlamyrr</label>
+            </div>
+          </div>
+          <div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="gonorrhea"><label class="checkbox-label">Gonorrhea</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="other"><label class="checkbox-label">Other-specify</label>
+            </div>
+            <div class="form-checkbox">
+              ${form.historyOther ? form.historyOther : '___________________'}
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

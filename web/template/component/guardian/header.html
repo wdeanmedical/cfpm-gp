@@ -1,0 +1,14 @@
+<div class="row" id="guardians-header">
+  {{if typeof offsetClass != 'undefined'}}
+    <div class="${offsetClass}">
+  {{else}}
+    <div class="col-sm-10 col-sm-offset-1">
+  {{/if}} 
+    {{if readonly === false}}
+    <img id="guardian-placeholder" src="assets/images/placeholder/guardian.jpg" class="img-responsive ${list && list.length > 0 ? 'initially-no-display' : ''}">
+    {{else}}
+    <div class="jumbotron ${list && list.length > 0 ? 'initially-no-display' : ''}"> <h3 class="text-center">No Parents or Guardians</h3> </div>
+    {{/if}}
+  </div>
+</div>
+<div id="guardians-list"></div>

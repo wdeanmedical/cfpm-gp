@@ -1,0 +1,25 @@
+{{each(i, item) list}}
+<div class="col-sm-12" id="patient-supplement-${id}">
+  <div class="col-sm-3">
+    <div class="form-group">
+      <label>Supplement</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${supp}" data-property="${instanceName}.entity-form-PatientSupplement.supp">
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="form-group">
+      <label>Dose/Freq</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${dose}" data-property="${instanceName}.entity-form-PatientSupplement.dose">
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="form-group">
+      <label>Reason</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${reason}" data-property="${instanceName}.entity-form-PatientSupplement.reason">
+    </div>
+  </div>
+  <div class="col-sm-1">
+    <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete supp-delete-control">x</button>
+  </div>
+</div>
+{{/each}}

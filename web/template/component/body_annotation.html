@@ -1,0 +1,28 @@
+<div id="canvas-static" style="display:none">
+ <h2>Finished Image</h2>
+  <image id="canvas-finished-image" width="800" height="569"></img>
+</div>
+<div id="canvas-wip" style="display:none">
+  <canvas id="canvas" width="800" height="569"></canvas>
+  <div id="canvas-controls">
+    <a id="canvas-pencil-mode" data-placement="top" data-toggle="tooltip" title="Tool: Select to draw free hand" class="btn" href="#">
+      <i class="fa fa-pencil fa-3x" aria-hidden="true"></i>
+    </a>
+    <a id="canvas-add-textbox" data-placement="top" data-toggle="tooltip" title="Add a bordered text box" class="btn" href="#">
+      <i class="fa fa-text-width fa-3x" aria-hidden="true"></i>
+    </a>
+    <a id="canvas-add-arrow" data-placement="top" data-toggle="tooltip" title="Add an arrow; move using the line, rotate using endpoints" class="btn" href="#">
+      <i class="fa fa-arrows-alt fa-3x" aria-hidden="true"></i>
+    </a>
+    <a id="canvas-eraser-mode" data-placement="top" data-toggle="tooltip" title="Tool: Enter erasure mode; if an object is already selected it will remove it on click; otherwise hover over object to remove; click when cursor changes to select it; then double click to remove it" class="btn" href="#">
+      <i  class="fa fa-eraser fa-3x" aria-hidden="true"></i>
+    </a>
+     <a id="canvas-select-mode" data-placement="top" data-toggle="tooltip" title="Tool: Enter selection mode; hold down shift to select multiple objects." class="btn" href="#">
+      <i  class="fa fa-hand-grab-o fa-3x" aria-hidden="true"></i>
+    </a>
+    <button id="canvas-undo" data-placement="top" data-toggle="tooltip" title="This will restore any previous saved states; up to 10 previous states" class="btn btn-info">Undo</button>
+    <button id="canvas-toggle-tooltip" data-placement="top" data-toggle="tooltip" title="This turns tooltips on/off" class="btn btn-info">Toggle Tooltip</button>
+    <button id="canvas-clear" data-placement="top" data-toggle="tooltip" title="This will wipe the canvas" class="btn btn-danger">Clear Canvas</button>
+    <button id="canvas-finish" data-placement="top" data-toggle="tooltip" title="Click when you are done to save annotation as an image" class="btn btn-success">Finish</button>
+    <span class="help-block" id="canvas-help"></span>
+</div> 

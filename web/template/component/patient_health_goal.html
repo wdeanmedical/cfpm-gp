@@ -1,0 +1,38 @@
+{{each(i, item) list}}
+<div class="col-sm-12" id="patient-health-goal-${id}">
+  <div class="col-sm-2">
+    <div class="form-group">
+      <label>Date Start</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${dateStart}" data-property="${instanceName}.prf-entity-from-PatientHealthGoal.dateStart" data-field-type="date" placeholder="MM/DD/YYYY">
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="form-group">
+      <label>Goal</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${goal}" data-property="${instanceName}.prf-entity-from-PatientHealthGoal.goal">
+    </div>
+  </div>
+  <div class="col-sm-2">
+    <div class="form-group">
+      <label>Date End</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${dateEnd}" data-property="${instanceName}.prf-entity-from-PatientHealthGoal.dateEnd" data-field-type="date" placeholder="MM/DD/YYYY">
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="form-group">
+      <label>Rx</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${rx}" data-property="${instanceName}.prf-entity-from-PatientHealthGoal.rx">
+    </div>
+  </div>
+    <div class="col-sm-1">
+    <div class="form-group">
+      <label>N/A</label>
+      <br>
+      <input data-id="${id}" type="checkbox" class="list-item-checkbox"  {{if typeof accomplished !== 'undefined' && accomplished == true}} checked="checked"{{/if}} data-property="${instanceName}.prf-entity-from-PatientHealthGoal.accomplished" data-field-type="boolean">
+    </div>
+  </div>
+  <div class="col-sm-1">
+    <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete patient-health-goal-delete-control">x</button>
+  </div>
+</div>
+{{/each}}

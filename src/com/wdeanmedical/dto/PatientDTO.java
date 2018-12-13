@@ -1,0 +1,88 @@
+package com.wdeanmedical.dto;
+
+import java.util.Date;
+import java.util.List;
+
+import com.wdeanmedical.entity.PatientIntake;
+import com.wdeanmedical.model.BodyAnnotation;
+import com.wdeanmedical.model.PatientPersonalInfo;
+import com.wdeanmedical.model.PatientRecentActivity;
+
+public class PatientDTO extends AppDTO {
+
+  public String activationCode;
+  public Integer authStatus;
+  public String address1;
+  public String address2;
+  public String assignedClinicianId;
+  public BodyAnnotation bodyAnnotation;
+  public String city;
+  public String cityFilter; 
+  public String dob;
+  public String dobFilter; 
+  public String driversLicense;
+  public String employed;
+  public String employer;
+  public String ethnicity;
+  public Integer fbabipId;
+  public String firstName;
+  public String firstNameFilter; 
+  public String forms;
+  public String genderFilter; 
+  public Integer genderId;
+  public String govtId;
+  public String groupNumber;
+  public String insuranceCarrier;
+  public String insuredName;
+  public Boolean intake;
+  public Date lastLoginTime;
+  public String lastName;
+  public String lastNameFilter; 
+  public String maritalStatus;
+  public Integer medicalConditionId;
+  public String memberNumber;
+  public String middleName;
+  public String middleNameFilter; 
+  public String mrn;
+  public String mrnFilter; 
+  public String occupation;
+  public Integer patientExamId;
+  public PatientFileDTO patientFile;
+  public Integer patientInfoId;
+  public PatientIntake patientIntake;
+  public String phoneFilter;
+  public String postalCode;
+  public Integer practiceFormId;
+  public String preferredName;
+  public String prepaymentAmount;
+  public String primaryPhone;
+  public String problem;
+  public String profileImagePath;
+  public String profileImageTempPath;
+  public String programs;
+  public String race;
+  public String relation;
+  public String salt;
+  public String school;
+  public String schoolName;
+  public String secondaryPhone;
+  public Boolean sendPortalInvite;
+  public String ssn;
+  public Integer status;
+  public String statusFilter;
+  public String term;
+  public Integer testId;
+  public Integer txNoteComplaintId;
+  public Integer updateListItemId;
+  public Integer usState;
+  
+  public PatientRecentActivity recentActivity;
+  public PatientPersonalInfo personalInfo;
+  public List<String> ltgDescriptions;
+  public List<String> stgDescriptions;
+  public Date portalInviteDate;
+  public List<String> intakeForms;
+  public Integer patientIntakeId;
+  public Integer patientAge;
+  public Integer createClinicianId;
+}

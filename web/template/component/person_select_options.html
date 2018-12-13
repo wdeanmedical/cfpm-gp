@@ -1,0 +1,10 @@
+<option value=''>Choose</option>
+{{each options}}
+  <option value='${id}'>
+  {{if middleName}}
+    ${util_buildFullName(firstName, middleName, lastName)}
+  {{else}}
+    ${util_buildFullName(firstName, '', lastName)}
+  {{/if}}
+  </option>
+{{/each}}

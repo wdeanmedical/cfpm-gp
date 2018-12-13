@@ -1,0 +1,263 @@
+<div class="modal fade" id="modal-new-sales-lead" tabindex="-1" role="dialog" aria-labelledby="modal-new-sales-lead" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" id="new-sales-lead-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">New Sales Lead</h4>
+      </div>
+      <div class="modal-body">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="container">
+            <form role="form">
+            
+              <div class="row">
+                <div class="panel-top" id="new-lead-assigned-to-title">Assigned To</div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="new-lead-location">Location</label>
+                    <select class="form-control lead-mgmt-location" id="new-lead-location" data-property="entity-form-SalesLead.facilityId"></select>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="new-lead-user">Team Members</label>
+                    <select class="form-control selectpicker" multiple id="new-lead-user" data-property="entity-form-SalesLead.salesAgentIds"></select>
+                  </div>
+                </div>
+              </div>
+              
+              <hr>
+              
+              <div class="row">
+              <div class="panel-top" id="new-lead-contact-info-title">Contact Information</div>
+              <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-title">Title</label>
+                    <select class="form-control lead-mgmt-title" id="new-lead-title" data-property="entity-form-SalesLead.title">
+                      <option>Choose</option>
+                      <option>Mr.</option>
+                      <option>Mrs.</option>
+                      <option>Ms.</option>
+                      <option>Dr.</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-first-name">* First Name</label>
+                    <input type="text" class="form-control" id="new-lead-first-name" data-property="entity-form-SalesLead.firstName">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-middle-name">Middle Name</label>
+                    <input type="text" class="form-control" id="new-lead-middle-name" data-property="entity-form-SalesLead.middleName">
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-last-name">* Last Name</label>
+                    <input type="text" class="form-control" id="new-lead-last-name" data-property="entity-form-SalesLead.lastName">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-status">Status</label>
+                    <select class="form-control lead-mgmt-status" id="new-lead-status" data-property="entity-form-SalesLead.status"></select>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-stage">Stage</label>
+                    <select class="form-control lead-mgmt-stage" id="new-lead-stage" data-property="entity-form-SalesLead.stage"></select>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-age-range">* Age Range</label>
+                    <select class="form-control lead-mgmt-age-range" id="new-lead-age-range" data-property="entity-form-SalesLead.ageRange"></select>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-best-time">Best Time To Contact</label>
+                    <input type="text" class="form-control" id="new-lead-best-time" placeholder="Day / Night" data-property="entity-form-SalesLead.bestTime">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="new-lead-source">Lead Source</label>
+                    <select class="form-control lead-mgmt-source" id="new-lead-source" data-property="entity-form-SalesLead.source"></select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="network-marketing-source">If Network Marketing</label>
+                    <select class="form-control lead-mgmt-network-marketing-source" id="new-lead-network-marketing-source" 
+                            data-property="entity-form-SalesLead.networkMarketingSource"></select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="new-lead-referral-source-type">If Referred By</label>
+                    <select class="form-control lead-mgmt-source-type" id="new-lead-source-type" data-property="entity-form-SalesLead.sourceType"></select>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+              <div class="col-sm-3">
+                	<div class="form-group">
+                   <label for="new-lead-gender">* Gender</label>             
+                     <select class="form-control lead-mgmt-gender" id="new-lead-gender" data-property="entity-form-SalesLead.gender"></select>
+                     <div class="help-block with-errors"></div>
+                   </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="lead-mgmt-occupation">Occupation</label>
+                    <input type="text" class="form-control" id="new-lead-occupation" data-property="salesLead.occupation">
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-dob">Date Of Birth</label>
+                    <input type="text" class="form-control" id="new-lead-dob" placeholder="mm/dd/yyyy" data-property="entity-form-SalesLead.dob">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="new-lead-email">* Email</label>
+                    <input type="text" class="form-control" id="new-lead-email" data-property="entity-form-SalesLead.email">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="new-lead-primary-phone">* Primary Phone</label>
+                    <input type="text" class="form-control" id="new-lead-primary-phone" placeholder="(000) 000-0000" data-property="entity-form-SalesLead.primaryPhone">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="new-lead-secondary-phone">Secondary Phone</label>
+                    <input type="text" class="form-control" id="new-lead-secondary-phone" placeholder="(000) 000-0000" data-property="entity-form-SalesLead.secondaryPhone">
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="panel-top" id="lead-mgmt-goals-title">Interests and Goals</div>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="goal">Primary Interest Or Goal</label>
+                    <select class="form-control lead-mgmt-goal" id="new-lead-goal" data-property="entity-form-SalesLead.goal"></select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="new-lead-notes">Notes</label>
+                    <textarea class="form-control" rows="3" id="new-lead-notes"></textarea>
+                 </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+              <div class="panel-top" id="new-lead-addresses-title">Addresses</div>
+                <div class="col-sm-8">
+                  <div class="form-group">
+                    <label for="primary-address">Primary Address</label>
+                    <input type="text" class="form-control" id="new-lead-primary-address" data-property="entity-form-SalesLead.streetAddress1">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="primary-address-type">Address Type</label>
+                    <select class="form-control lead-mgmt-primary-address-type" id="new-lead-primary-address-type" data-property="entity-form-SalesLead.addressType"></select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="primary-address-city">City</label>
+                    <input type="text" class="form-control" id="new-lead-primary-city" data-property="entity-form-SalesLead.city">
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-primary-us-state">State</label>
+                    <select class="form-control lead-mgmt-primary-us-state" id="new-lead-primary-us-state" data-property="entity-form-SalesLead.usState"></select>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="primary-address-postal-code">Zip Code</label>
+                    <input type="text" class="form-control" id="new-lead-primary-postal-code" data-property="entity-form-SalesLead.postalCode">
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="form-group">
+                    <label for="secondary-address">Secondary Address</label>
+                    <input type="text" class="form-control" id="new-lead-secondary-address" data-property="entity-form-SalesLead.altStreetAddress1">
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="secondary-address-type">Address Type</label>
+                    <select class="form-control lead-mgmt-secondary-address-type" id="new-lead-secondary-address-type" 
+                            data-property="entity-form-SalesLead.altAddressType"></select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="secondary-address-city">City</label>
+                    <input type="text" class="form-control" id="new-lead-secondary-city" data-property="entity-form-SalesLead.altCity">
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="new-lead-secondary-us-state">State</label>
+                    <select class="form-control lead-mgmt-secondary-us-state" 
+                            id="new-lead-secondary-us-state" data-property="entity-form-SalesLead.altUSState"></select>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="secondary-address-zip">Zip Code</label>
+                    <input type="text" class="form-control" id="new-lead-secondary-postal-code" data-property="entity-form-SalesLead.altPostalCode">
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="modal-footer">
+                <button id="new-sales-lead-save-btn" class="btn btn-primary">Save</button>
+                <button id="new-sales-lead-cancel-btn" class="app-dashboard-link btn btn-default">Cancel</button>
+              </div>
+            </form>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

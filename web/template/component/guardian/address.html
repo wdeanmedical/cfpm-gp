@@ -1,0 +1,32 @@
+<div>
+  <span class="inline-h4">Address</span>
+  <label class="pull-right"><input data-id="${id}" data-instance-name="${instanceName}" type="checkbox" data-field-type="addressSameAsClient" data-property="${instanceName}.addressSameAsClient"
+    {{if addressSameAsClient == true}}checked="checked"{{/if}} class="input-checkbox-group same-as-client-checkbox">
+    Same as client
+  </label>
+</div>
+<div class="col-sm-3 form-group">
+  <label>* Street Address</label>
+  <input data-id="${id}" type="text" class="form-control input-sm list-item-field street-address-1-field address-field" data-field-type="streetAddress1" value="${streetAddress1}"
+  data-property="${instanceName}.streetAddress1" {{if readonly == true || addressSameAsClient == true}}readonly="readonly"{{/if}} maxlength="200">
+  <div class="help-block with-errors"></div>
+</div>
+<div class="col-sm-2 form-group">
+  <label>* City</label>
+  <input data-id="${id}" type="text" class="form-control input-sm list-item-field city-field address-field" data-field-type="city" value="${city}" data-property="${instanceName}.city"
+  {{if readonly == true || addressSameAsClient == true}}readonly="readonly"{{/if}} maxlength="200">
+  <div class="help-block with-errors"></div>
+</div>
+<div class="col-sm-3 form-group">
+  <label>* State</label>
+  <select data-id="${id}" id="guardian-us-state-${id}" class="form-control input-sm address-field list-item-field input-us-state us-state-field"
+  data-value="${usState}" data-property="${instanceName}.usState" data-field-type="usState" {{if readonly == true || addressSameAsClient == true}}disabled="disabled"{{/if}}></select>
+  <div class="help-block with-errors"></div>
+</div>
+<div class="col-sm-2 form-group">
+  <label>* Zip Code</label>
+  <input id="guardian-postal-code-${id}" data-id="${id}" type="text" class="form-control input-sm address-field list-item-field postal-code-field"
+  value="${postalCode}" data-field-type="postalCode" data-property="${instanceName}.postalCode" {{if readonly == true || addressSameAsClient == true}}readonly="readonly"{{/if}}>
+  <div class="help-block with-errors"></div>
+</div>
+<script>$("#guardian-postal-code-${id}").mask("99999");</script>

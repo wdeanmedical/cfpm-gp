@@ -1,0 +1,46 @@
+
+{{each(i, item) list}}
+<div class="panel-body well col-sm-12" id="billing-ticket-entry-${id}">
+ <div class="row">
+  <div class="col-sm-1 pull-right">
+    {{if readonly == false}}
+      <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete entry-delete-control">x</button>
+    {{/if}}
+  </div>
+ </div> 
+ <div class="col-sm-12">
+  <div class="col-sm-3 form-group">
+    <label>Client Name</label>
+    <input data-id="${id}" type="text" class="form-control" value="${clientName}" readonly="readonly">
+  </div>
+  <div class="col-sm-3 form-group">
+    <label>Date of Service</label>
+    <input data-id="${id}" type="text" id="ticket-date-${id}" class="form-control list-item-field" value="${typeof date !== 'undefined' ?  dateFormat(date, 'mm/dd/yyyy') : ''}" 
+    data-property="${instanceName}.date" data-field-type="date"  {{if readonly == true}}readonly="readonly"{{/if}}>
+  </div>
+  <div class="col-sm-3 form-group">
+    <label>Total Time</label>
+    <input data-id="${id}" type="text" class="form-control list-item-field" value="${totalTime}" data-property="${instanceName}.totalTime"
+    {{if readonly == true}}readonly="readonly"{{/if}}>
+  </div>
+  </div>
+  <div class="col-sm-12">
+     <div class="col-sm-3 form-group">
+      <label>Diagnosis (F Code)</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${dx}" data-property="${instanceName}.dx"
+       maxlength="200" {{if readonly == true}}readonly="readonly"{{/if}}>
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Service Provided</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${service}" data-property="${instanceName}.service"
+       maxlength="200" {{if readonly == true}}readonly="readonly"{{/if}}>
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Copay/Method</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${copayMethod}" data-property="${instanceName}.copayMethod"
+       maxlength="200" {{if readonly == true}}readonly="readonly"{{/if}}>
+    </div>
+  </div>
+</div>
+<script>$('#ticket-date-${id}').mask("99/99/9999");</script>
+{{/each}}

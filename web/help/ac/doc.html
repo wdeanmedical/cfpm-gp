@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>WDean Medical - Documentation</title>
+    <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+    
+#header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: black;
+}
+    
+#main-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+#sidebar-wrapper {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  width: 250px;
+  height: 600px;
+  overflow-y: auto;
+}
+
+#help-screen-container {
+  width: 100%;
+}
+
+#welcome-screen {
+  background-image: url(../../assets/images/specialty/ac/signin-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+} 
+
+.help-screen {
+  width: 800px;
+  height: 100%;
+}
+
+.help-screen-body {
+  margin: 40px;
+}
+
+.help-screen-instructions {
+  margin: 40px;
+  width: 600px;
+}
+
+.help-screen-video {
+  margin-bottom: 20px;
+}
+
+#help-title {
+  text-align: center;
+}
+
+.sidebar-nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-nav li {
+  text-indent: 20px;
+}
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  text-indent: 30px;
+  color: #999999;
+}
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: black;
+  background: rgba(255,255,255,0.2);
+}
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+  color:black;
+}
+.sidebar-nav > .sidebar-section-title {
+  margin-top: 10px;
+  font-size: 16px;
+}
+.sidebar-nav > .sidebar-section-title a {
+  color: #999999;
+}
+.sidebar-nav > .sidebar-section-title a:hover {
+   color: black;
+   background: none;
+}
+a, a:active, a:focus {
+  outline: none;
+}
+
+#info-badge {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 150px;
+
+}
+
+#info-badge p {
+  font-weight: 400;
+  text-align: center;
+}
+
+.initially-no-display {
+  display: none;
+}
+
+   </style>
+  
+  </head>
+  <body>
+  
+  <div id="header">
+    <img src="../../assets/images/WDM-Header3.png">
+  </div>
+
+    <div id="main-content">
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-section-title">User Administration</li>
+          <li> <a id="add-user" href="#" data-screencast-id="2c5d6d04-56f3-4d23-8d2a-8ccc50aea0b1">Add User</a> </li>
+          <li> <a id="edit-user" href="#" data-screencast-id="334f244a-b378-4890-9641-01e02effa6d0">Edit User</a> </li>
+          
+          <li class="sidebar-section-title">General</li>
+          <li> <a id="logging-in" href="#" data-screencast-id="5dae9fbe-232a-45e4-a4fb-61f2f22b7cd0">Logging In</a> </li>
+          <li> <a id="password-reset" href="#" data-screencast-id="be36b8b0-b6cc-4462-8462-ccd633dacaab">Password Reset</a> </li>
+          <li> <a id="parking" href="#" data-screencast-id="e72454a3-6edd-456c-8943-d8e934fe9c4a">Parking</a> </li>
+          <li> <a id="printing" href="#" data-screencast-id="fe76823a-ff17-4c80-92b0-2b3d9a78faf3">Printing</a> </li>
+          
+          <li class="sidebar-section-title">Clients</li>
+          <li> <a id="create-client" href="#" data-screencast-id="8544d7a9-8134-486a-8af6-ee02313e5527">Create Client</a> </li>
+          <li> <a id="client-intake" href="#" data-screencast-id="4c21653f-8675-4620-9935-98adc83d3b21">Intake Forms</a> </li>
+          <li> <a id="treatment-notes" href="#" data-screencast-id="4b5bcfaa-6b15-45ec-95b2-20292f3cb730">Treatment Notes</a> </li>
+          <li> <a id="update-demographics" href="#" data-screencast-id="f96cb524-ec43-4a52-a72d-cad1acbb2ae0">Demographics</a> </li>
+          <li> <a id="client-forms" href="#" data-screencast-id="58cb326c-d294-4a0a-84b6-1d6c7eef4137">Client Forms</a> </li>
+          <li> <a id="client-files" href="#" data-screencast-id="9d548281-66da-4e78-81b1-e2a30c54e68e">Client Files</a> </li>
+          <li> <a id="client-letters" href="#" data-screencast-id="ef8e1858-21cd-49fd-9710-15ed64d46d4d">Client Letters</a> </li>
+          
+          <li class="sidebar-section-title">Scheduling</li>
+          <li> <a id="appt-schedule" href="#" data-screencast-id="831e0062-1d7d-451b-9aec-f6ebb77a221e">Creating an Appt</a> </li>
+          <li> <a id="appt-modify" href="#" data-screencast-id="ded397a2-6fad-40e5-b01e-52f8561091fd">Modifying an Appt</a> </li>
+          
+          <li class="sidebar-section-title">Messages</li>
+          <li> <a id="message-folders" href="#" data-screencast-id="b6647eb7-ecae-410b-8e08-bb3a53175d18">Message Folders</a> </li>
+          <li> <a id="sending-a-message" href="#" data-screencast-id="43841a48-8949-4294-9428-88a79ce64fe2">Sending a Message</a> </li>
+          
+          <li class="sidebar-section-title">Reports</li>
+          <li> <a id="available-reports" href="#" data-screencast-id="efb61ee9-c4c7-4b73-927a-3337768a145d">Available Reports</a> </li>
+          <li> <a id="exporting-to-csv" href="#" data-screencast-id="2ca8eaf2-7b2e-4cb6-8485-daf6e48e7e28">Exporting to CSV</a> </li>
+          
+          <li class="sidebar-section-title">Financial</li>
+          <li> <a id="billing-ticket" href="#" data-screencast-id="09f57c38-2bdb-4018-bb71-7b3268f50e2f">Billing Ticket</a> </li>
+          <li> <a id="invoicing" href="#" data-screencast-id="5d04c1fe-1ba9-427e-afe4-1d403fabc895">Invoicing</a> </li>
+       </ul>
+     </div>
+
+     <div id="help-screen-container">
+     
+       <!-- WELCOME SCREEN -->
+       <div id="welcome-screen" class="help-screen">
+         <h2 id="help-title">WDean Medical Practice Manager for Acupuncture</h2>
+         <div id="info-badge" class="jumbotron">
+           <div class="container">
+             <p>
+             Select a topic from the left menu to get started 
+             </p>
+           </div>
+         </div>
+       </div>
+       <!-- WELCOME SCREEN -->
+       
+       <!-- ADD USER SCREEN -->
+       <div id="add-user-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Add User</h2>
+           <div class="help-screen-instructions">
+             <div id="add-user-screen-video"></div>
+             <h4><strong>Follow the steps below to add a new user:</strong></h4>
+             <ol>
+               <li>While logged in as an administrator, select "Admin" in the Top Navigation Bar.</li>
+               <li>Select the "User Admin" button.</li>
+               <li>Select "Add User" in the lower right.</li>
+               <li>Enter the name and contact information in the "Add User" form. Fields with asterisks are required fields. 
+               Note that assigning the user the Role of Admin will allow them to add users to the system or modify user information.</li>
+               <li>Once you have entered all the user information, select "Submit" to add the user to the system.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- ADD USER SCREEN -->
+       
+       <!-- EDIT USER SCREEN -->
+       <div id="edit-user-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Edit User</h2>
+           <div class="help-screen-instructions">
+             <div id="edit-user-screen-video"></div>
+             <h4><strong>Follow the steps below to edit an existing user:</strong></h4>
+             <ol>
+               <li>While logged in as an administrator, select "Admin" in the Top Navigation Bar.</li>
+               <li>Select the "User Admin" button.</li>
+               <li>Find the user in the list in the User Manager and select "View Details."</li>
+               <li>Make the desired changes in Edit User window.</li>
+               <li>Select "Close.".</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- EDIT USER SCREEN -->
+       
+       <!-- LOGGING IN SCREEN -->
+       <div id="logging-in-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Logging In</h2>
+           <div class="help-screen-instructions">
+             <div id="logging-in-screen-video"></div>
+             <h4><strong>Follow the steps below to log in:</strong></h4>
+             <ol>
+              <li>At the login screen, enter your assigned username and password</li>
+              <li>Click the "SIGN IN" button.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- LOGGING IN SCREEN -->
+       
+       <!-- PASSWORD RESET SCREEN -->
+       <div id="password-reset-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Password Reset</h2>
+           <div class="help-screen-instructions">
+             <div id="password-reset-screen-video"></div>
+             <h4><strong>Follow the steps below to reset your password:</strong></h4>
+             <ol>
+              <li>At the login screen, click on "Forgot Credentials?"</li>
+              <li>The Credentials Recovery window will open. Enter the email address associated 
+              with your account in the field and click the "Submit" button.</li>
+              <li>Check your email inbox for a message with the subject line "Password Recovery"</li>
+              <li>Open the message and click on the contained link, as directed.</li>
+              <li>In the Create Password window that opens, enter a new password in the Password field. 
+              (Acceptable passwords are at least 6 characters long, have at least one uppercase and one 
+              lowercase letter, at least one numeric character and one punctuation character.)</li>
+              <li>Reenter your new password in the Confirm Password field.</li>
+              <li>Click the "Submit" button.</li>
+              <li>If the new password is acceptable and the two fields match, your password will be 
+              reset. A confirmation will appear at the top of the window.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- PASSWORD RESET SCREEN -->
+        
+       <!-- PARKING SCREEN -->
+       <div id="parking-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Parking Your Session</h2>
+           <div class="help-screen-instructions">
+             <div id="parking-screen-video"></div>
+             <h4><strong>Follow the steps below to park your session:</strong></h4>
+             <ol>
+             <li>In the upper-right select Park from the settings (gear) dropdown</li>
+             <li>Now your session is parked.  Your place will be saved until you log back in</li>
+             <li>Enter your username and password in the Park dialog and select "Sign Back In' to sign in</li>
+             <li>Alternatively, select "Log Out" to log out of your session.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- PARKING SCREEN -->
+        
+       <!-- PRINTING SCREEN -->
+       <div id="printing-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Printing</h2>
+           <div class="help-screen-instructions">
+             <div id="printing-screen-video"></div>
+             <h4><strong>Follow the steps below to print:</strong></h4>
+             <ol>
+             <li>
+             In addition to any print button on a given screen there is also the main Print button 
+             in the top menu bar.
+             </li>
+             <li>
+             Upon pressing this button, if there is a printable screen currently in view, it 
+             will bring up the print dialog.
+             </li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- PRINTING SCREEN -->
+        
+       <!-- CREATE CLIENT SCREEN -->
+       <div id="create-client-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Create Client</h2>
+           <div class="help-screen-instructions">
+             <div id="create-client-screen-video"></div>
+             <h4><strong>Follow the steps below to create a client:</strong></h4>
+             <ol>
+             <li>
+             Click on the Client button in the top menu bar.  
+             If already in the Client section, Click on the Change Client button 
+             in the top blue contextual menu. 
+             </li>
+             <li>Click on the green New Client button at the top of the Client Search form.</li>
+             <li>Fill out at least the required fields in the form.</li>
+             <li>
+             If the client has a guardian click on the "has guardian" check box and add
+             a new guardian.  You may also choose an existing guardian.
+             </li>
+             <li>
+             All available Intake Forms are pre-selected.  You may unselect any of the forms that 
+             should not be sent to this client at the time of Portal Invitation.
+             </li>
+             <li>
+             By default the Client is placed in the Wait List.  Switch status to Active if that is desired.
+             </li>
+             <li>
+             Click the Save button to save the New Client. You are then taken to the Client Search form.
+             The new client is now listed in the Recent Clients list.  Select that client in the list
+             and you will be taken the the new client's chart.
+             </li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- CREATE CLIENT SCREEN -->
+       
+       <!-- CLIENT INTAKE SCREEN -->
+       <div id="client-intake-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Intake Forms</h2>
+           <div class="help-screen-instructions">
+             <div id="client-intake-screen-video"></div>
+             <h4><strong>Follow the steps below to work with client intake forms:</strong></h4>
+             <ol>
+             <li>
+             Intake forms are selected at the time of Client creation or in the Client Info 
+             form if the client was already created without sending forms.
+             </li>
+             <li>
+             Once sent to the client to fill out in the Client Portal, the forms also
+             appear in the Client Intake section of the Client Chart.
+             </li>
+             <li>
+             At this point the forms can be edited within the Client Intake section and the Client 
+             Portal concurrently.
+             </li>
+             <li>
+             Once the forms are completed and submitted, they become read-only.
+             </li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- CLIENT INTAKE SCREEN -->
+       
+       <!-- TREATMENT NOTES SCREEN -->
+       <div id="treatment-notes-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Treatment Notes</h2>
+           <div class="help-screen-instructions">
+             <div id="treatment-notes-screen-video"></div>
+             <h4><strong>Follow the steps below to work with treatment notes:</strong></h4>
+             <ol>
+             <li>In the Client Chart click on the Treatment Notes button</li>
+             <li>In the Treatment Notes screen all previously completed notes are displayed in the list.</li> 
+             <li>The most recent Treatment Note will automatically be visible.</li> 
+             <li>The history of each section of the Treatment Note is accessible from a given Treatment Note.</li> 
+             <li>To create a new Treatment Note, click the New Visit button.</li>
+             <li>Within a Treatment Note, a new Complaint is created by clicking the New Complaint button.</li>
+             <li>Within a Complaint, a new item is created by clicking the New Item button.</li>
+             <li>A tongue image can be added by clicking on the New Image.</li>
+             <li>Clicking on a tongue image allows you to edit or delete that image.</li>
+             <li>Diagnoses can be added by clicking on the New Dx button.</li>
+             <li>Treatment Plan goals can be added by clicking on the New Goal button.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- TREATMENT NOTES SCREEN -->
+        
+       <!-- UPDATE DEMOGRAPHICS SCREEN -->
+       <div id="update-demographics-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Update Demographics</h2>
+           <div class="help-screen-instructions">
+             <div id="update-demographics-screen-video"></div>
+             <h4><strong>Follow the steps below to update client demographics:</strong></h4>
+             <ol>
+             <li>In the Client Chart click on the Client Info button</li>
+             <li>The View/Edit Client form will appear.  Here you can update any of the client information.</li>
+             <li>The option to delete the client is presented with a red Delete button at the bottom of the form.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- UPDATE DEMOGRAPHICS SCREEN -->
+        
+       <!-- CLIENT FORMS SCREEN -->
+       <div id="client-forms-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Client Forms</h2>
+           <div class="help-screen-instructions">
+             <div id="client-forms-screen-video"></div>
+             <h4><strong>Follow the steps below to work with client forms:</strong></h4>
+             <ol>
+             <li>In the Client Chart click on the Client Forms button</li>
+             <li>
+               In the Forms screen the full history of Client Forms are listed.  Here you can click on a form 
+               in the list and view it.
+             </li>
+             <li>The available forms for assignment are listed in the drop-down next the the Assign Form button</li>
+             <li>To assign a new form to a client choose a form and click the Assign Form button.</li>
+             <li>As the client views and eventually submits the form the status of the form will update.</li>
+             <li>To view any form, click on the form in the assigned forms list and it will appear below.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- CLIENT FORMS SCREEN -->
+        
+       <!-- CLIENT FILES SCREEN -->
+       <div id="client-files-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Client Files</h2>
+           <div class="help-screen-instructions">
+             <div id="client-files-screen-video"></div>
+             <h4><strong>Follow the steps below to work with client files:</strong></h4>
+             <ol>
+             <li>In the Client Chart click on the Client Files button</li>
+             <li>In the Client Files screen the files sent from Provider are listed by default</li> 
+             <li>
+             To send a new file to the client click on the Add File button.  Select a file by clicking on the 
+             Choose a file... button and enter a description of the file.  Click the Add button and the file is
+             now available for the client to download from the Client Portal.
+             </li>
+             <li>
+             Additionally there is a Files To Provider left tab that when clicked, display all files
+             sent by the client to the provider
+             </li>
+             <li>Any files can be downloaded or deleted by the provider.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- CLIENT FILES SCREEN -->
+       
+       <!-- CLIENT LETTERS SCREEN -->
+       <div id="client-letters-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Client Letters</h2>
+           <div class="help-screen-instructions">
+             <div id="client-letters-screen-video"></div>
+             <h4><strong>Follow the steps below to work with client letters:</strong></h4>
+             <ol>
+             <li>In the Client Chart click on the Client Letters button</li>
+             <li>In the Letters screen all previously issued letters are displayed in the list.</li> 
+             <li>All available letters to send are displayed in the dropdown to the right of the New Letter button.</li> 
+             <li>
+             To compose a new letter select a letter from the dropdown and click on the New Letter button.  
+             The letter template appears below.
+             </li>
+             <li>Make all needed edits to the letter.</li>
+             <li>The newly created letter can be saved for later sending by clicking the Save button, sent by clicking the 
+             Send button or deleted by clicking the Cancel button
+             </li>
+             <li>
+             A letter that has been saved can be clicked on in the list and worked on further.  At any time while it has 
+             not yet been sent it can be sent or cancelled.
+             </li>
+             <li>
+             When the letter is sent it appears in the inbox in the client's Portal and a notification of 
+             communication email is sent to the client.
+             </li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- CLIENT LETTERS SCREEN -->
+       
+       <!-- APPT SCHEDULE SCREEN -->
+       <div id="appt-schedule-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Creating an Appointment</h2>
+           <div class="help-screen-instructions">
+             <div id="appt-schedule-screen-video"></div>
+             <h4><strong>Follow the steps below to schedule an appointment:</strong></h4>
+             <ol>
+             <li>Click on the Schedule button in the Top Navigation Bar</li>
+             <li>Click or click-drag on the calendar to bring up the New Appointment dialog.</li>
+             <li>
+             The new appointment will default to one hour at the point of click unless 
+             there was a click-drag specifying a different duration.
+             </li>
+             <li>The Clinician field will auto-complete as you type.</li>
+             <li>
+             Clicking the Add button will add the appointment and notify the client 
+             of the upcoming appointment in the form of a message.
+             </li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- APPT SCHEDULE SCREEN -->
+       
+       <!-- APPT MODIFY SCREEN -->
+       <div id="appt-modify-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Modifying an Appointment</h2>
+           <div class="help-screen-instructions">
+             <div id="appt-modify-screen-video"></div>
+             <h4><strong>Follow the steps below to modify an appointment:</strong></h4>
+             <ol>
+             <li>Click on the Schedule button in the Top Navigation Bar</li>
+             <li>An appointment can be moved by dragging it to a different calendar spot.</li>
+             <li>Clicking on an appointment brings up the Edit Appointment dialog.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- APPT MODIFY SCREEN -->
+       
+       <!-- MESSAGE FOLDERS SCREEN -->
+       <div id="message-folders-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Message Folders</h2>
+           <div class="help-screen-instructions">
+             <div id="message-folders-screen-video"></div>
+             <h4><strong>Follow the steps below to work with message folders:</strong></h4>
+             <ol>
+             <li>Click on the Messages button in the Top Navigation Bar</li>
+             <li>In the Messages screen the messages in the Inbox are listed by default.</li>
+             <li>Sent contains your sent messages.</li>
+             <li>Draft contains messages you have saved but not yet sent.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- MESSAGE FOLDERS SCREEN -->
+        
+       <!-- SENDING A MESSAGE SCREEN -->
+       <div id="sending-a-message-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Sending a Message</h2>
+           <div class="help-screen-instructions">
+             <div id="sending-a-message-screen-video"></div>
+             <h4><strong>Follow the steps below to send a message:</strong></h4>
+             <ol>
+             <li>To compose a new message click on the Compose New button </li>
+             <li>Recipients are autocompleted as you enter them.</li>
+             <li>
+             If the notify checkbox is checked then the recipients in that field 
+             will receive an email notification that there is a new message.
+             </li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- SENDING A MESSAGE SCREEN -->
+        
+       <!-- AVAILABLE REPORTS SCREEN -->
+       <div id="available-reports-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Available Reports</h2>
+           <div class="help-screen-instructions">
+             <div id="available-reports-screen-video"></div>
+             <h4><strong>Follow the steps below to work with the reporting capabilities:</strong></h4>
+             <ol>
+             <li>Click on the Reports button in the Top Navigation Bar</li>
+             <li>In the Reports screen the available reports are listed.</li>
+             <ul>
+             <li>Activity Log:  View all user activity.</li>
+             <li>Clinician Activity: View all Clinician activity.</li>
+             <li>Client Activity: View all Client activity.</li>
+             <li>Wait List: View all Clients on the Wait List.</li>
+             </ul>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- AVAILABLE REPORTS SCREEN -->
+        
+       <!-- EXPORTING TO CSV SCREEN -->
+       <div id="exporting-to-csv-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Exporting to CSV</h2>
+           <div class="help-screen-instructions">
+             <div id="exporting-to-csv-screen-video"></div>
+             <h4><strong>Follow the steps below to export a report:</strong></h4>
+             <ol>
+             <li>After a report is run click on the Export button</li>
+             <li>If you have an application installed on your system that can view the export, 
+             you will be presented with an open/save system dialog box, otherwise 
+             it will just prompt you to save the file.</li>
+             <li>At this point you can view or save the exported file.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- EXPORTING TO CSV SCREEN -->
+        
+       <!-- BILLING TICKET SCREEN -->
+       <div id="billing-ticket-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Billing Ticket</h2>
+           <div class="help-screen-instructions">
+             <div id="billing-ticket-screen-video"></div>
+             <h4><strong>Follow the steps below to work with billing tickets:</strong></h4>
+             <ol>
+             <li>In the Client Chart click on the Billing Ticket button.</li>
+             <li>Billing ticket entries, most recent first, appear in the list.</li>
+             <li>A new Billing Entry is created by clicking the New Entry button.</li>
+             <li>The Billing Entries can be edited at any time by editing a field in the entry.</li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- BILLING TICKET SCREEN -->
+        
+       <!-- INVOICING SCREEN -->
+       <div id="invoicing-screen" class="help-screen initially-no-display">
+         <div class="help-screen-body">
+           <h2 id="help-title">Invoicing</h2>
+           <div class="help-screen-instructions">
+             <div id="invoicing-screen-video"></div>
+             <h4><strong>Follow the steps below to create a client invoice:</strong></h4>
+             <ol>
+             <li>In the Client Chart click on the Client Invoicing button.</li>
+             <li>All previously created invoices appear in the list.</li>
+             <li>An invoice can be accessed by clicking on one in the list.</li>
+             <li>A previously created invoice that is not yet sent may be edited.</li>
+             <li>A new invoice is created by clicking on the New Invoice button below the list.</li>
+             <li>Invoice items can be added by clicking on the Add Item button</li>
+             <li>Once an invoice is sent, its status changed to 'sent'.<br>
+               Once viewed by the client in the portal it becomes 'viewed'.<br>
+               The status of paid Invoices are set to 'paid'.
+               </li>
+             </ol>
+           </div>
+         </div>
+       </div>
+       <!-- INVOICING SCREEN -->
+        
+      </div>
+     </div>
+     
+
+    <script src="../../js/lib/jquery.min.js"></script>
+    <script src="../../js/deferred.js"></script>
+    <script src="../../js/lib/bootstrap.min.js"></script>
+    <script src="../../js/lib/jquery.tmpl.js"></script>
+    <script src="../../js/util/RenderUtil.js"></script>
+    <script src="../../js/util/util.js"></script>
+       
+    <script>  
+    
+    /************      @JQUERY INIT    *******************/
+    $(document).ready(function() {
+      $('.sidebar-nav a').click( function(e){ 
+    	    handleNavigation($(this), e); 
+    	  });
+    });
+    /***********      @JQUERY INIT    *******************/
+    
+    function handleNavigation($this, e) {
+      e.preventDefault();
+    	  var screencastId = $this.data('screencast-id');
+      RenderUtil.render('../../../template/component/screencast', {screencast_id: screencastId}, function(s) { 
+    	    var screenId = e.currentTarget.id;
+    	    $('.help-screen').hide();
+    	    $('#'+screenId+'-screen').show();
+    	    $('#'+screenId+'-screen-video').html(s);
+      });
+    } 
+    
+    </script> 
+    
+  </body>
+</html>

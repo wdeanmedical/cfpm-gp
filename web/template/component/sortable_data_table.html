@@ -1,0 +1,30 @@
+<table class="table table-hover table-bordered table-condensed simple-data-table">
+  <thead>
+  <tr>
+    {{each(i, column) columns}} 
+      <th>
+        <label>
+        ${column.title}
+        <button class="btn btn-default btn-reorder" type="button"> <i class="icon-chevron-up"></i> </button>
+        <button class="btn btn-default btn-reorder" type="button"> <i class="icon-chevron-down"></i> </button>
+        </label>
+      </th> 
+    {{/each}}
+  </tr>
+  </thead>
+  <tbody>
+  {{each(i, item) items}}
+    <tr id="${tableName}-${item.id}" class="clickable-table-row" name="${item.id}" data-row-key="${item.id}" data-table-name="${tableName}">
+    {{each(j, column) columns}} 
+      <td id="${tableName}-${item.id}-${j}"> {{html app_getColumnValue(column, item) }} </td>
+    {{/each}}
+    </tr>
+    <tr style="display:none" id="${tableName}-${item.id}-content" class="row-content"><td colspan="${columns.length}"></td></tr>
+  {{/each}}
+  <tr class="simple-data-table-footer">
+    <td class="simple-data-table-footer" colspan='${columns.length}'>
+      <p><span>${title} ${items.length == 0 ? '0' : '1'}-<wbr>${items.length}</span></p>
+    </td>
+  </tr>
+  </tbody>
+</table>

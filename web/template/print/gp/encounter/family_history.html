@@ -1,0 +1,123 @@
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      SOCIAL & FAMILY HISTORY
+    </div>
+  </div>
+  <table class="form-table">
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label"># RESIDENTS IN DOMICILE</span>
+          <div class="basic-info-input">
+            ${form.numResidents}
+          </div>
+        </div>
+      </td>
+      <td colspan="2">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TYPE OF JOB</span>
+          <div class="basic-info-input">
+            ${form.jobType}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">MOTHER</span> <span class="item-label" style="left:160px">REASON</span>
+          <div class="form-radio">
+            <input name="${formPrefix}-mother-alive" type="radio" class="input-checkbox"  value="true"><label class="checkbox-label">Alive</label>
+          </div>
+          <div class="form-radio">
+            <input name="${formPrefix}-mother-alive" type="radio" class="input-checkbox"  value="false"><label class="checkbox-label">Dead</label>
+          </div>
+          <div class="form-radio">
+            ${form.motherDeathReason}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">FATHER</span> <span class="item-label" style="left:160px">REASON</span>
+          <div class="form-radio">
+           <input name="${formPrefix}-father-alive" type="radio" class="input-checkbox"  value="true"><label class="checkbox-label">Alive</label>
+          </div>
+          <div class="form-radio">
+            <input name="${formPrefix}-father-alive" type="radio" class="input-checkbox"  value="false"><label class="checkbox-label">Dead</label>
+          </div>
+          <div class="form-radio">
+            ${form.fatherDeathReason}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PARTNER</span> <span class="item-label" style="left:160px">REASON</span>
+          <div class="form-radio">
+            <input name="${formPrefix}-partner-alive" type="radio" class="input-checkbox"  value="true"><label class="checkbox-label">Alive</label>
+          </div>
+          <div class="form-radio">
+            <input name="${formPrefix}-partner-alive" type="radio" class="input-checkbox"  value="false"><label class="checkbox-label">Dead</label>
+          </div>
+          <div class="form-radio">
+            ${form.partnerDeathReason}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TOTAL SIBLINGS</span>
+          <div class="basic-info-input">
+            ${form.numSiblings}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label"># BROTHERS</span>
+          <div class="basic-info-input">
+            ${form.numBrothers}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label"># SISTERS</span>
+          <div class="basic-info-input">
+            ${form.numSisters}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TOTAL CHILDREN</span>
+          <div class="basic-info-input">
+            ${form.numChildren}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label"># SONS</span>
+          <div class="basic-info-input">
+            ${form.numSons}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label"># DAUGHTERS</span>
+          <div class="basic-info-input">
+            ${form.numDaughters}
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

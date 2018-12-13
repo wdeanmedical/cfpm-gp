@@ -1,0 +1,1073 @@
+<div class="panel">
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      DEMOGRAPHICS
+    </div>
+  </div>
+  <table class="form-table">
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TODAY'S DATE</span>
+          <div class="basic-info-input">
+            ${currentDate ? currentDate : '___ /___ /___'}
+          </div>
+          <div class="item-date-input-legend" style="visibility:${currentDate ? 'hidden' : 'visible'}">
+            <span class="date-legend-month">month</span> <span class="date-legend-day">day</span> <span class="date-legend-year">year</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">MRN</span>
+          <div class="basic-info-input">
+            ${form.patient.mrn}
+          </div>
+        </div>
+      </td>
+       <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SSN</span>
+          <div class="basic-info-input">
+            ${form.patient.govtId}
+          </div>
+        </div>
+      </td>
+       <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DOB</span>
+          <div class="basic-info-input">
+            ${form.patient.dob ? dateFormat(form.patient.dob, 'mm/dd/yyyy') : '___ /___ /___'}
+          </div>
+          <div class="item-date-input-legend" style="visibility:${form.patient.dob ? 'hidden' : 'visible'}">
+            <span class="date-legend-month">month</span> <span class="date-legend-day">day</span> <span class="date-legend-year">year</span>
+          </div>
+        </div>
+      </td>
+      </tr>
+      <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">FIRST NAME</span>
+           <div class="basic-info-input">
+            ${form.patient.firstName}
+          </div> 
+        </div>
+        </td>
+        <td>
+         <div class="item-wrapper-basic-info">
+          <span class="item-label">MIDDLE NAME</span>
+           <div class="basic-info-input">
+            ${form.patient.middleName}
+          </div> 
+        </div>
+        </td>
+        <td>
+         <div class="item-wrapper-basic-info">
+          <span class="item-label">LAST NAME</span>
+           <div class="basic-info-input">
+            ${form.patient.lastName}
+          </div> 
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">GENDER</span>
+          <div class="basic-info-input">
+            ${form.patient.gender? form.patient.gender.code: ''}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">MARITAL STATUS</span>
+          <div class="basic-info-input">
+            ${form.patient.maritalStatus ? form.patient.maritalStatus.name : ''}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">RACE</span>
+          <div class="basic-info-input">
+            ${form.patient.race ? form.patient.race.name : ''}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">ETHNICITY</span>
+          <div class="basic-info-input">
+            ${form.patient.ethnicity ? form.patient.ethnicity.name : ''}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">STREET ADDRESS</span>
+          <div class="basic-info-input">
+            ${form.patient.streetAddress}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">CITY</span>
+          <div class="basic-info-input">
+            ${form.patient.city}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">STATE</span>
+          <div class="basic-info-input">
+            ${form.patient.usState ? form.patient.usState.code : ''}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">ZIP</span>
+          <div class="basic-info-input">
+            ${form.patient.postalCode}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PRIMARY PHONE</span>
+          <div class="basic-info-input">
+            ${form.patient.primaryPhone}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SECONDARY PHONE</span>
+          <div class="basic-info-input">
+            ${form.patient.secondaryPhone}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">EMAIL</span>
+          <div class="basic-info-input">
+            ${form.patient.email}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">OCCUPATION</span>
+          <div class="basic-info-input">
+            ${form.patient.occupation}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">EMPLOYMENT STATUS</span>
+          <div class="basic-info-input">
+            ${form.patient.employmentStatus}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">EMPLOYER</span>
+          <div class="basic-info-input">
+            ${form.patient.employer}
+          </div>
+        </div>
+      </td>
+      </tr>
+      <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">EDUCATION STATUS</span>
+          <div class="basic-info-input">
+            ${form.patient.educationStatus}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SCHOOL NAME</span>
+          <div class="basic-info-input">
+            ${form.patient.schoolName}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">NOTES</span>
+          <div class="basic-info-input">
+            ${app_currentEncounter.notes}
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<DIV style="page-break-after:always"></DIV>
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      SOAP NOTE
+    </div>
+  </div>
+  <table class="form-table">
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SUBJECTIVE</span>
+          <div class="basic-info-input-soap">
+            ${form.soapNote.subjective}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">OBJECTIVE</span>
+          <div class="basic-info-input-soap">
+            ${form.soapNote.objective}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">ASSESSMENT</span>
+          <div class="basic-info-input-soap">
+            ${form.soapNote.assessment}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PLAN</span>
+          <div class="basic-info-input-soap">
+            ${form.soapNote.plan}
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      VITALS
+    </div>
+  </div>
+  <table class="form-table">
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">HEIGHT</span>
+          <div class="basic-info-input">
+            ${form.vitalSign.height}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">WEIGHT</span>
+          <div class="basic-info-input">
+            ${form.vitalSign.weight}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SYS</span>
+          <div class="basic-info-input">
+            ${form.vitalSign.systolic}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DIA</span>
+          <div class="basic-info-input">
+            ${form.vitalSign.diastolic}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">HR</span>
+          <div class="basic-info-input">
+            ${form.vitalSign.pulse}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">RR</span>
+          <div class="basic-info-input">
+            ${form.vitalSign.respiration}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TEMP (C)</span>
+          <div class="basic-info-input">
+            ${form.vitalSign.temperature}
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      CHIEF COMPLAINT
+    </div>
+  </div>
+  <table class="form-table">
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DESCRIPTION</span>
+          <div class="basic-info-input">
+            ${form.chiefComplaint.description}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">OCCURS WHEN</span>
+          <div style="margin-top:20px">
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="n-a"><label class="checkbox-label">N/A</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="constant"><label class="checkbox-label">Constant</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="walking"><label class="checkbox-label">Walking</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="sitting"><label class="checkbox-label">Sitting</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="running"><label class="checkbox-label">Running</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="standing_up"><label class="checkbox-label">Standing Up</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="laying_down"><label class="checkbox-label">Laying Down</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="when_touched"><label class="checkbox-label">When Touched</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="before_eating"><label class="checkbox-label">Before Eating</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="after_eating"><label class="checkbox-label">After Eating</label>
+          </div>
+        </div>
+        <div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="bending"><label class="checkbox-label">Bending</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="holding-gripping"><label class="checkbox-label">Holding/Gripping</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="chiefComplaint-occurs-when" type="checkbox" value="other"><label class="checkbox-label">Other-specify</label>
+          </div>
+          <div class="form-checkbox">
+            ${form.chiefComplaint.occursOther ? form.chiefComplaint.occursOther : '___________________'}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SPECIFIC LOCATION</span>
+          <div class="basic-info-input">
+            ${form.chiefComplaint.specificLocation}
+          </div>
+        </div>
+      </td>
+      <td colspan="2">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PAIN SCALE</span>
+          <div class="basic-info-input">
+            ${form.chiefComplaint.painScale}
+          </div>
+        </div>
+      </td>
+      <td colspan="2">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PAIN TYPE</span>
+          <div class="basic-info-input">
+            ${form.chiefComplaint.painType}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info" style="height:100px">
+          <span class="item-label">HOW LONG / SINCE WHEN</span><br>
+          <span class="item-label">HOURS</span> <span class="item-label" style="left:100px">DAYS</span> <span class="item-label" style="left:200px">WEEKS</span> <span class="item-label" style="left:300px">MONTHS</span> <span class="item-label" style="left:400px">YEARS</span> <span class="item-label" style="left:500px">OTHER</span><br>
+          <span class="basic-info-input" style="left:30px">${form.chiefComplaint.hoursSince}</span> <span class="basic-info-input" style="left:160px">${form.chiefComplaint.daysSince}</span> <span class="basic-info-input" style="left:300px">${form.chiefComplaint.weeksSince}</span> <span class="basic-info-input" style="left:450px">${form.chiefComplaint.monthsSince}</span> <span class="basic-info-input" style="left:600px">${form.chiefComplaint.yearsSince}</span> <span class="basic-info-input" style="left:750px">${form.chiefComplaint.howLongOther}</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info" style="height:100px">
+          <span class="item-label">FREQUENCY</span><br>
+          <span class="item-label">X HOUR</span> <span class="item-label" style="left:100px">X DAY</span> <span class="item-label" style="left:200px">X WEEK</span> <span class="item-label" style="left:300px">X MONTH</span> <span class="item-label" style="left:400px">DURATION</span><br>
+          <span class="basic-info-input" style="left:30px">${form.chiefComplaint.painXHour}</span> <span class="basic-info-input" style="left:160px">${form.chiefComplaint.painXDay}</span> <span class="basic-info-input" style="left:300px">${form.chiefComplaint.painXWeek}</span> <span class="basic-info-input" style="left:450px">${form.chiefComplaint.painXMonth}</span> <span class="basic-info-input" style="left:600px">${form.chiefComplaint.painDuration}</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DENIES</span>
+          <div style="margin-top:20px">
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="n"><label class="checkbox-label">N</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="v"><label class="checkbox-label">V</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="d"><label class="checkbox-label">D</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="ha"><label class="checkbox-label">HA</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="vision_px"><label class="checkbox-label">Vision Px</label>
+            </div>
+            <div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="dizziness"><label class="checkbox-label">Dizziness</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="weakness"><label class="checkbox-label">Weakness</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="parasthesia"><label class="checkbox-label">Parasthesia</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="syncope"><label class="checkbox-label">Syncope</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="pain"><label class="checkbox-label">Pain</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="anorexia"><label class="checkbox-label">Anorexia</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="fatigue"><label class="checkbox-label">Fatigue</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="chiefComplaint-denies" type="checkbox" value="other"><label class="checkbox-label">Other</label>
+            </div>
+            <div class="form-checkbox">
+              ${form.chiefComplaint.deniesOther ? form.chiefComplaint.deniesOther : '___________________'}
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      OBGYN
+    </div>
+  </div>
+  <table class="form-table">
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">G</span> <span class="item-label" style="left:80px">P</span> <span class="item-label" style="left:160px">T</span> <span class="item-label" style="left:240px">A</span> <span class="item-label" style="left:320px">L</span><br>
+          <span class="basic-info-input">${form.obgyn.g}</span> <span class="basic-info-input" style="left:80px">${form.obgyn.p}</span> <span class="basic-info-input" style="left:160px">${form.obgyn.t}</span> <span class="basic-info-input" style="left:240px">${form.obgyn.a}</span> <span class="basic-info-input" style="left:320px">${form.obgyn.l}</span>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">WHEN WAS THE LAST PERIOD?</span>
+          <div class="basic-info-input">
+            ${form.obgyn.lastPeriod}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">AGE AT FIRST PERIOD</span>
+          <div class="basic-info-input">
+            ${form.obgyn.ageFirstPeriod}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PREGNANT</span>
+          <div style="margin-top:20px">
+            <div class="form-radio">
+              <input class="input-checkbox" name="obgyn-preg-status" type="radio" value="yes"><label class="checkbox-label">Yes</label>
+            </div>
+            <div class="form-radio">
+              <input class="input-checkbox" name="obgyn-preg-status" type="radio" value="no"><label class="checkbox-label">No</label>
+            </div>
+            <div class="form-radio">
+              <input class="input-checkbox" name="obgyn-preg-status" type="radio" value="dk"><label class="checkbox-label">DK</label>
+            </div>
+            <div class="form-radio">
+              <input class="input-checkbox" name="obgyn-preg-status" type="radio" value="post_partum"><label class="checkbox-label">Post Partum</label>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">BREASTFEEDING</span>
+          <div class="basic-info-input">
+            ${form.obgyn.breastfeeding}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">MONTHS</span>
+          <div class="basic-info-input">
+            ${form.obgyn.breastfeedingMonths}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PAP SMEAR EVER</span>
+          <div class="basic-info-input">
+            ${form.obgyn.papSmearStatus}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">BIRTH CONTROL</span>
+          <div class="basic-info-input">
+            ${form.obgyn.birthControlStatus}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TYPE</span>
+          <div class="basic-info-input">
+            ${form.obgyn.birthControlType}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">OTHER PAST GYNECOLOGICAL HISTORY</span>
+          <div style="margin-top:20px">
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="obgyn-history" type="checkbox" value="venereal_warts"><label class="checkbox-label">Venereal Warts</label>
+            </div>
+            <div class="form-checkbox">
+             <input class="input-checkbox-group" name="obgyn-history" type="checkbox" value="herpes_genital"><label class="checkbox-label">Herpes Genital</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="obgyn-history" type="checkbox" value="syphilis"><label class="checkbox-label">Syphilis</label>
+            </div>
+          </div>
+          <div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="obgyn-history" type="checkbox" value="pid"><label class="checkbox-label">PID</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="obgyn-history" type="checkbox" value="endometriosis"><label class="checkbox-label">Endometriosis</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="obgyn-history" type="checkbox" value="chlamyrr"><label class="checkbox-label">Chlamyrr</label>
+            </div>
+          </div>
+          <div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="obgyn-history" type="checkbox" value="gonorrhea"><label class="checkbox-label">Gonorrhea</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="obgyn-history" type="checkbox" value="other"><label class="checkbox-label">Other-specify</label>
+            </div>
+            <div class="form-checkbox">
+              ${form.obgyn.historyOther ? form.obgyn.historyOther : '___________________'}
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<br/>
+<br/>
+<br/>
+
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      MEDICAL HISTORY
+    </div>
+  </div>
+  <table class="form-table">
+   {{each(i, item) form.medicalHistory.medicationList}}  
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">MEDICATION</span>
+          <div class="basic-info-input">
+            ${medication}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DOSE</span>
+          <div class="basic-info-input">
+            ${dose}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">FREQUENCY</span>
+          <div class="basic-info-input">
+            ${frequency}
+          </div>
+        </div>
+      </td>
+    </tr>
+    {{/each}}
+    <tr>
+      <td colspan="3">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PAST SURGERIES AND MEDICAL CONDITIONS</span>
+          <div class="basic-info-input">
+            ${form.medicalHistory.pastSM}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">FAMILY HISTORY</span>
+          <div style="margin-top:20px">
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="medicalHistory-fam-hist" type="checkbox" value="cancer"><label class="checkbox-label">Cancer</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="medicalHistory-fam-hist" type="checkbox" value="rrbetes"><label class="checkbox-label">Diabetes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="medicalHistory-fam-hist" type="checkbox" value="heart_problems"><label class="checkbox-label">Heart problems</label>
+            </div>
+          </div>
+          <div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="medicalHistory-fam-hist" type="checkbox" value="hepatitis"><label class="checkbox-label">Hepatitis</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="medicalHistory-fam-hist" type="checkbox" value="high_bp"><label class="checkbox-label">High BP</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="medicalHistory-fam-hist" type="checkbox" value="hiv"><label class="checkbox-label">HIV</label>
+            </div>
+          </div>
+          <div>
+            <div class="form-group">
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="medicalHistory-fam-hist" type="checkbox" value="tb"><label class="checkbox-label">Tuberculosis</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="medicalHistory-fam-hist" type="checkbox" value="other"><label class="checkbox-label">Other-specify</label>
+              </div>
+              <div class="form-checkbox">
+                ${form.medicalHistory.famHistOther ? form.medicalHistory.famHistOther : '___________________'}
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">FAMILY HISTORY NOTES</span>
+          <div class="basic-info-input">
+            ${form.medicalHistory.famHistNotes}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="item-label">
+          ALLERGIES
+        </div><br>
+        <table width="100%">
+          <tr>
+            <th><span class="item-label">FOOD</span></th>
+            <th><span class="item-label">DRUG</span></th>
+            <th><span class="item-label">ENVIRO</span></th>
+          </tr>
+          <tr>
+            <td align="center">${form.medicalHistory.allergFood}</td>
+            <td align="center">${form.medicalHistory.allergDrug}</td>
+            <td align="center">${form.medicalHistory.allergEnv}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">COMPLETED FD VACCINATION RECORD?</span>
+          <div style="margin-top:20px">
+            <div class="form-radio">
+             <input name="${formPrefix}-vacc" type="radio" class="input-checkbox" value="true"><label class="checkbox-label">Yes</label>
+            </div>
+            <div class="form-radio">
+              <input name="${formPrefix}-vacc" type="radio" class="input-checkbox" value="false"><label class="checkbox-label">No</label>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td colspan="2">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">NOTES</span>
+          <div class="basic-info-input">
+            ${form.medicalHistory.vaccNotes}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SMOKING</span><br>
+          <span class="item-label">PACKS/DAY</span> <span class="item-label">YEARS SMOKED</span> <span class="item-label">YEARS QUIT</span><br>
+          <span class="basic-info-input" style="left:20px">${form.medicalHistory.smokePksDay}</span> <span class="basic-info-input" style="left:100px">${form.medicalHistory.yearsSmoked}</span> <span class="basic-info-input" style="left:200px">${form.medicalHistory.smokeYearsQuit}</span>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">ETOH UNITS / WEEK</span>
+          <div class="basic-info-input">
+            ${form.medicalHistory.etohUnitsWeek}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SUBSTANCES</span>
+          <div style="margin-top:20px">
+            <div class="form-checkbox">
+              <input name="medicalHistory-subst" type="checkbox" class="input-checkbox-group" value="smoke"><label class="checkbox-label">Smoke</label>
+            </div>
+            <div class="form-checkbox">
+              <input name="medicalHistory-subst" type="checkbox" class="input-checkbox-group" value="drink"><label class="checkbox-label">Drink</label>
+            </div>
+            <div class="form-checkbox">
+             <input name="medicalHistory-subst" type="checkbox" class="input-checkbox-group" value="drugs"><label class="checkbox-label">Drugs</label>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DRUGS CURRENTLY USED</span>
+          <div class="basic-info-input">
+            ${form.medicalHistory.currentDrugs}
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      SOCIAL & FAMILY HISTORY
+    </div>
+  </div>
+  <table class="form-table">
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label"># RESIDENTS IN DOMICILE</span>
+          <div class="basic-info-input">
+            ${form.familyHistory.numResidents}
+          </div>
+        </div>
+      </td>
+      <td colspan="2">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TYPE OF JOB</span>
+          <div class="basic-info-input">
+            ${form.familyHistory.jobType}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">MOTHER</span> <span class="item-label" style="left:160px">REASON</span>
+          <div class="form-radio">
+            <input name="familyHistory-mother-alive" type="radio" class="input-checkbox"  value="true"><label class="checkbox-label">Alive</label>
+          </div>
+          <div class="form-radio">
+            <input name="familyHistory-mother-alive" type="radio" class="input-checkbox"  value="false"><label class="checkbox-label">Dead</label>
+          </div>
+          <div class="form-radio">
+            ${form.familyHistory.motherDeathReason}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">FATHER</span> <span class="item-label" style="left:160px">REASON</span>
+          <div class="form-radio">
+           <input name="familyHistory-father-alive" type="radio" class="input-checkbox"  value="true"><label class="checkbox-label">Alive</label>
+          </div>
+          <div class="form-radio">
+            <input name="familyHistory-father-alive" type="radio" class="input-checkbox"  value="false"><label class="checkbox-label">Dead</label>
+          </div>
+          <div class="form-radio">
+            ${form.familyHistory.fatherDeathReason}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PARTNER</span> <span class="item-label" style="left:160px">REASON</span>
+          <div class="form-radio">
+            <input name="familyHistory-partner-alive" type="radio" class="input-checkbox"  value="true"><label class="checkbox-label">Alive</label>
+          </div>
+          <div class="form-radio">
+            <input name="familyHistory-partner-alive" type="radio" class="input-checkbox"  value="false"><label class="checkbox-label">Dead</label>
+          </div>
+          <div class="form-radio">
+            ${form.familyHistory.partnerDeathReason}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TOTAL SIBLINGS</span>
+          <div class="basic-info-input">
+            ${form.familyHistory.numSiblings}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label"># BROTHERS</span>
+          <div class="basic-info-input">
+            ${form.familyHistory.numBrothers}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label"># SISTERS</span>
+          <div class="basic-info-input">
+            ${form.familyHistory.numSisters}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">TOTAL CHILDREN</span>
+          <div class="basic-info-input">
+            ${form.familyHistory.numChildren}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label"># SONS</span>
+          <div class="basic-info-input">
+            ${form.familyHistory.numSons}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label"># DAUGHTERS</span>
+          <div class="basic-info-input">
+            ${form.familyHistory.numDaughters}
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<DIV style="page-break-after:always"></DIV>
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      EXAM
+    </div>
+  </div>
+  <div style="margin-bottom:100px;margin-top:100px"><img src="assets/images/encounter/human-body-outline1.png" width="350"> <img src="assets/images/encounter/lungs.png" width="350"> <img src="assets/images/encounter/exam_shape.png" width="350"></div>
+  <table class="form-table" width="100%">
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">CVS</span><br>
+          <span class="item-label">HS I+II</span>
+          <div class="basic-info-input">
+            ${form.exam.hs}
+          </div><span class="item-label">RHYTHM</span>
+          <div class="form-radio">
+            <input class="input-checkbox" name="exam-heart-rhythm" type="radio" value="regular"><label class="checkbox-label">Regular</label>
+          </div>
+          <div class="form-radio">
+            <input class="input-checkbox" name="exam-heart-rhythm" type="radio" value="irregular">Irregular
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-label">
+          LABS
+        </div><br>
+        <table>
+          <tr>
+            <th>Hb</th>
+            <th>GLUCOSE</th>
+            <th>URINE DIP(+)</th>
+          </tr>
+          <tr>
+            <td align="center">${form.exam.lab.hb}</td>
+            <td align="center">&gt;${form.exam.lab.glucose}</td>
+            <td align="center">&gt;${form.exam.lab.urineDip}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table><br>
+  <table class="form-table" width="100%">
+    <tr>
+      <td>
+        <div class="item-label">
+          DIAGNOSIS
+        </div>
+        <div class="basic-info-input">
+          ${form.exam.diagnosis}
+        </div>
+      </td>
+    </tr>
+  {{if form.exam.dxCodes.length > 0}} 
+    <tr>
+      <td>
+      <div class="item-wrapper-basic-info">
+        <table class="form-table">
+        <tr>
+          <th>DX CODE</th>
+          <th>MODIFIER</th>
+        </tr>
+        {{each(i, item) form.exam.dxCodes}}  
+          <tr>
+            <td align="center">${ item.icd9 ? item.icd9.code : ''}</td>
+            <td>${item.icd9 ? item.icd9.codeText : '' }</td>
+          </tr>
+        {{/each}}
+        </table>
+      </div>
+      </td>
+    </tr>
+  {{/if}}
+  </table>{{if form.exam.txCodes.length > 0}} {{/if}}
+  <table class="form-table" width="100%">
+    <tr>
+      <td>
+        <div class="item-wrapper-text-area">
+          <span class="item-label">TREATMENT PLAN</span>
+          <p class="paragraph-input">${form.exam.treatmentPlan}</p>
+        </div>
+      </td>
+    </tr>
+  {{if form.exam.txCodes.length > 0}}
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <table class="form-table">
+            <tr>
+              <th>TX CODE</th>
+              <th>MODIFIER</th>
+            </tr>
+            {{each(i, item) form.exam.txCodes}}  
+            <tr>
+              <td align="center">${item.cpt ? item.cpt.code : ''}</td>
+              <td>${item.cptModifier ? cptModifier.description : ''}</td>
+            </tr>
+            {{/each}}   
+          </table>
+        </div>
+      </td>
+    </tr>
+    {{/if}}   
+  </table>
+</div>
+</div>

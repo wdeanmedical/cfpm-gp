@@ -1,0 +1,71 @@
+<div class="panel-body">
+  <form data-form-key="${formKey}" data-instance-id="${id}" id="${formName}" name="${formName}" role="form">
+    <div class="row">
+      <div class="${formPrefix}-exam-image-and-overlay">
+        <div class="${formPrefix}-exam-image-wrapper" id="${formPrefix}-exam-image-wrapper">
+          <div class="col-md-4"><img alt="Responsive image" class="img-responsive center-block" src="assets/images/encounter/human-body-outline1.png"></div>
+          <div class="col-md-4"><img alt="Responsive image" class="img-responsive center-block" src="assets/images/encounter/lungs.png"></div>
+          <div class="col-md-4"><img alt="Responsive image" class="img-responsive center-block" src="assets/images/encounter/exam_shape.png"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label class="sub-title">CVS</label>
+        </div>
+        <div class="form-group">
+          <label class="control-label">HS I + II</label> <input class="form-control input-sm input-field" id="${formPrefix}-hs" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <label class="control-label">Rhythm</label>
+        <div class="form-group">
+          <label class="radio-inline"><input name="${formPrefix}-heart-rhythm" class="input-checkbox" type="radio" value="regular">Regular</label> <label class="radio-inline"><input name="${formPrefix}-heart-rhythm" class="input-checkbox" type="radio" value="irregular">Irregular</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-default" id="vital-sign-screen">
+          <div id="lab-placeholder"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="control-label">Diagnosis</label> 
+          <textarea class="form-control input-sm input-field" id="${formPrefix}-diagnosis" rows="5"></textarea>
+        </div>
+      </div>
+      <div id="dx-codes" class="col-md-6">
+      <div id="dx-codes-wrapper">
+        <div id="dx-code-list" class="col-md-12"></div>
+         <div class="row">
+           <div class="col-md-offset-10">
+            <div id="new-resource-btn-placeholder"></div>
+           </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="control-label">Treatment Plan</label> 
+          <textarea class="form-control input-sm input-field" id="${formPrefix}-treatment-plan" rows="10"></textarea>
+        </div>
+      </div>
+      <div id="tx-codes" class="col-md-6">
+         <div id="tx-code-list" class="col-md-12"></div>
+         <div class="row">
+           <div class="col-md-offset-10">
+          <div id="new-resource-btn-placeholder"></div>
+          </div>
+      </div>
+    </div>
+  </form>
+</div>

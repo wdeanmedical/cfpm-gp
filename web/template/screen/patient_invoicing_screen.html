@@ -1,0 +1,97 @@
+<div id="invoicing-screen">
+  <div class="container">
+    <div class="panel-top">${app_practiceClientProperties['app.patient_label']} Invoicing</div>
+    <div id="patient-invoices-list" class="table-responsive"></div>
+   <div class="col-sm-1 pull-right margin-20px">
+     <button id="app-new-invoice-btn" type="button" class="btn btn-success">New Invoice</button>
+   </div>
+   <br>
+   <br>
+   <div id="patient-invoice-form" class="initially-no-display margin-20px">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-primary">
+          <div id="patient-invoice-title" class="panel-heading">Invoice</div>
+          <div class="panel-body margin-20px">
+            <form role="form" id="invoice-form" data-instance-id="" data-form-key="">
+              <div class="row">
+                <div class="col-sm-2 col-sm-offset-10">
+                  <input type="text" id="invoice-issue-date" class="input-sm input-field input-text-100px initially-no-display" 
+                    data-property="entity-form-Invoice.issueDate" data-field-type="date"  placeholder="mm/dd/yyyy">
+                  <span id="invoice-issue-date-saved" class="initially-no-display"></span><br>
+                  invoice# <span id="invoice-invoice-number"></span>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm-6">
+                  <p>${app_practiceClientProperties['app.business_name']}<br>
+                  {{html app_practiceClientProperties['app.business_address'] }}<br>
+                  ${app_practiceClientProperties['app.director']}, Director</p>
+                </div>
+                <div class="col-sm-3 col-sm-offset-3">
+                  <p><span id="invoice-patient-name"></span><br>
+                  <span id="invoice-patient-street-address"></span><br>
+                  <span id="invoice-patient-city"></span>, <span id="invoice-patient-us-state"></span>   
+                  <span id="invoice-patient-postal-code"></span>
+                  <br>
+                 <span id="invoice-patient-primary-phone"></span></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <h4><span id="invoice-title"></span></h4>
+                  <hr class="hr-gold">
+                  <p><span id="invoice-description"></span></p>
+                </div>
+              </div>
+              
+             <div class="row">
+               <div class="col-sm-12">
+                  <div id="patient-invoice-item-list" class="table-responsive"></div>
+               </div>
+             </div>
+             
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-condensed">
+                      <tbody>
+                        <tr>
+                          <td width="90%" align="right">Sub Total</td>
+                          <td align="right" id="invoice-sub-total"></td>
+                        </tr> 
+                        <tr>
+                          <td width="90%" align="right">Sales Tax</td>
+                          <td align="right" id="invoice-sales-tax">$0.00</td>
+                        </tr>
+                        <tr>
+                          <td width="90%" align="right">Total</td>
+                          <td align="right" id="invoice-total"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 text-right">
+                  <p>We accept all Major Credit Cards, Cash, and PayPal</p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="panel-footer text-right">
+          
+           <button id="invoice-save-btn" type="button" class="btn btn-default invoice-button initially-no-display">Save</button>
+           <button id="invoice-cancel-btn" type="button" class="btn btn-default invoice-button initially-no-display">Cancel</button>
+           <button id="invoice-print-btn" type="button" class="btn btn-primary invoice-button initially-no-display">Print</button>
+           <button id="invoice-send-btn" type="button" class="btn btn-success invoice-button initially-no-display">Send</button>
+           <button id="invoice-delete-btn" type="button" class="btn btn-danger invoice-button initially-no-display">Delete</button>
+           <button id="invoice-edit-btn" type="button" class="btn btn-default invoice-button initially-no-display">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

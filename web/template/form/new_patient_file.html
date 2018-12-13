@@ -1,0 +1,57 @@
+<div class="modal fade" id="modal-new-patient-file" tabindex="-1" role="dialog" aria-labelledby="modal-new-file" aria-hidden="true">
+  <div id="size6" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">New ${app_practiceClientProperties['app.patient_label']} File</h4>
+      </div>
+      <div class="modal-body">
+        <div class="col-sm-12">
+         <form role="form">
+          <div class="form-group">
+            <div class="col-sm-2">
+              <div class="btn-group-vertical-sm">
+                <span class="btn btn-success fileinput-button">
+                  <div id="new-file-upload"></div>
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="progress initially-no-display" id="new-file-upload-progress">
+                <div class="progress-bar progress-bar-success"></div>
+              </div>
+            </div>
+            <div style="clear:both"></div>
+          </div>
+            <div class="form-group">
+              <label for="description" class="control-label col-sm-2 pull-left">
+              Enter a description</label>
+              <div class="col-sm-6">
+                <input id="description" type="text" class="form-control" placeholder="Description" name="description">
+                 <div class="help-block">A description and file is required to submit form.</div>
+              </div>
+              <div style="clear:both"></div>
+            </div>
+
+            <div class="form-group initially-no-display" id="uploaded-list">
+              <label  class="control-label col-sm-2 pull-left">
+              File: </label>
+              <div class="col-sm-6">
+                <span id="file-name"></span>
+                <input id="path" type="hidden">
+              </div>
+            </div>
+            <input id="type" type="hidden">
+            <input id="name" type="hidden">
+
+          </form>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-success pull-left"  id="btn-add" disabled>Add</a>
+        <a href="#" class="btn btn-default pull-left" data-dismiss="modal">Cancel</a>
+      </div>
+    </div>
+  </div>
+</div>

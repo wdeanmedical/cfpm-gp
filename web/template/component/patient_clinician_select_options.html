@@ -1,0 +1,6 @@
+<option value=''>choose</option>
+{{each options}}
+  <option value='${clinician.id}'>
+  ${util_buildFullName(clinician.firstName, clinician.middleName, clinician.lastName)}
+  </option>
+{{/each}}

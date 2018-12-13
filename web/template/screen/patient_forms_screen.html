@@ -1,0 +1,21 @@
+<div id="patient-forms-screen">
+  <div class="container">
+    <div class="panel-top">${app_practiceClientProperties['app.patient_label']} Forms</div>
+    <div id="app-patient-forms-list" class="table-responsive"></div>
+    <div class="row">
+      <div class="col-sm-2 form-group">
+        <a id="app-new-patient-form-btn" class="btn btn-success btn-block">Assign Form</a>
+     </div>
+      <div class="col-sm-3 form-group">
+        <select id="app-practice-form" class="form-control"></select>
+        <div class="help-block with-errors"></div>
+     </div>
+   </div>
+   <br>
+   <br>
+   <div id="patient-form-screen" class="initially-no-display"></div>
+   <div id="patient-form-buttons" class="col-sm-1 pull-right">
+     <button id="patient-form-print-btn" type="button" class="btn btn-success initially-no-display">Print</button>
+   </div>
+ </div>
+</div>

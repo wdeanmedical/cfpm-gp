@@ -1,0 +1,728 @@
+<div id="portal-module">
+
+    <!-- HEADER --> 
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://www.wdeanmedical.com" target="_blank">
+            <img src="assets/images/CF-Header.png" class="img-responsive">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><p class="version-string"></p></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><p class='wdm-notification' class="navbar-text"><span class='wdm-notification-text'></span></p></li>
+            <li><a id="app-logout-submit" href="#" ><i class="fa fa-sign-out"></i> Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER --> 
+    
+    <!-- TOP NAV PANEL -->
+    <div class="container-fluid initially-no-display" id="top-nav-panel">
+      <div class="row">
+        <div class="col-xs-4 col-sm-2 col-md-1">
+          <a id="dashboard-screen-btn" class="btn btn-default btn-sm btn-block btn-nav text-center btn-black">
+          <p><i class="fa fa-dashboard fa-3x fa-space"></i></p><p>Dashboard</p></a>
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-1">
+          <a id="app-intake-forms-panel-btn" class="btn portal-blue btn-sm btn-block btn-nav text-center">
+          <p><i class="fa fa-folder-open fa-3x fa-space"></i></p><p>Intake <span class="hidden-xs">Documents</span></p></a>
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-1">
+          <a id="app-appointments-panel-btn" class="btn portal-blue btn-sm btn-block btn-nav text-center">
+          <p><i class="fa fa-calendar fa-3x fa-space"></i></p><p>Appointments</p></a>
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-1">
+          <a id="app-forms-panel-btn" class="btn portal-blue btn-sm btn-block btn-nav text-center">
+          <p><i class="fa fa-check-square-o fa-3x fa-space"></i></p><p>Forms</p></a>
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-1">
+          <a id="app-files-panel-btn" class="btn portal-blue btn-sm btn-block btn-nav text-center">
+          <p><i class="fa fa-briefcase fa-3x fa-space"></i></p><p>Files</p></a>
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-1">
+          <a id="app-messages-panel-btn" class="btn portal-blue btn-sm btn-block btn-nav text-center">
+          <p><i class="fa fa-comments fa-3x fa-space"></i></p><p>Messages</p></a>
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-1">
+          <a id="app-send-message-panel-btn" class="btn portal-blue btn-sm btn-block btn-nav text-center">
+          <p><i class="fa fa-user-md fa-3x fa-space"></i></p><p>Send Message</p></a>
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-1">
+          <a id="app-letters-panel-btn" class="btn portal-blue btn-sm btn-block btn-nav text-center">
+          <p><i class="fa fa-envelope fa-3x fa-space"></i></p><p>Letters</p></a>
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-1">
+          <a id="app-payments-panel-btn" class="btn portal-blue btn-sm btn-block btn-nav text-center">
+          <p><i class="fa fa-credit-card-alt fa-3x fa-space"></i></p><p>Payments</p></a>
+        </div>
+        <div class="col-xs-4 col-sm-2 col-md-1 initially-no-display">
+          <a id="app-change-patient" class="btn portal-blue btn-sm btn-block btn-nav text-center">
+          <p><i class="fa fa-user fa-3x fa-space"></i></p><p>Change Client</p></a>
+        </div>
+        <div class="hidden-xs col-sm-2 col-md-1">
+          <a id="nav-btn-fill" class="btn btn-default btn-sm btn-block btn-nav text-center btn-black">
+          <p><i class="fa fa-3x fa-space"></i></p><p></p></a>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-1">
+          <a id="app-settings-panel-btn" class="btn btn-default btn-sm btn-block btn-nav text-center btn-black">
+          <p><i class="fa fa-cogs fa-3x fa-space"></i></p><p>Settings</p></a>
+        </div>
+      </div>
+    </div>
+    <!-- TOP NAV PANEL -->
+
+    <!-- SIGN IN SCREEN -->
+    <div id="signin-screen" class="container-fluid initially-no-display">
+      <div class="row">
+        <div class="col-sm-5 col-sm-offset-1">
+          <h1 class="text-center">Welcome To Our Portal</h1>
+          <div class="panel panel-default inner-panel">
+            <div class="panel-body">
+              <img class="img-responsive center-block portal practice-logo">
+              <br>
+               <form role="form">
+                <div class="form-group">
+                  <input type="text" id="app-signin-username" placeholder="Username" name="username" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="password" id="app-signin-password" placeholder="Password" name="password" class="form-control">
+                </div>
+                <a id="app-signin-submit" class="btn portal-blue btn-block singin-btn"><i class="fa fa-sign-in fa-lg"></i> Sign In</a><br>
+                <a id="app-retrieve-credentials" class="btn btn-default btn-block">Forgot Password?</a><br>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <img id="portal-welcome-screen-image" class="img-responsive img-rounded" alt="Responsive image"><br>
+          <div class="row list">
+            <div class="col-xs-6">
+              <ul class="signin">
+                <li>Communicate with your doctor</li> 
+                <li>Access your test results</li> 
+                <li>Request prescription renewals</li> 
+                <li>View your recent visits</li>
+              </ul>
+            </div>
+            <div class="col-xs-6">
+              <ul class="signin">
+                <li>Enter medical history on-line</li> 
+                <li>Complete Client Registration </li> 
+                <li>Check lab results</li> 
+                <li>Schedule appointments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a target="_blank" href="http://wdeanmedical.com/corp/products_details.html#products-details-portal">
+        <img class="img-responsive center-block pwr-wdm" alt="Responsive image" src="assets/images/wdm-powered.png">
+      </a>
+    </div>
+    <!-- SIGN IN SCREEN -->
+
+    <!-- DASHBOARD SCREEN -->
+    <div id="dashboard-screen" class="container-fluid initially-no-display">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="title-white visible-xs"><i class="fa fa-dashboard fa-lg"></i> Dashboard</h3>
+          <h2 class="title-white text-right hidden-xs"><i class="fa fa-dashboard fa-lg"></i> Dashboard</h2>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-2 text-center">  
+                  <img id="dashboard-patient-profile-photo" class="img-responsive center-block" alt="Responsive image" src="assets/images/headshot_placeholder_med.jpg">
+                  <p id="dashboard-patient-full-name" class="app-patient-full-name"></p> 
+                </div>
+                <div class="col-sm-5">
+                  <h3>Your Recent Activity</h3>                                    
+                  <p id="dashboard-recent-activity"></p>
+                </div>
+                <div class="col-sm-5">
+                  <h3>Your Information</h3>  
+                  <p id="dashboard-your-information"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- DASHBOARD SCREEN -->  
+    
+    <!-- INTAKE RECORDS SCREEN -->
+    <div id="intake-forms-screen" class="initially-no-display">
+      <h3 class="title-white visible-xs">Intake Records</h3>
+      <h2 class="title-white text-right hidden-xs"><i class="fa fa-folder-open fa-lg"></i> Intake Records</h2>
+      <div id="forms-subscreen"></div>
+    </div>
+    <!-- INTAKE RECORDS SCREEN -->
+    
+    <!-- FORMS SCREEN -->
+    <div class="initially-no-display" id="portal-forms-screen">
+      <h2 class="title-white text-right"><i class="fa fa-check-square-o fa-lg"></i> ${app_practiceClientProperties['app.patient_label']} Forms</h2>
+      <div class="panel-top">${app_practiceClientProperties['app.patient_label']} Forms</div>
+      <div id="app-patient-forms-list" class="table-responsive"></div>
+      <div id="patient-form-screen" class="initially-no-display"></div>
+      <div id="patient-form-submit-footer" class="text-right">
+        <button id="patient-form-submit-btn" type="button" class="initially-no-display btn portal-blue btn-lg">Submit Form</button>
+        <span id="patient-form-submitted-notification" class="inline-h3 padding-right-30px initially-no-display">Form Submitted</span>
+      </div>
+    </div>
+    <!-- FORMS SCREEN -->
+    
+    <!-- LETTERS SCREEN -->
+    <div class="container-fluid initially-no-display" id="letters-screen">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="title-white text-right"><i class="fa fa-envelope fa-lg"></i> Letters</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="panel-top">Letters List</div>
+        <div id="app-letters-list" class="table-responsive"></div>
+        <div id="letter-form" class="initially-no-display">
+          <div class="panel-top"><span id="letter-title"></span></div>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div id="letter-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- LETTERS SCREEN -->
+    
+    <!-- MESSAGES SCREEN -->
+    <div class="container-fluid initially-no-display" id="messages-screen">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="title-white text-right"><i class="fa fa-comments fa-lg"></i> Messages</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <button id="app-inbox-btn" type="button" class="btn portal-blue btn-block btn-lg btn-nav2 yt-toggle" data-toggle="collapse" data-target="#inbox">
+            <span class="pull-left">
+              <i class="fa fa-inbox fa-lg fa-fw"></i> Inbox
+            </span>
+            <span class="chevron-list pull-right"><i class="fa fa-chevron-up fa-lg"></i><i class="fa fa-chevron-down fa-lg"></i></span>
+          </button>
+          <div id="inbox" class="panel panel-default sections">
+            <div class="panel-body">
+              <h4>Messages that your physicians and their staff have sent to you are listed within your inbox.</h4>
+              <label>Click on a message row to view the full text. Messages in bold type are those that are unread.
+              Click on a message to view the full text.</label>
+            </div>
+            <div id="messages-inbox" class="table-responsive"></div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <button id="app-sent-messages-btn" type="button" class="btn portal-blue btn-block btn-lg btn-nav2 yt-toggle" data-toggle="collapse" data-target="#sent">
+              <span class="pull-left">
+                <i class="fa fa-share-square fa-lg fa-fw"></i> Sent Messages
+              </span>
+              <span class="chevron-list pull-right"><i class="fa fa-chevron-up fa-lg"></i><i class="fa fa-chevron-down fa-lg"></i></span>
+          </button>
+          <div id="sent" class="sections panel panel-default collapse">
+            <div class="panel-body">
+              <label>Click on a message to view the text of the message. Messages in bold have not yet been read by clinic staff.</label>
+            </div>
+            <div id="messages-sent" class="table-responsive"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MESSAGES SCREEN -->  
+    
+    <!-- FILES SCREEN -->
+    <div id="patient-files-screen" class="initially-no-display"></div>  
+    <!-- FILES SCREEN -->
+    
+    <!-- APPOINTMENTS SCREEN -->
+    <div class="container-fluid initially-no-display" id="appointments-screen">
+      <h2 class="title-white text-right"><i class="fa fa-folder-open fa-lg"></i> Appointments</h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <button  id="app-appt-request-btn" type="button" class="btn portal-blue btn-block btn-lg btn-nav2 yt-toggle collapsed" data-toggle="collapse" data-target="#reqstapp">
+            <span class="pull-left">
+              <i class="fa fa-calendar fa-lg fa-fw"></i> Request An Appointment
+            </span>
+            <span class="chevron-list pull-right"><i class="fa fa-chevron-up fa-lg"></i><i class="fa fa-chevron-down fa-lg"></i></span>
+          </button>
+          <div id="reqstapp" class="panel panel-default sections collapse">
+            <div class="panel-body">
+              <h4>If you would like to schedule an appointment for a different reason, please call the clinic.</h4><br>
+              <label>From:</label><span class="app-patient-appt-name"></span><br>
+              <form class="form" role="form">
+                <div class="form-group">
+                  <label for="appt-request-clinician">* Want to see:</label>
+                  <select id="appt-request-clinician" class="form-control app-patient-clinicians-select input-sm"></select>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <label for="appt-request-would-see">Would see:</label>
+                  <select id="appt-request-would-see" class="form-control app-patient-clinicians-select input-sm"></select>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <label for="appt-request-visit-reason">* Reason for visit:</label>
+                  <select id="appt-request-visit-reason" class="form-control input-sm">
+                    <option value=''>Choose</option>
+                    <option>Physical (routine)</option>
+                    <option>Follow up appt.</option>
+                    <option>Non-Urgent Issue</option>
+                  </select>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <h4>Preferred Dates</h4>
+                </div>
+                <div class="form-group">
+                  <label for="appt-request-from">From:</label>
+                  <input id="appt-request-from" type="text" class="form-control input-sm">
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <label for="appt-request-to">To:</label>
+                  <input id="appt-request-to" type="text" class="form-control input-sm">
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                  <h4>Preferred Times</h4>
+                </div>
+                <div class="form-group">
+                  <div class="table-responsive">
+                    <table class="table table-condensed">
+                      <tbody>
+                        <tr><td>&nbsp;</td><td>Mon</td><td>Tues</td><td>Wed</td><td>Thur</td><td>Fri</td></tr>
+                        <tr>
+                          <td>Morning</td>
+                          <td><input id="ar-mon-morn" class="checkbox appt-request-cb" type="checkbox" title="Mon Morning" value="Mon Morning" /></td>
+                          <td><input id="ar-tues-morn" class="checkbox appt-request-cb" type="checkbox" title="Tues Morning" value="Tues Morning" /></td>
+                          <td><input id="ar-wed-morn" class="checkbox appt-request-cb" type="checkbox" title="Wed Morning" value="Wed Morning" /></td><td>
+                          <input id="ar-thurs-morn" class="checkbox appt-request-cb" type="checkbox" title="Thur Morning" value="Thur Morning" /></td>
+                          <td><input id="ar-fri-morn" class="checkbox appt-request-cb" type="checkbox" title="Fri Morning" value="Fri Morning" /></td>
+                        </tr>
+                        <tr>
+                          <td>Afternoon</td>
+                          <td><input id="ar-mon-aft" class="checkbox appt-request-cb" type="checkbox" title="Mon Afternoon" value="Mon Afternoon" /></td>
+                          <td><input id="ar-tues-aft" class="checkbo appt-request-cb" type="checkbox" title="Tues Afternoon" value="Tues Afternoon" /></td>
+                          <td><input id="ar-wed-aft" class="checkbox appt-request-cb" type="checkbox" title="Wed Afternoon" value="Wed Afternoon" /></td>
+                          <td><input id="ar-thurs-aft" class="checkbox appt-request-cb" type="checkbox" title="Thur Afternoon" value="Thur Afternoon" /></td>
+                          <td><input id="ar-fri-aft" class="checkbox appt-request-cb" type="checkbox" title="Fri Afternoon" value="Fri Afternoon" /></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="appt-request-message">Message:</label>
+                  <textarea id="appt-request-message" class="form-control input-sm" rows="6"></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="clearfix">
+                  <a id="appt-request-submit" class="btn portal-blue pull-right">Submit</a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <button  id="app-upcoming-appointments-btn" type="button" class="btn portal-blue btn-block btn-lg btn-nav2 yt-toggle collapsed" data-toggle="collapse" data-target="#upapp">
+            <span class="pull-left">
+              <i class="fa fa-calendar fa-lg fa-fw"></i> Upcoming Appointments
+            </span>
+            <span class="chevron-list pull-right"><i class="fa fa-chevron-up fa-lg"></i><i class="fa fa-chevron-down fa-lg"></i></span>
+          </button>
+          <div id="upapp" class="panel panel-default sections">
+            <div class="panel-body">
+              <h4>Click on a row to see more details about an appointment.</h4>
+              <div id="upcoming_appointments_table" class="table-responsive"></div>
+            </div>
+          </div>
+          <button  id="app-past-appointments-btn" type="button" class="btn portal-blue btn-block btn-lg btn-nav2 yt-toggle collapsed" data-toggle="collapse" data-target="#pstapp">
+            <span class="pull-left">
+              <i class="fa fa-calendar fa-lg fa-fw"></i> Past Appointments
+            </span>
+            <span class="chevron-list pull-right"><i class="fa fa-chevron-up fa-lg"></i><i class="fa fa-chevron-down fa-lg"></i></span>
+          </button>
+          <div id="pstapp" class="panel panel-default sections collapse">
+            <div class="panel-body">
+              <h4>Click on a row to see more details about an appointment.</h4>
+              <div id="past_appointments_table" class="table-responsive"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <button  type="button" class="btn portal-blue btn-block btn-lg btn-nav2 yt-toggle" data-toggle="collapse" data-target="#app-calendar">
+            <span class="pull-left">
+              <i class="fa fa-calendar fa-lg fa-fw"></i> Your Calendar
+            </span>
+            <span class="chevron-list pull-right"><i class="fa fa-chevron-up fa-lg"></i><i class="fa fa-chevron-down fa-lg"></i></span>
+          </button>
+          <div class="panel panel-default sections">
+            <div id='app-calendar' class="panel-body app-calendar"></div>
+          </div>
+        </div>    
+      </div>
+    </div>
+    <!-- APPOINTMENTS SCREEN -->    
+    
+    <!-- SEND MESSAGE SCREEN -->
+    <div class="container-fluid initially-no-display" id="send-message-screen">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="title-white text-right"><i class="fa fa-user-md fa-lg"></i> Send Message</h2>
+          <div class="panel-top">Send Your Doctor A Message</div>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p>We will attempt to respond to your message within one business day, but delays may occur. The Family Portal 
+              should only be used for routine and non-urgent matters. Please do not send messages through the Family Portal 
+              that require urgent attention.</p><p>Messages will be screened by your physician's staff to determine an appropriate 
+              person to respond to your request; please consider this when communicating sensitive information within your message.</p>
+              <p><strong>Please note:</strong> the communication you send or receive may become a part of your medical record.</p>
+              <p>Send a non-urgent message to your clinic.</p><p>Expect a response within 2 business days.</p>
+              <h4><strong>From:</strong><span class="app-patient-appt-name"></span></h4><br>
+              <form class="form" role="form">
+                <div class="form-group">
+                  <label for="send-message-clinician">To The Office Of:</label>
+                  <select id="send-message-clinician" class="form-control input-sm app-patient-clinicians-select"></select>
+                  <span id="send-message-clinician-validation" class="form-element-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="send-message-subject">Subject:</label>
+                  <select id="send-message-subject" class="form-control input-sm">
+                    <option>Medical Advice</option>
+                    <option>Lab Results</option>
+                    <option>Referral</option>
+                    <option>Consult</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="send-message-message">Message:</label>
+                  <textarea id="send-message-message" class="form-control input-sm" rows="6"></textarea>
+                  <span id="send-message-message-validation" class="form-element-error"></span>
+                </div>
+                <div class="form-group">
+                  <a id="send-message-submit" class="btn portal-blue pull-right">Submit</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SEND MESSAGE SCREEN -->
+    
+    <!-- SETTINGS SCREEN -->
+    <div class="container-fluid initially-no-display" id="settings-screen">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="title-white text-right"><i class="fa fa-cogs fa-lg"></i> Account Settings</h2>
+          <div class="panel-top">Edit User Information</div>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <form role="form" id="settings-password-form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3>Change Password</h3>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control input-sm" id="password" name="password" placeholder="" required>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                      <label for="password_confirmation">Confirm Password</label>
+                      <input type="password" class="form-control input-sm" id="password_confirmation" name="password_confirmation" placeholder="" required>
+                      <span class="help-block">To change the current user password, enter the new password in both fields.</span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">                                                                               
+                    <h3>Picture</h3>
+                    <div class="form-group">
+                    <img id="patient-photo" class="img-responsive" alt="Responsive image" src="assets/images/headshot_placeholder_med.jpg">  
+                    </div>                      
+                    <div class="form-group">
+                      <div class="btn-group-vertical-sm">
+                        <span class="btn btn-success fileinput-button">
+                          <div id="patient-photo-upload"></div>
+                        </span>
+                        <br>
+                        <br>
+                        <div class="progress" id="patient-photo-upload-progress">
+                          <div class="progress-bar progress-bar-success"></div>
+                        </div>
+                      </div>
+                      <p class="help-block">Maximum dimensions are 85x85 and the maximum size is 5000 kB.</p>                        
+                    </div>                     
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="panel-footer text-right">
+              <button class="btn portal-blue" id="password-form-submit">Save</button>
+              <a href="#" class="btn btn-default">Cancel</a>
+            </div> 
+          </div>
+        </div> 
+      </div>
+    </div>
+    <!-- SETTINGS SCREEN -->
+    
+    <!-- RX RENEWAL SCREEN -->
+    <div class="container-fluid initially-no-display" id="rx-renewal-screen">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="title-white visible-xs"><i class="fa fa-beer fa-lg"></i> Request Rx Renewal</h3>
+          <h2 class="title-white text-right hidden-xs"><i class="fa fa-beer fa-lg"></i> Rx Renewal</h2>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h4>Request An Rx Renewal</h4>
+              <div id="renew" class="sections">
+                <h5>Step 1 of 2: Choose prescriptions to renew</h5>
+                <p>Your MyHealth Online request to have a new updated (renewal) prescription written will be sent to your Clinician's office. Please submit 
+                a request if you have 0 refills on a medication.</p><p>The prescription must be approved by your provider. Once approved, it will be sent 
+                to your pharmacy within 2 business days. Please contact your pharmacy prior to picking up your medication to be sure it is ready.</p>
+                <p><strong>Important Note:</strong> Please do not submit a MyHealth Online Rx Renewal Request if you simply need a medication refilled by 
+                your pharmacy. Instead you must contact your pharmacy directly to have your prescription refilled.</p>
+                <form class="form" role="form">
+                 <div class="form-group">
+                    <label for="rx-request-clinician">To The Office Of:</label>
+                    <select id="rx-request-clinician" class="form-control app-patient-clinicians-select input-lg"></select>
+                    <span id="rx-request-clinician-validation" class="form-element-error"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="rx-request-message">Message:</label>
+                    <textarea id="rx-request-message" class="form-control" rows="6"></textarea>
+                    <span id="rx-request-message-validation" class="form-element-error"></span>
+                  </div>
+                  <div class="form-group">
+                    <a id="rx-request-submit" class="btn portal-blue btn-lg pull-right">Submit</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- RX RENEWAL SCREEN -->
+    
+    
+    <!-- PAYMENTS SCREEN -->
+    <div class="container-fluid initially-no-display" id="payments-screen">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="title-white text-right"><i class="fa fa-credit-card-alt fa-lg"></i> Payments</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <button id="app-payments-btn" type="button" class="btn portal-blue btn-block btn-lg btn-nav2 yt-toggle collapsed" data-toggle="collapse" data-target="#cc-auth-form-panel">
+            <span class="pull-left"> <i class="fa fa-inbox fa-lg fa-fw"></i> Credit Card Authorization </span>
+            <span class="chevron-list pull-right"><i class="fa fa-chevron-up fa-lg"></i><i class="fa fa-chevron-down fa-lg"></i></span>
+          </button>
+          <div id="cc-auth-form-panel" class="sections collapse">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div id="pending-transaction" class=" text-info initially-no-display"> 
+                 <h3 id="progress-message"></h3>
+                </div>
+                <form id="cc-auth-form" role="form">
+                  <div id="cc-auth-header" class="row">
+                    <div class="col-sm-12">
+                      <label>Please complete this form if you would like ${app_practiceClientProperties['app.business_name']} to keep your credit card on file for future payments. You may elect to provide us with credit card information separately for each payment. Information to be completed by the card holder:</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-sm-3">
+                      <label>Cardholder Name</label>
+                      <input type="text" id="cc-auth-cardholder-name" class="form-control input-field input-sm" maxlength="100">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label>Credit Card Type</label>
+                      <select id="cc-auth-cc-type" class="form-control input-select input-sm">
+                        <option value=''>Choose</option>
+                        <option value='MasterCard'>Mastercard</option>
+                        <option value='Visa'>Visa</option>
+                        <option value='Amex'>Amex</option>
+                        <option value='Disc'>Discover</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label>Credit Card Number</label>
+                      <input type="text" id="cc-auth-cc-number" class="form-control input-field input-sm">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label>Exp Month/Year</label>
+                      <input type="text" id="cc-auth-exp" class="form-control input-sm input-field">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label>CVC</label>
+                      <input type="text" id="cc-auth-cvc" class="form-control input-sm input-field">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-sm-4">
+                      <label>Street Address</label>
+                      <input type="text" id="cc-auth-street-address" class="form-control input-field input-sm">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label>City</label>
+                      <input type="text" id="cc-auth-city" class="form-control input-field input-sm" maxlength="100">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-3">
+                      <label>State</label>
+                       <select id="cc-auth-us-state" class="form-control input-select input-sm"></select>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group col-sm-2">
+                      <label>Zip</label>
+                      <input type="text" id="cc-auth-postal-code" class="form-control input-field input-sm">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div id="cc-auth-footer">
+                    <div class="row">
+                      <div class="form-group col-sm-12">             
+                        <label>I, <input type="text" id="cc-auth-initials" class="input-field input-sm" maxlength="200"> authorize ${app_practiceClientProperties['app.business_name']} to charge the above credit card account for payments owed to my account for services rendered at their office. I agree to update any information regarding this account. The above information is complete and correct to the best of my knowledge. 
+                        <label>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12 form-group">
+                        <input type="checkbox" id="cc-auth-sig" class="input-checkbox" value="true">
+                        <b>Signature check box. By checking this box and typing my name above, I agree that this constitutes my signature on this document.</b>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12 text-right">
+                      <button id="cc-cancel-btn" type="button" class="btn btn-default">Cancel</button>
+                      <button id="cc-delete-btn" type="button" class="btn btn-danger">Delete</button>
+                      <button id="cc-edit-btn" type="button" class="btn btn-primary">Edit</button>
+                      <button id="cc-auth-btn" type="button" class="btn btn-success">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="panel-top">Invoices</div>
+          <div id="patient-invoices-list" class="table-responsive"></div>
+          <div id="patient-invoice-form" class="container-fluid initially-no-display">
+            <div class="row">
+              <div class="col-sm-12">
+                <div id="patient-invoice-title" class="panel-top">Invoice</div>
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <form role="form" id="invoice-form" data-instance-id="" data-form-key="">
+                      <div class="row">
+                        <div class="col-sm-2 col-sm-offset-10">
+                          <span id="invoice-issue-date-saved"></span><br>
+                          invoice# <span id="invoice-invoice-number"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p>${app_practiceClientProperties['app.business_name']}<br>
+                          {{html app_practiceClientProperties['app.business_address'] }}<br>
+                          ${app_practiceClientProperties['app.director']}, Director</p>
+                        </div>
+                        <div class="col-sm-3 col-sm-offset-3">
+                          <p><span id="invoice-patient-name"></span><br>
+                          <span id="invoice-patient-street-address"></span><br>
+                          <span id="invoice-patient-city"></span>, <span id="invoice-patient-us-state"></span>   
+                          <span id="invoice-patient-postal-code"></span>
+                          <br>
+                         <span id="invoice-patient-primary-phone"></span></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4><span id="invoice-title"></span></h4>
+                          <hr class="hr-gold">
+                          <p><span id="invoice-description"></span></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div id="patient-invoice-item-list" class="table-responsive"></div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div class="table-responsive">
+                            <table class="table table-bordered table-condensed">
+                              <tbody>
+                                <tr>
+                                  <td width="90%" align="right">Sub Total</td>
+                                  <td align="right" id="invoice-sub-total"></td>
+                                </tr> 
+                                <tr>
+                                  <td width="90%" align="right">Sales Tax</td>
+                                  <td align="right" id="invoice-sales-tax">$0.00</td>
+                                </tr>
+                                <tr>
+                                  <td width="90%" align="right">Total</td>
+                                  <td align="right" id="invoice-total"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12 text-right">
+                          <p>We accept all Major Credit Cards, Cash, and PayPal</p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="panel-footer text-right">
+                   <button id="invoice-print-btn" type="button" class="btn btn-primary invoice-button">Print</button>
+                   <button id="invoice-pay-btn" type="button" class="btn btn-success invoice-button initially-no-display">Pay Invoice</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PAYMENTS SCREEN --> 
+    
+    <div class="container-fluid intially-no-display" id="portal-footer">
+      <div class="row">
+        <div class="col-sm-12">
+          <a target="_blank" href="http://wdeanmedical.com"><img src="assets/images/wdm-powered.png" class="img-responsive center-block" alt="powered by WDM"></a>
+        </div>
+      </div>
+    </div>
+
+  <!-- MODALS -->
+  <div id="modals-placement"></div>
+  <!-- MODALS -->
+  
+</div>

@@ -1,0 +1,33 @@
+<div id="${resource}-list">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label class="sub-title">Medications</label>
+      </div>
+    </div>
+  </div>
+  <div class="list-item-wrapper" data-item-class="${itemClass}" data-item-prefix="${resource}" data-parent-id="${parentId}" data-parent-id-name="${parentIdName}">
+    {{each(i, item) items}}
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="${resource}-medication">Medication</label> <input class="form-control list-item-field" data-id="${id}" id="${resource}-medication" type="text">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="${resource}-dose">Dose</label> <input class="form-control list-item-field" data-id="${id}" id="${resource}-dose" type="text">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="${resource}-frequency">Frequency</label> <input class="form-control list-item-field" data-id="${id}" id="${resource}-frequency" type="text">
+        </div>
+      </div>
+      <div class="col-md-1">
+        <button class="btn btn-danger btn-sm list-item-delete" data-id="${id}" style="display:none" type="button">x</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

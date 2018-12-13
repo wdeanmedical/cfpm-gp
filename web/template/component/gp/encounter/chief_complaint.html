@@ -1,0 +1,240 @@
+<div class="panel-body">
+  <form data-form-key="${formKey}" data-instance-id="${id}" id="${formName}" name="${formName}" role="form">
+    <label class="sub-title">Description</label>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <textarea class="form-control input-sm input-field" id="${formPrefix}-description" rows="5"></textarea>
+        </div>
+      </div>
+    </div><label class="sub-title">Occurs When</label>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="col-xs-4">
+          <div class="form-group">
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="n-a" type="checkbox">N/A</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="constant" type="checkbox">Constant</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="walking" type="checkbox">Walking</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="sitting" type="checkbox">Sitting</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="running" type="checkbox">Running</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="form-group">
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="standing_up" type="checkbox">Standing Up</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="laying_down" type="checkbox">Laying Down</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="when_touched" type="checkbox">When Touched</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="before_eating" type="checkbox">Before Eating</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="after_eating" type="checkbox">After Eating</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="form-group">
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="bending" type="checkbox">Bending</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="holding-gripping" type="checkbox">Holding/Gripping</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-occurs-when" value="other" type="checkbox">Other-specify</label>
+            </div>
+            <input class="form-control input-sm input-field input-sm" id="${formPrefix}-occurs-other" type="text">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label class="control-label">Specific Location</label> <input class="form-control input-sm input-field" id="${formPrefix}-specific-location" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label class="sub-title">How Long/Since When</label>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="col-xs-2">
+              <div class="form-group text-center">
+                <label class="control-label">Hours</label> <input class="form-control input-sm input-field" id="${formPrefix}-hours-since" type="text">
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="form-group text-center">
+                <label class="control-label">Days</label> <input class="form-control input-sm input-field" id="${formPrefix}-days-since" type="text">
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="form-group text-center">
+                <label class="control-label">Weeks</label> <input class="form-control input-sm input-field" id="${formPrefix}-weeks-since" type="text">
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="form-group text-center">
+                <label class="control-label">Months</label> <input class="form-control input-sm input-field" id="${formPrefix}-months-since" type="text">
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="form-group text-center">
+                <label class="control-label">Years</label> <input class="form-control input-sm input-field" id="${formPrefix}-years-since" type="text">
+              </div>
+            </div>
+            <div class="col-xs-2">
+              <div class="form-group text-center">
+                <label class="control-label">Other</label> <input class="form-control input-sm input-field" id="${formPrefix}-how-long-other" type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><label class="sub-title">Pain</label>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Pain Scale: <span id="${formPrefix}-pain-scale-value"></span></label>
+            <div id="${formPrefix}-pain-scale-placeholder"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label">Pain Type</label> <select class="form-control input-sm input-field" id="${formPrefix}-pain-type">
+              <option>
+              </option>
+              <option value="dull">
+                Dull
+              </option>
+              <option value="tingly">
+                Tingly
+              </option>
+              <option value="hot">
+                Hot
+              </option>
+              <option value="sharp">
+                Sharp
+              </option>
+              <option value="achey">
+                Achey
+              </option>
+              <option value="uncomfortable">
+                Uncomfortable
+              </option>
+              <option value="superficial">
+                Superficial
+              </option>
+              <option value="deep">
+                Deep
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div><label class="sub-title">Frequency</label>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">X Hour</label> <input class="form-control input-sm input-field" id="${formPrefix}-pain-x-hour" type="text">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">X Day</label> <input class="form-control input-sm input-field" id="${formPrefix}-pain-x-day" type="text">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">X Week</label> <input class="form-control input-sm input-field" id="${formPrefix}-pain-x-week" type="text">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">X Month</label> <input class="form-control input-sm input-field" id="${formPrefix}-pain-x-month" type="text">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="control-label">Duration</label> <input class="form-control input-sm input-field" id="${formPrefix}-pain-duration" type="text">
+          </div>
+        </div>
+      </div>
+    </div><label class="sub-title">Denies</label>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="col-xs-4">
+          <div class="form-group">
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="n" type="checkbox">N</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="v" type="checkbox">V</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="d" type="checkbox">D</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="ha" type="checkbox">HA</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="vision_px" type="checkbox">Vision Px</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="form-group">
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="dizziness" type="checkbox">Dizziness</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="weakness" type="checkbox">Weakness</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="parasthesia" type="checkbox">Parasthesia</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="syncope" type="checkbox">Syncope</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="pain" type="checkbox">Pain</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="form-group">
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="anorexia" type="checkbox">Anorexia</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="fatigue" type="checkbox">Fatigue</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="input-checkbox-group" name="${formPrefix}-denies" value="other" type="checkbox">Other</label>
+            </div>
+          </div><input class="form-control input-sm input-field" id="${formPrefix}-denies-other" type="text">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

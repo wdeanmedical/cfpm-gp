@@ -1,0 +1,45 @@
+<div class="modal fade" id="modal-task" tabindex="-1" role="dialog" aria-labelledby="modal-task" aria-hidden="true">
+  <div class="modal-dialog narrow-modal-width">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"> ${title}</h4>
+      </div>
+    <div class="modal-body">
+   <form class="form-horizontal" role="form">
+   <div class="form-group">
+     <label class="col-sm-3 control-label">Date</label>
+     <div class='col-sm-6 input-group date' id='app-task-due-date'>
+       <input type='text' class="form-control" />
+       <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+     </div>
+   </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Time</label>
+        <div class="col-sm-6 input-group bootstrap-timepicker timepicker">
+          <input id="app-task-due-time" class="form-control input-small input-timepicker" type="text"/>
+          <span id="app-task-due-time-btn" class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+       </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Team Members</label>
+      <div class="col-sm-6">
+        <input id="app-task-users" class="form-control input-small" type="text" readonly="readonly"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="app-task-notes" class="col-sm-3 control-label">Notes</label>
+      <div class="col-sm-6"><textarea id="app-task-notes" class="form-control" rows="3"></textarea></div>
+      <span id="app-task-notes-validation" class="form-element-error"></span>
+    </div>
+    </form>
+    </div>
+  <div class="modal-footer">
+    <button id="app-task-delete" type="button" class="btn btn-danger">${deleteButton}</button>
+    <button type="button" id="app-task-submit" class="btn btn-primary">${submitButtonLabel}</button>
+    <button id="app-task-complete" type="button" class="btn btn-success">Complete</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>       
+  </div>
+ </div>
+ </div>
+</div>

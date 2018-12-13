@@ -1,0 +1,25 @@
+{{each(i, item) list}}
+<div class="panel-body well col-sm-10 col-sm-offset-1" id="presenting-problem-${id}">
+  <div class="col-sm-3">
+    <div class="form-group">
+      <label>Presenting Problem</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${problem}" data-property="${instanceName}.problem">
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="form-group">
+      <label>Duration</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${duration}" data-property="${instanceName}.duration">
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="form-group">
+      <label>Additional Information</label>
+      <input data-id="${id}" type="text" class="form-control list-item-field" value="${info}" data-property="${instanceName}.info">
+    </div>
+  </div>
+  <div class="col-sm-1">
+    <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete presenting-problem-delete-control">x</button>
+  </div>
+</div>
+{{/each}}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>WDean Medical - Body Test</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, user-scalable = no" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    
+    <script>
+    function DrawPic() {
+    // Get the canvas element and its 2d context
+    var Cnv = document.getElementById('myCanvas');
+    var Cntx = Cnv.getContext('2d');
+    
+    // Create gradient
+    var Grd = Cntx.createRadialGradient(100, 100, 20, 140, 100, 230);
+    Grd.addColorStop(0, "red");
+    Grd.addColorStop(1, "black");
+
+    // Fill with gradient
+    Cntx.fillStyle = Grd;
+    Cntx.fillRect(0, 0, 300, 200);
+
+    // Write some text
+    for (i=1; i<10 ; i++)
+    {
+        Cntx.fillStyle = "white";
+        Cntx.font = "36px Verdana";
+        Cntx.globalAlpha = (i-1) / 9;
+        Cntx.fillText("Codicode.com", i * 3 , i * 20);
+    }
+}
+
+function UploadPic() {
+    
+    // generate the image data
+    var Pic = document.getElementById("myCanvas").toDataURL("image/png");
+    Pic = Pic.replace(/^data:image\/(png|jpg);base64,/, "")
+    
+    var path = 'patientFile/uploadTxTongueImage?patientId=9';
+
+    // Sending the image data to Server
+    $.ajax({
+        type: 'POST',
+        url: path,
+        data: '{ "imageData" : "' + Pic + '" }',
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        success: function (msg) {
+            alert("Done, Picture Uploaded."); 
+        }
+    });
+}
+    </script>
+
+    <style type="text/css">
+    body {
+        margin-top: 70px;
+        background-color: #2a6496;
+        background: url(assets/images/kid.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Segoe UI Light", "Open Sans Light" ,Verdana, Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      font-size: 4em;
+    }
+    h1 small {
+      color: red;
+    }
+    .navbar-right {
+      padding-right: 10px;
+    }
+    </style>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html#top"><img class="img-responsive" alt="Responsive image" src="assets/images/WDM-Header3.png"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+           <ul class="nav navbar-nav navbar-right">
+            <li id="wdm-notification" class="navbar-text"><span id="wdm-notification-text"></span></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container">
+      <h1>Body Test</h1>
+      <div align="center">
+        <canvas id="myCanvas" width="300" height="200"></canvas>
+        <br /><br />
+        <table><tr><td><button onclick="javascript:DrawPic();return false;">Draw Picture</button></td><td><button onclick="javascript:UploadPic();return false;">Upload Picture to Server</button></td></tr></table>
+    </div>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <a class="btn btn-primary navbar-btn" href="/pmd-pm" role="button"><i class="fa fa-home fa-lg"></i> Back To Home Page</a>
+          <a class="btn btn-success navbar-btn" target="_blank" href="mailto:nick@wdeanmedical.com" role="button"><i class="fa fa-bullhorn fa-lg"></i> Contact Support</a>
+        </ul>
+      </div>
+    </nav>
+
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+  </body>
+</html>

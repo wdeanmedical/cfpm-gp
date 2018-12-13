@@ -1,0 +1,268 @@
+   <div id="forms-subscreen-${i}" class="container forms-subscreen initially-no-display">
+        <div class="col-sm-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading hidden-xs">Authorization for the Release of Healthcare Information</div>
+            <div class="panel-heading panel-heading-sm visible-xs">Information Release</div>
+            <div class="panel-body">
+              <form id="release-form" role="form" data-instance-id="" data-form-key="">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1">
+                  <h3>Authorization for the Release of Healthcare Information</h3>
+                  <p>
+                  By completing this form you are authorizing the disclosure and/or use of your protected health information, as described below, 
+                  consistent with state and federal laws concerning the privacy of such information.  Completing this form authorizes GPS to 
+                  verbally/physically release/obtain your medical records/letter when this authorization is received.  If you do not provide all 
+                  the information requested, this authorization will not be valid. 
+                  </p>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="release-first-name">* First Name</label>
+                      <input type="text" class="form-control input-field input-sm" id="release-first-name" data-property="gp-entity-form-Release.firstName">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="release-middle-name">Middle Name</label>
+                      <input type="text" class="form-control input-field input-sm" id="release-middle-name" data-property="gp-entity-form-Release.middleName">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="release-last-name">* Last Name</label>
+                      <input type="text" class="form-control input-field input-sm" id="release-last-name" data-property="gp-entity-form-Release.lastName">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label for="birth-date">* DOB</label>
+                      <input type="text" class="form-control input-field input-sm" id="release-dob" data-property="gp-entity-form-Release.dob" data-field-type="date" placeholder="mm/dd/yyyy">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-3 form-group">
+                    <label for="release-first-name">* Street Address</label>
+                    <input type="text" class="form-control input-field input-sm" id="release-street-address" data-property="gp-entity-form-Release.streetAddress">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="release-middle-name">* City</label>
+                      <input type="text" class="form-control input-field input-sm" id="release-city" data-property="gp-entity-form-Release.city">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="release-last-name">* State</label>
+                      <select id="release-us-state" class="form-control input-form-us-state input-select" data-property="gp-entity-form-Release.usState" data-field-type="usState"></select>  
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label for="birth-date">* Zip</label>
+                      <input type="text" class="form-control input-field input-sm" id="release-postal-code" data-property="gp-entity-form-Release.postalCode">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="release-first-name">* Phone</label>
+                      <input type="text" class="form-control input-field input-masked input-sm" id="release-phone" data-mask-type="phone" data-property="gp-entity-form-Release.phone">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="release-middle-name">Alias</label>
+                      <input type="text" class="form-control input-field input-sm" id="release-alias" data-property="gp-entity-form-Release.alias">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1">
+                    Initial: <input type="text" class="input-field input-sm input-text-50px" id="release-initials-1" data-property="gp-entity-form-Release.initials1">
+                    I authorize GPS to release and receive records to/from:</label><br>
+                  </div>
+                </div>
+                <br>
+                <div class="col-sm-12">
+                  <div class="col-sm-3 form-group">
+                    <label>Agency Name</label>
+                    <input type="text" class="form-control input-field input-sm" id="release-agency-name" data-property="gp-entity-form-Release.agencyName">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="col-sm-3 form-group">
+                    <label>Contact Person</label>
+                    <input type="text" class="form-control input-field input-sm" id="release-agency-contact" data-property="gp-entity-form-Release.agencyContact">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-3 form-group">
+                    <label>Street Address</label>
+                    <input type="text" class="form-control input-field input-sm" id="release-agency-street-address" data-property="gp-entity-form-Release.agencyStreetAddress">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="col-sm-3 form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control input-field input-sm" id="release-agency-city" data-property="gp-entity-form-Release.agencyCity">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="col-sm-3 form-group">
+                    <label>State</label>
+                    <select id="release-agency-us-state" class="form-control input-form-us-state input-select" data-property="gp-entity-form-Release.agencyUSState" data-field-type="usState"></select>  
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="col-sm-2 form-group">
+                    <label>Zip</label>
+                    <input type="text" class="form-control input-field input-sm" id="release-agency-postal-code" data-property="gp-entity-form-Release.agencyPostalCode">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-2 form-group">
+                    <label>Phone</label>
+                    <input type="text" class="form-control input-field input-sm" id="release-agency-phone" data-property="gp-entity-form-Release.agencyPhone">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="col-sm-2 form-group">
+                    <label>Fax</label>
+                    <input type="text" class="form-control input-field input-sm" id="release-agency-fax" data-property="gp-entity-form-Release.agencyFax">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <h4>Check all information you authorize to receive/release</h4>
+                  </div>
+                  <div class="col-sm-5 col-sm-offset-1">
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="intake_summary">Intake Summary</label></div>
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="discharge_summary">Discharge Summary</label></div>
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="psych_eval">Psychiatric Evaluation</label></div>
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="phys_eval">Physical Evaluation Findings</label></div>
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="dates">Dates of Admission/Discharge</label></div>
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="school">School Evaluations/Observations</label></div>
+                  </div>
+                  <div class="col-sm-5">
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="medical">Medication Evaluations</label></div>
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="cons">Consultation</label></div>
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="family_history">Family History</label></div>
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="records">Birth/Death Records</label></div>
+<div class="checkbox"><label><input type="checkbox" name="infoType" data-property="gp-entity-form-Release.infoType" class="input-checkbox-group" value="other">Other</label></div>
+<input type="text" class="form-control input-field input-sm" id="release-info-type-other" data-property="gp-entity-form-Release.infoTypeOther">
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <h4>The purpose of this authorization to disclose/obtain information is/are as follows</h4>
+                  </div>
+                  <div class="col-sm-5 col-sm-offset-1">
+<div class="checkbox"><label><input type="checkbox" name="purpose" data-property="gp-entity-form-Release.purpose" class="input-checkbox-group" value="tx">Treatment planning, Communication, Case Management</label></div>
+<div class="checkbox"><label><input type="checkbox" name="purpose" data-property="gp-entity-form-Release.purpose" class="input-checkbox-group" value="discharge">Discharge Planning</label></div>
+<div class="checkbox"><label><input type="checkbox" name="purpose" data-property="gp-entity-form-Release.purpose" class="input-checkbox-group" value="insurance">Insurance</label></div>
+                  </div>
+                  <div class="col-sm-5">
+<div class="checkbox"><label><input type="checkbox" name="purpose" data-property="gp-entity-form-Release.purpose" class="input-checkbox-group" value="disability">Disability Determination or Redetermination</label></div>
+<div class="checkbox"><label><input type="checkbox" name="purpose" data-property="gp-entity-form-Release.purpose" class="input-checkbox-group" value="legal">Court/Legal Related</label></div>
+<div class="checkbox"><label><input type="checkbox" name="purpose" data-property="gp-entity-form-Release.purpose" class="input-checkbox-group" value="client">Per Client Request</label></div>
+<div class="checkbox"><label><input type="checkbox" name="purpose" data-property="gp-entity-form-Release.purpose" class="input-checkbox-group" value="other">Other</label></div>
+<input type="text" class="form-control input-field input-sm" id="release-purpose-other" data-property="gp-entity-form-Release.purposeOther">
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1">
+                  <p>
+                  Initial: <input type="text" class="input-field input-sm input-text-50px" id="release-initials-2" data-property="gp-entity-form-Release.initials2">
+                  I specifically authorize the release of personal health 
+                  information relation to drug and/or alcohol abuse.  I understand that my records are protected under federal 
+                  regulations governing Confidentiality of Alcohol and Drug Abuse Patient Records (42 CFR Part II) and cannot 
+                  be disclosed without my written consent unless otherwise provided for in the federal regulations.  The 
+                  recipient of drug and/or alcohol abuse information disclosed as a result of this authorization will need my 
+                  further written authorization to re-disclose this information.  
+                 <br> 
+                  Initial: <input type="text" class="input-field input-sm input-text-50px" id="release-initials-3" data-property="gp-entity-form-Release.initials3">
+                  I specifically authorize release of HIV related information 
+                  that may be disclosed including whether or not I have been counseled on HIV, have been subject to HIV testing, 
+                  have been diagnosed with HIV or HIV-related illness or AIDS, and can also include information that identifies 
+                  or could identify of I have one or more of such conditions, including information pertaining to the clients spouse, 
+                  sexual partner, or persons with whom the client shared needles or syringes. 
+                 <br> 
+                  Initial: <input type="text" class="input-field input-sm input-text-50px" id="release-initials-4" data-property="gp-entity-form-Release.initials4">
+                  I understand that i may revoke this authorization in writing at 
+                  any time by contact the clinician, except that it will not have any effect on actions taken by the recipient 
+                  organization before it received the revocation.                                                                                                                                 
+                 <br> 
+                 <b>This authorization expires on:</b>
+                 <input type="text" class="input-field input-sm" id="release-exp-date" data-property="gp-entity-form-Release.expDate" data-field-type="date" placeholder="mm/dd/yyyy">
+                 (or if unspecified one year from date of signature.)
+                  </p>
+                  </div>
+                </div>
+                <br>
+                <div class="row"><div class="col-sm-10 col-sm-offset-1"><hr class="hr-gold"></div></div>
+                <div class="row">
+                  <div class="col-sm-5 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Patient</label>
+                      <input type="text" class="form-control input-field input-sm" id="release-sig-patient" data-property="gp-entity-form-Release.sigPatient">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label>Date</label>
+                      <input type="text" class="form-control input-date input-field input-sm" id="release-sig-date" data-property="gp-entity-form-Release.sigDate" data-field-type="date" placeholder="mm/dd/yyyy">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-5 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Authorized Representative</label>
+                      <input type="text" class="form-control input-field input-sm" id="release-sig-rep" data-property="gp-entity-form-Release.sigRep">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label>Date</label>
+                      <input type="text" class="form-control input-date input-field input-sm" id="release-sig-rep-date" data-property="gp-entity-form-Release.sigRepDate" data-field-type="date" placeholder="mm/dd/yyyy">
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label>Relationship to Patient</label>
+                      <input type="text" class="form-control input-field input-sm" id="release-sig-rel" data-property="gp-entity-form-Release.sigRel">
+                    </div>
+                  </div>
+                </div>
+                <div class="row sign-box">
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group has-warning">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" id="release-read-doc" class="input-checkbox" value="true" data-property="gp-entity-form-Release.readDoc">
+                          <b>* By checking this box and typing your name in the box below, you agree that you have read and understand this document.</b>
+                        </label>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+     </div>
+   </div>

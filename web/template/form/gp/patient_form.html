@@ -1,0 +1,369 @@
+<div class="modal fade" id="modal-patient" data-backdrop="static" data-keyboard="false" tabindex="-1">
+  <div class="modal-dialog default-modal-width">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" id="patient-form-close-box" type="button">&times;</button>
+        <h4 class="modal-title"><span id="patient-form-title">New ${app_practiceClientProperties['app.patient_label']}</span></h4>
+      </div>
+      <div class="modal-body">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="container">
+              <form id="patient-form" class="form-horizontal" data-instance-id="" data-form-key="">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Last Name</label>
+                      <div class="col-sm-6">
+                        <input id="patient-last-name" class="form-control input-sm input-field" data-property="entity-Patient.lastName" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* First Name</label>
+                      <div class="col-sm-6">
+                        <input id="patient-first-name" class="form-control input-sm input-field" data-property="entity-Patient.firstName" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      </div>
+                     <div class="form-group"> 
+                      <label class="col-sm-5 control-label">MI</label>
+                      <div class="col-sm-2">
+                        <input id="patient-middle-name" class="form-control input-sm input-field" data-property="entity-Patient.middleName" type="text" maxlength="1"> 
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">SSN</label>
+                      <div class="col-sm-6">
+                        <input id="patient-ssn" class="form-control input-sm input-field" data-property="entity-Patient.govtId" placeholder="000-00-0000" type="text"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Drivers License</label>
+                      <div class="col-sm-6">
+                        <input id="patient-drivers-license" class="form-control input-sm input-field" data-property="entity-Patient.driversLicense" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Date of Birth</label>
+                      <div class="col-sm-6">
+                        <input id="patient-dob" class="form-control input-sm input-field" placeholder="MM/DD/YYYY" data-property="entity-Patient.dob" data-field-type="date">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Gender</label>
+                      <div class="col-sm-5">
+                        <select id="patient-gender" class="form-control input-select" data-property="entity-Patient.gender" data-field-type="gender">
+                          <option value=""> Choose </option>
+                          <option value="1"> Male </option> 
+                          <option value="2"> Female </option>
+                        </select> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>  
+                    <div class="form-group">  
+                      <label class="col-sm-5 control-label">Marital</label>
+                      <div class="col-sm-5">
+                        <select id="patient-marital-status" class="form-control input-select" data-property="entity-Patient.maritalStatus" data-field-type="maritalStatus">
+                          <option value=""> Choose </option>
+                          <option value="1"> Single </option>
+                          <option value="2"> Married </option>
+                          <option value="3"> Divorced </option>
+                          <option value="4"> Widowed </option>
+                          <option value="5"> Other </option>
+                        </select> 
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label" >* Address</label>
+                      <div class="col-sm-6">
+                        <input id="patient-address1" class="form-control input-sm input-field" data-property="entity-Patient.streetAddress1" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label"></label>
+                      <div class="col-sm-6">
+                        <input id="patient-address2" class="form-control input-sm input-field" data-property="entity-Patient.streetAddress2" type="text" maxlength="250"> 
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Guardian Status</label>
+                      <div class="col-sm-3">
+                        <div class="checkbox">
+                          <label>
+                            <input id="patient-guardian-status" type="checkbox" name="hasGuardian" class="input-checkbox-group" value="true">Has Guardian
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <button class="btn btn-primary initially-no-display" id="patient-new-guardian-btn" type="button">New Guardian</button>
+                      </div>
+                    </div>
+                    
+                    <div id="patient-guardian-form-group" class="form-group initially-no-display">
+                      <label class="col-sm-5 control-label">Choose Guardian</label>
+                      <div class="col-sm-6">
+                        <select id="patient-guardian" class="form-control"></select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    
+                    <div id="patient-form-guardian-section" class="initially-no-display" data-instance-id="" data-form-key="">
+                    <hr>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Guardian Last Name</label>
+                      <div class="col-sm-6">
+                        <input id="patient-g-last-name" class="form-control input-sm input-field guardian-form-section" data-property="entity-Guardian.lastName" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Guardian First Name</label>
+                      <div class="col-sm-3">
+                        <input id="patient-g-first-name" class="form-control input-sm input-field guardian-form-section" data-property="entity-Guardian.firstName" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <label class="col-sm-1 control-label">MI</label>
+                      <div class="col-sm-2">
+                        <input id="patient-g-middle-name" class="form-control input-sm input-field guardian-form-section" data-property="entity-Guardian.middleName" type="text" maxlength="250"> 
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Guardian Address</label>
+                      <div class="col-sm-6">
+                        <input id="patient-g-address1" class="form-control input-sm input-field guardian-form-section" data-property="entity-Guardian.streetAddress1" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Guardian City</label> 
+                      <div class="col-sm-6">
+                        <input id="patient-g-city" class="form-control input-sm input-field guardian-form-section" data-property="entity-Guardian.city" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Guardian State</label>
+                      <div class="col-sm-5">
+                        <select id="patient-g-state" class="form-control input-form-us-state input-select guardian-form-section" data-property="entity-Guardian.usState" data-field-type="usState"></select>  
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Guardian Zip</label>
+                      <div class="col-sm-3">
+                        <input id="patient-g-postal-code" class="form-control input-sm input-field guardian-form-section" data-property="entity-Guardian.postalCode" placeholder="00000" type="text"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Guardian Phone</label> 
+                      <div class="col-sm-6">
+                        <input id="patient-g-phone" class="form-control input-sm input-field guardian-form-section" data-property="entity-Guardian.primaryPhone" type="text"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Guardian Email</label>
+                      <div class="col-sm-6">
+                        <input id="patient-g-email" class="form-control input-sm input-field guardian-form-section" data-property="entity-Guardian.email" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Relationship To ${app_practiceClientProperties['app.patient_label']}</label> 
+                      <div class="col-sm-6">
+                        <input id="patient-g-rel" class="form-control input-sm input-field guardian-form-section" data-property="entity-Guardian.relation" type="text"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <hr>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Clinician</label>
+                      <div class="col-sm-6">
+                        <select id="patient-clinician" class="form-control patient-clinician input-select" data-property="entity-Patient.assignedClinicianId" data-field-type="clinician"></select>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">${app_practiceClientProperties['app.patient_label']} Portal</label>
+                      <div class="col-sm-6">
+                        <span id="portal-invitation-screen"></span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-sm-4">
+                     <div class="form-group">
+                      <label class="col-sm-5 control-label">* City</label> 
+                      <div class="col-sm-6">
+                        <input id="patient-city" class="form-control input-sm input-field" data-property="entity-Patient.city" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* State</label>
+                      <div class="col-sm-5">
+                        <select id="patient-us-state" class="form-control input-form-us-state input-select" data-property="entity-Patient.usState" data-field-type="usState"></select>  
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Zip</label>
+                      <div class="col-sm-5">
+                        <input id="patient-postal-code" class="form-control input-sm input-field" data-property="entity-Patient.postalCode" placeholder="00000" type="text" maxlength="5"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Status</label>
+                      <div class="col-sm-5">
+                        <select id="patient-status" class="form-control input-select" data-property="entity-Patient.status" data-field-type="status">
+                          <option value="5">Wait List</option>
+                          <option value="1">Active</option>
+                          <option value="2">Inactive</option>
+                          <option value="3">Deceased</option>
+                        </select>  
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Occupation</label>
+                      <div class="col-sm-6">
+                        <input id="patient-occupation" class="form-control input-sm input-field" data-property="entity-Patient.occupation" type="text" maxlength="250"> 
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Race</label> 
+                      <div class="col-sm-5">
+                        <select id="patient-race" class="form-control input-select" data-property="entity-Patient.race" data-field-type="race">
+                          <option value=""> Choose </option>
+                          <option value="1"> White </option>
+                          <option value="2"> Black or African American </option>
+                          <option value="3"> Asian </option>
+                          <option value="4"> American Indian/ Alaskan Native </option>
+                          <option value="5"> Native Hawaiian or Other Pacific Islander </option>
+                          <option value="6"> More than one race </option>
+                          <option value="7"> Unknown or Not Reported </option>
+                        </select>  
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Ethnicity</label>
+                      <div class="col-sm-5">
+                        <select id="patient-ethnicity" class="form-control input-select" data-property="entity-Patient.ethnicity" data-field-type="ethnicity"> 
+                        <option value=""> Choose </option>
+                          <option value="1"> Not Hispanic or Latino </option>
+                          <option value="2"> Hispanic or Latino </option>
+                          <option value="3"> Unknown or Not Reported </option>
+                        </select> 
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Primary Phone</label>
+                      <div class="col-sm-6">
+                        <input id="patient-primary-phone" class="form-control input-sm input-field" data-property="entity-Patient.primaryPhone" placeholder="(000) 000-0000" type="text"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Secondary Phone</label>
+                      <div class="col-sm-6">
+                        <input id="patient-secondary-phone" class="form-control input-sm input-field" data-property="entity-Patient.secondaryPhone" placeholder="(000) 000-0000" type="text"> 
+                      </div>
+                    </div>
+                    <div class="form-group" id="patient-email-form-group">
+                      <label class="col-sm-5 control-label">* Email</label>
+                      <div class="col-sm-6">
+                        <input id="patient-email" class="form-control input-sm input-field" data-property="entity-Patient.email" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Preferred Name</label>
+                      <div class="col-sm-6">
+                        <input id="patient-preferred-name" class="form-control input-sm input-field" data-property="entity-Patient.preferredName" type="text" maxlength="250"> 
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Insurance Carrier</label> 
+                      <div class="col-sm-6">
+                        <input id="patient-ins-carr" class="form-control input-sm input-field" data-property="entity-Patient.insuranceCarrier" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Member Number</label> 
+                      <div class="col-sm-6">
+                        <input id="patient-member-number" class="form-control input-sm input-field" data-property="entity-Patient.memberNumber" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Group Number</label> 
+                      <div class="col-sm-6">
+                        <input id="patient-group-number" class="form-control input-sm input-field" data-property="entity-Patient.groupNumber" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">* Name of Insured</label> 
+                      <div class="col-sm-6">
+                        <input id="patient-insured-name" class="form-control input-sm input-field" data-property="entity-Patient.insuredName" type="text" maxlength="250"> 
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-5 control-label">Intake Forms</label>
+                      <div id="intake-forms-screen" class="col-sm-6">
+                        <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="client_contact" checked="checked">Client Contact</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="client_rights" checked="checked">Client Rights</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="consent" checked="checked">Consent For Medical Services</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="texting_waiver" checked="checked">Texting Waiver</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="release" checked="checked">Release of information</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="emergency_info" checked="checked">In Case of Emergency</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="self_rating" checked="checked">Self Rating</label></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div>
+                      <img id="patient-photo" class="img-responsive headshot-sm" src="assets/images/headshot_placeholder_sm.jpg">
+                    </div>
+                      <br>
+                    <div class="btn-group-vertical-sm">
+                      <span class="btn btn-success fileinput-button">
+                        <div id="patient-photo-upload">
+                      </span>
+                      <br>
+                      <br>
+                      <div class="progress" id="patient-photo-upload-progress">
+                        <div class="progress-bar progress-bar-success"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+      {{if formMode == 'add'}} 
+        <a class="btn btn-default" id="patient-save">Save</a> 
+        <a class="app-dashboard-link btn btn-default" id="patient-cancel">Cancel</a>
+      {{else formMode == 'edit'}} 
+        <button class="btn btn-danger" id="patient-form-delete-btn" type="button">Delete</button> 
+        <button class="btn btn-default" data-dismiss="modal" id="patient-form-close-btn" type="button">Close</button> 
+      {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

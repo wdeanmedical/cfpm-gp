@@ -1,0 +1,91 @@
+<div id="invoice-print" class="container">
+  <img src="${DEFAULT_APP_PATH}assets/images/practice/${PRACTICE}/${app_practiceClientProperties['app.image.practice_logo_med']}" class="pull-left" height="100">
+  <h2 class="text-center clear-both">Invoice</h2>
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-2 col-sm-offset-10">
+      invoice# ${obj.invoiceNumber}<br>  
+      ${obj.issueDate != null ? dateFormat(obj.issueDate, 'mm/dd/yyyy') : ''}
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-6">
+      <p>${app_practiceClientProperties['app.business_name']}<br>
+      {{html app_practiceClientProperties['app.business_address'] }}<br>
+      ${app_practiceClientProperties['app.director']}, Director</p>
+    </div>
+    
+    <div class="col-sm-3 col-sm-offset-3">
+      <p>${obj.patientName}<br>
+      ${obj.streetAddress1}<br>
+      ${obj.city}, ${obj.usState.code}  ${obj.postalCode}
+      <br>
+     ${obj.primaryPhone}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>${obj.title}</h4>
+      <hr class="hr-gold">
+      <p>${obj.description}</p>
+    </div>
+  </div>
+  
+ <div class="row">
+   <div class="col-sm-12">
+     <table id="${tableName}-table" class="table table-hover table-bordered table-condensed simple-data-table">
+     <thead>
+     <tr>
+       {{each(i, column) columns}} <th>${column.title}</th> {{/each}}
+     </tr>
+    </thead>
+    <tbody>
+    {{each(i, item) items}}
+      <tr id="${tableName}-${item.id}">
+      {{each(j, column) columns}} 
+        <td id="${tableName}-${item.id}-${j}" ${column.width ? 'width='+column.width : ''}>
+          {{html app_getColumnValue(column, item) }}
+        </td>
+      {{/each}}
+      </tr>
+    {{/each}}
+    </tbody>
+    </table>
+   </div>
+ </div>
+<script>
+$('#patient-invoice-item-list-table tr').each(function() {
+  $(this).find('td:last').addClass('text-align-right');
+});
+</script>
+ 
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="table-responsive">
+        <table class="table table-bordered table-condensed">
+          <tbody>
+            <tr>
+              <td width="90%" align="right">Sub Total</td>
+              <td align="right">${obj.subtotal.formatMoney()}</td>
+            </tr> 
+            <tr>
+              <td width="90%" align="right">Sales Tax</td>
+              <td align="right">$0.00</td>
+            </tr>
+            <tr>
+              <td width="90%" align="right">Total</td>
+              <td align="right">${obj.total.formatMoney()}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-right">
+      <p>We accept all Major Credit Cards, Cash, and PayPal</p>
+    </div>
+  </div>
+</div>

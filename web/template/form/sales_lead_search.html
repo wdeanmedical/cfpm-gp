@@ -1,0 +1,72 @@
+<div class="modal fade" id="modal-sales-lead-search" tabindex="-1" role="dialog" aria-labelledby="modal-sales-lead-search" aria-hidden="true">
+  <div id="size1" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" id="modal-sales-lead-search-close" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Sales Lead Search</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <form class="form-horizontal">
+            <div class="row">
+                <div class="col-sm-8">
+                  <div class="panel-top">Sales Lead Search By</div>
+                  <div class="panel panel-default">
+                    <div class="panel-body search-panel">                      
+                      <div class="form-group">
+                        <label for="sales-lead-search-first-name" class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-4">
+                          <input type="text" class="form-control input-sm" id="sales-lead-search-first-name">
+                        </div>
+                        <label for="sales-lead-search-gender" class="col-sm-2 control-label">Gender</label>
+                        <div class="col-sm-4">
+                          <select class="form-control input-sm lead-mgmt-gender" id="sales-lead-search-gender"></select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="sales-lead-search-middle-name" class="col-sm-2 control-label">Middle</label>
+                        <div class="col-sm-4">
+                          <input type="text" class="form-control input-sm" id="sales-lead-search-middle-name">
+                        </div>
+                        <label for="sales-lead-search-dob" class="col-sm-2 control-label">Date of Birth</label>
+                        <div class="col-sm-4">
+                          <input type="text" class="form-control input-sm" id="sales-lead-search-dob">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="sales-lead-search-last-name" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-4">
+                          <input type="text" class="form-control input-sm" id="sales-lead-search-last-name">
+                        </div>
+                        <label for="sales-lead-search-city" class="col-sm-2 control-label">City</label>
+                        <div class="col-sm-4">
+                          <input type="text" class="form-control input-sm" id="sales-lead-search-city">
+                          <div class="pull-right search-btn">
+                            <a id="btn-sales-lead-search-clear" class="btn btn-default">Clear</a>
+                            <a id="btn-sales-lead-search-search" class="btn btn-primary">Search</a>
+                          </div>
+                        </div>                
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="panel-top" id="sales-lead-search-results-title">Search Results</div>
+                <div id="sales-lead-search-results" class="table-responsive"></div>
+              </div>
+            </div>
+            
+            <div class="modal-footer">
+              <a id="btn-sales-lead-search-new-sales-lead"  href="#" class="btn btn-success pull-left">New Sales Lead</a>
+              <a id="btn-sales-lead-search-cancel" href="#" class="app-dashboard-link btn btn-default" data-dismiss="modal">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

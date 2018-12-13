@@ -1,0 +1,226 @@
+   <div id="forms-subscreen-${i}" class="container forms-subscreen initially-no-display">
+        <div class="col-sm-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading hidden-xs">Client Contact Confidentiality Form</div>
+            <div class="panel-heading panel-heading-sm visible-xs">Client Contact</div>
+            <div class="panel-body">
+              <form id="client-contact-form" role="form" data-instance-id="" data-form-key="">
+                <div class="col-sm-12">
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="cc-first-name">* First Name</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-first-name" data-property="gp-entity-form-ClientContact.firstName" data-field-type="text">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="cc-middle-name">Middle Name</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-middle-name" data-property="gp-entity-form-ClientContact.middleName" data-field-type="text">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label for="cc-last-name">* Last Name</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-last-name" data-property="gp-entity-form-ClientContact.lastName" data-field-type="text">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label for="birth-date">* DOB</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-dob" data-property="gp-entity-form-ClientContact.dob" data-field-type="date" placeholder="mm/dd/yyyy">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="cc-signer">* Person Completing Form</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-signer" data-property="gp-entity-form-ClientContact.signer" data-field-type="text">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="cc-signer">* Relationship To Client</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-signer-rel" data-property="gp-entity-form-ClientContact.signerRelationship" data-field-type="text">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <br>
+                <div class="col-sm-12">
+                  <div class="col-sm-12">
+                    <h4>
+                    Confidentiality is top priority. <br><small>We want to ensure that your confidentiality is protected even 
+                    when following up with you or attempting to reach you via telephone.</small>
+                    </h4>
+                    <br>
+                    <b>Please list below methods that you consent to allow us to reach you through:</b>
+                  </div>
+                </div>
+                <br>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>* May leave a message on home phone voice mail</label>
+                      <select class="form-control input-select input-sm" id="cc-vm-ok" data-property="gp-entity-form-ClientContact.voicemailOk" data-field-type="int-boolean">
+                        <option value=''>Choose</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>* May leave a message with an adult at home phone number</label>
+                      <select class="form-control input-select input-sm" id="cc-msg-ok" data-property="gp-entity-form-ClientContact.msgOk" data-field-type="int-boolean">
+                        <option value=''>Choose</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>List adults for whom this would be okay</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-msg-names" data-property="gp-entity-form-ClientContact.msgNames" data-field-type="text">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>* May leave a message on a voice mail on cell phone</label>
+                      <select class="form-control input-select input-sm" id="cc-cell-msg-ok" data-property="gp-entity-form-ClientContact.cellMsgOk" data-field-type="int-boolean">
+                        <option value=''>Choose</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>May text to cell phone (is text waiver signed?)</label>
+                      <select class="form-control input-select input-sm" id="cc-text-ok" data-property="gp-entity-form-ClientContact.textOk" data-field-type="int-boolean">
+                        <option value=''>Choose</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>* May be called at work</label>
+                      <select class="form-control input-select input-sm" id="cc-call-work-ok" data-property="gp-entity-form-ClientContact.callWorkOk" data-field-type="int-boolean">
+                        <option value=''>Choose</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>* May leave a message at work</label>
+                      <select class="form-control input-select input-sm" id="cc-msg-work-ok" data-property="gp-entity-form-ClientContact.msgWorkOk" data-field-type="int-boolean">
+                        <option value=''>Choose</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>May email information to: </label>
+                      <select class="form-control input-select input-sm" id="cc-email-ok" data-property="gp-entity-form-ClientContact.emailOk" data-field-type="int-boolean">
+                        <option value=''>Choose</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Email address: </label>
+                    <div class="form-group">
+                      <input type="text" class="form-control input-field input-sm" id="cc-email" data-property="gp-entity-form-ClientContact.email">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>* In the event that I can not be reached directly, no information is to be left with any other individual or on a voice mail.</label>
+                      <select class="form-control input-select input-sm" id="cc-no-info" data-property="gp-entity-form-ClientContact.noInfo" data-field-type="int-boolean">
+                        <option value=''>Choose</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="col-sm-12">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="name">Home Phone #</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-home-phone" data-property="gp-entity-form-ClientContact.homePhone" data-field-type="text">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Cell Phone #</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-cell-phone" data-property="gp-entity-form-ClientContact.cellPhone" data-field-type="text">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label>Work Phone #</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-work-phone" data-property="gp-entity-form-ClientContact.workPhone" data-field-type="text">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="col-sm-12">
+                  <div class="col-sm-8">
+                    <div class="form-group">
+                      <label for="Occupation">* Form Completed By</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-completed-by" data-property="gp-entity-form-ClientContact.completedBy" data-field-type="text">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="date">* Date</label>
+                      <input type="text" class="form-control input-field input-sm" id="cc-completed-by-date" data-property="gp-entity-form-ClientContact.completedByDate" data-field-type="date" placeholder="mm/dd/yyyy">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+     </div>
+   </div>

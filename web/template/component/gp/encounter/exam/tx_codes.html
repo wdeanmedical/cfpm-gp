@@ -1,0 +1,24 @@
+<div id="${resource}-list" class="col-md-12">
+  <div class="list-item-wrapper" data-item-class="${itemClass}" data-parent-id="${parentId}" data-item-prefix="${resource}"  data-parent-id-name="${parentIdName}">
+    {{each(i, item) items}}
+      <div class="form-group">
+        <div class="col-md-8">
+          <div class="form-group">
+            <label for="${resource}-cpt">TX Code</label> <input class="form-control form-control list-item-field cpt-typeahead" id="${resource}-cpt" data-id="${id}" data-updater="exam_updateTxCode" data-field-type=
+            "cpt" placeholder="CPT Code" type="text">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="${resource}-cpt-modifier">Modifier</label> <select class="form-control list-item-field cpt-modifier" data-field-type=
+            "id"  data-id="${id}" id="${resource}-cpt-modifier-id">
+            </select>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <button type="button" data-id="${id}" style="display:none" class="btn btn-danger btn-sm list-item-delete">x</button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

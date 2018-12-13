@@ -1,0 +1,173 @@
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      CHIEF COMPLAINT
+    </div>
+  </div>
+  <table class="form-table">
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DESCRIPTION</span>
+          <div class="basic-info-input">
+            ${form.description}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">OCCURS WHEN</span>
+          <div style="margin-top:20px">
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="n-a"><label class="checkbox-label">N/A</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="constant"><label class="checkbox-label">Constant</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="walking"><label class="checkbox-label">Walking</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="sitting"><label class="checkbox-label">Sitting</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="running"><label class="checkbox-label">Running</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="standing_up"><label class="checkbox-label">Standing Up</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="laying_down"><label class="checkbox-label">Laying Down</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="when_touched"><label class="checkbox-label">When Touched</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="before_eating"><label class="checkbox-label">Before Eating</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="after_eating"><label class="checkbox-label">After Eating</label>
+          </div>
+        </div>
+        <div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="bending"><label class="checkbox-label">Bending</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="holding-gripping"><label class="checkbox-label">Holding/Gripping</label>
+          </div>
+          <div class="form-checkbox">
+            <input class="input-checkbox-group" name="${formPrefix}-occurs-when" type="checkbox" value="other"><label class="checkbox-label">Other-specify</label>
+          </div>
+          <div class="form-checkbox">
+            ${form.occursOther ? form.occursOther : '___________________'}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SPECIFIC LOCATION</span>
+          <div class="basic-info-input">
+            ${form.specificLocation}
+          </div>
+        </div>
+      </td>
+      <td colspan="2">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PAIN SCALE</span>
+          <div class="basic-info-input">
+            ${form.painScale}
+          </div>
+        </div>
+      </td>
+      <td colspan="2">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PAIN TYPE</span>
+          <div class="basic-info-input">
+            ${form.painType}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info" style="height:100px">
+          <span class="item-label">HOW LONG / SINCE WHEN</span><br>
+          <span class="item-label">HOURS</span> <span class="item-label" style="left:100px">DAYS</span> <span class="item-label" style="left:200px">WEEKS</span> <span class="item-label" style="left:300px">MONTHS</span> <span class="item-label" style="left:400px">YEARS</span> <span class="item-label" style="left:500px">OTHER</span><br>
+          <span class="basic-info-input" style="left:30px">${form.hoursSince}</span> <span class="basic-info-input" style="left:160px">${form.daysSince}</span> <span class="basic-info-input" style="left:300px">${form.weeksSince}</span> <span class="basic-info-input" style="left:450px">${form.monthsSince}</span> <span class="basic-info-input" style="left:600px">${form.yearsSince}</span> <span class="basic-info-input" style="left:750px">${form.howLongOther}</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info" style="height:100px">
+          <span class="item-label">FREQUENCY</span><br>
+          <span class="item-label">X HOUR</span> <span class="item-label" style="left:100px">X DAY</span> <span class="item-label" style="left:200px">X WEEK</span> <span class="item-label" style="left:300px">X MONTH</span> <span class="item-label" style="left:400px">DURATION</span><br>
+          <span class="basic-info-input" style="left:30px">${form.painXHour}</span> <span class="basic-info-input" style="left:160px">${form.painXDay}</span> <span class="basic-info-input" style="left:300px">${form.painXWeek}</span> <span class="basic-info-input" style="left:450px">${form.painXMonth}</span> <span class="basic-info-input" style="left:600px">${form.painDuration}</span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="8">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DENIES</span>
+          <div style="margin-top:20px">
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="n"><label class="checkbox-label">N</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="v"><label class="checkbox-label">V</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="d"><label class="checkbox-label">D</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="ha"><label class="checkbox-label">HA</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="vision_px"><label class="checkbox-label">Vision Px</label>
+            </div>
+            <div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="dizziness"><label class="checkbox-label">Dizziness</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="weakness"><label class="checkbox-label">Weakness</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="parasthesia"><label class="checkbox-label">Parasthesia</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="syncope"><label class="checkbox-label">Syncope</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="pain"><label class="checkbox-label">Pain</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="anorexia"><label class="checkbox-label">Anorexia</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="fatigue"><label class="checkbox-label">Fatigue</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-denies" type="checkbox" value="other"><label class="checkbox-label">Other</label>
+            </div>
+            <div class="form-checkbox">
+              ${form.deniesOther ? form.deniesOther : '___________________'}
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

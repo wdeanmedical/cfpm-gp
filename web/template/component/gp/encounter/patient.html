@@ -1,0 +1,282 @@
+<div class="panel-body">
+  <form data-form-key="${formKey}" data-instance-id="${id}" id="${formName}" name="${formName}" role="form">
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Date</label>
+            <div data-field-type="date" id="${formPrefix}-created-date">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">MRN</label> <input class="form-control input-sm input-field" id="${formPrefix}-mrn" type="text">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">First Name</label> <input class="form-control input-sm input-field" id="${formPrefix}-first-name" maxlength="250" type="text">
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Middle Name</label> <input class="form-control input-sm input-field" id="${formPrefix}-middle-name" maxlength="1" type="text">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Last Name</label> <input class="form-control input-sm input-field" id="${formPrefix}-last-name" maxlength="250" type="text">
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">SSN</label> <input class="form-control input-masked input-sm input-field" data-mask-type="ssn" id="${formPrefix}-ssn" placeholder="000-00-0000" type="text">
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Date Of Birth</label> <input class="form-control input-sm input-masked input-field" data-field-type="date" data-mask-type="date" id="${formPrefix}-dob" placeholder="MM/DD/YYYY" type="text">
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Gender</label><select class="form-control input-select" data-field-type="gender" id="${formPrefix}-gender">
+              <option value="">
+                Choose
+              </option>
+              <option value="1">
+                Male
+              </option>
+              <option value="2">
+                Female
+              </option>
+            </select>
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Marital</label><select class="form-control input-select" data-field-type="maritalStatus" id="${formPrefix}-marital-status">
+              <option value="">
+                Choose
+              </option>
+              <option value="1">
+                Single
+              </option>
+              <option value="2">
+                Married
+              </option>
+              <option value="3">
+                Divorced
+              </option>
+              <option value="4">
+                Widowed
+              </option>
+              <option value="5">
+                Other
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="control-label">Street Address</label> <input class="form-control input-sm input-field" id="${formPrefix}-street-address1" maxlength="250" type="text">
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">City</label> <input class="form-control input-sm input-field" id="${formPrefix}-city" type="text">
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">State</label><select class="form-control input-form-us-state input-select" data-field-type="usState" id="${formPrefix}-us-state">
+            </select>
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">ZIP</label> <input class="form-control input-sm input-masked input-field" data-mask-type="zipcode" id="${formPrefix}-postal-code" placeholder="00000" type="text">
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Primary Phone</label> <input class="form-control input-sm input-masked input-field" data-mask-type="phone" id="${formPrefix}-primary-phone" placeholder="(000) 000-0000" type="text">
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label class="control-label">Secondary Phone</label> <input class="form-control input-masked input-sm input-field" data-mask-type="phone" id="${formPrefix}-secondary-phone" placeholder="(000) 000-0000" type="text">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label class="control-label">Email</label> <input class="form-control input-sm input-field" id="${formPrefix}-email" type="text">
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Occupation</label> <input class="form-control input-sm input-field" id="${formPrefix}-occupation" type="text">
+            <div class="help-block with-errors">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label class="control-label">Employment Status</label><select class="form-control input-select" data-field-type="employmentStatus" id="${formPrefix}-employment-status">
+              <option value="">
+                Choose
+              </option>
+              <option>
+                Yes
+              </option>
+              <option>
+                No
+              </option>
+              <option>
+                Retired
+              </option>
+              <option>
+                NA
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Employer</label> <input class="form-control input-sm input-field" id="${formPrefix}-employer" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Race</label><select class="form-control input-select" data-field-type="race" id="${formPrefix}-race">
+              <option>
+                Choose
+              </option>
+              <option value="1">
+                White
+              </option>
+              <option value="2">
+                Black or African American
+              </option>
+              <option value="3">
+                Asian
+              </option>
+              <option value="4">
+                American Inrrn/ Alaskan Native
+              </option>
+              <option value="5">
+                Native Hawaiian or Other Pacific Islander
+              </option>
+              <option value="6">
+                More than one race
+              </option>
+              <option value="7">
+                Unknown or Not Reported
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">Ethnicity</label><select class="form-control input-select" data-field-type="ethnicity" id="${formPrefix}-ethnicity">
+              <option>
+                Choose
+              </option>
+              <option value="1">
+                Not Hispanic or Latino
+              </option>
+              <option value="2">
+                Hispanic or Latino
+              </option>
+              <option value="3">
+                Unknown or Not Reported
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <label class="control-label">Education Status</label><select class="form-control input-select" data-field-type="schoolStatus" id="${formPrefix}-school-status">
+              <option value="">
+                Choose
+              </option>
+              <option>
+                Full Time
+              </option>
+              <option>
+                Part Time
+              </option>
+              <option>
+                No
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label">School Name</label> <input class="form-control input-sm input-field" id="${formPrefix}-school-name" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group form" data-instance-id="${encounterId}">
+            <label class="control-label">Notes</label> <input class="form-control input-sm input-field" data-property="gp-entity-form-Encounter.notes" id="encounter-notes" type="text">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+    <img class="img-responsive headshot-sm" data-field-type="image" id="${formPrefix}-photo" src="assets/images/headshot_placeholder_sm.jpg">
+    </div>
+    <div id="${formPrefix}-photo-upload-placeholder"></div>
+  </form>
+</div>

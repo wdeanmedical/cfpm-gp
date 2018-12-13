@@ -1,0 +1,365 @@
+<div id="forms-subscreen-${i}" class="container forms-subscreen initially-no-display">
+  <div class="col-sm-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading hidden-xs">Emergency Information</div>
+      <div class="panel-heading panel-heading-sm visible-xs">Emergency Information</div>
+      <div class="panel-body">
+      <form id="emergency-info-form" role="form" data-instance-id="" data-form-key="">
+      <div class="row">
+        <div class="col-sm-2 form-group">
+          <label>Date</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-date" data-property="gp-entity-form-EmergencyInfo.date" data-field-type="date" placeholder="mm/dd/yyyy">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>SSN</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-ssn" data-property="gp-entity-form-EmergencyInfo.ssn">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label>Primary Language</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-lang" data-property="gp-entity-form-EmergencyInfo.lang">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-3 form-group">
+          <label>First Name</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-first-name" data-property="gp-entity-form-EmergencyInfo.firstName" data-field-type="text">
+          <div class="help-block with-errors"></div>
+        </div>
+        <div class="col-sm-3 form-group">
+          <label>Middle Name</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-middle-name" data-property="gp-entity-form-EmergencyInfo.middleName" data-field-type="text">
+          <div class="help-block with-errors"></div>
+        </div>
+        <div class="col-sm-3 form-group">
+          <label>Last Name</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-last-name" data-property="gp-entity-form-EmergencyInfo.lastName" data-field-type="text">
+          <div class="help-block with-errors"></div>
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>DOB</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-dob" data-property="gp-entity-form-EmergencyInfo.dob" data-age-id="#emerg-age" data-field-type="date" placeholder="mm/dd/yyyy">
+          <div class="help-block with-errors"></div>
+        </div>
+        <div class="col-sm-1 form-group">
+          <label>Age</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-age" readonly="readonly">
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label>Address</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-street-address" data-property="gp-entity-form-EmergencyInfo.streetAddress">
+        </div>
+        <div class="col-sm-2 form-group">
+            <label>City</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-city" data-property="gp-entity-form-EmergencyInfo.city">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>State</label>
+          <select id="emerg-us-state" class="form-control input-form-us-state input-select" data-property="gp-entity-form-EmergencyInfo.usState" data-field-type="usState"></select>  
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>Zip</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-postal-code" data-property="gp-entity-form-EmergencyInfo.postalCode">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>Phone</label>
+          <input type="text" class="form-control input-masked input-field input-sm" id="emerg-phone" data-masked="phone" data-property="gp-entity-form-EmergencyInfo.phone">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label>Person Authorized to Drop Off</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-drop-off-name" data-property="gp-entity-form-EmergencyInfo.dropOffName">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>Phone</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-drop-off-phone" data-property="gp-entity-form-EmergencyInfo.dropOffPhone">
+        </div>
+        <div class="col-sm-4 form-group">
+          <label>Person Authorized to Pick Up</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-pick-up-name" data-property="gp-entity-form-EmergencyInfo.pickUpName">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>Phone</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-pick-up-phone" data-property="gp-entity-form-EmergencyInfo.pickUpPhone">
+        </div>
+      </div>
+           <div class="row">
+        <div class="col-sm-12">
+          <h4>Insurance Information</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <label>Insurance Company</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-insurance" data-property="gp-entity-form-EmergencyInfo.insurance">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label>Policy Number</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-policy-number" data-property="gp-entity-form-EmergencyInfo.policyNumber">
+        </div>
+      </div>
+      
+      <br>
+      <div class="row"><div class="col-sm-12"><h4> Emergency Contacts </h4></div></div>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+            <label>Name</label>
+            <input type="text" class="form-control input-field input-sm" id="emerg-contact-name-1" data-property="gp-entity-form-EmergencyInfo.contactName1">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label>Relationship</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-contact-rel-1" data-property="gp-entity-form-EmergencyInfo.contactRel1">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>Phone</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-contact-phone-1" data-property="gp-entity-form-EmergencyInfo.contactPhone1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+            <label>Name</label>
+            <input type="text" class="form-control input-field input-sm" id="emerg-contact-name-2" data-property="gp-entity-form-EmergencyInfo.contactName2">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label>Relationship</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-contact-rel-2" data-property="gp-entity-form-EmergencyInfo.contactRel2">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>Phone</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-contact-phone-2" data-property="gp-entity-form-EmergencyInfo.contactPhone2">
+        </div>
+      </div>
+      <br> 
+      
+      <div class="row"><div class="col-sm-12"><h4>Physicians</h4></div></div>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label>Primary Care Physician</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-pcp-name" data-property="gp-entity-form-EmergencyInfo.pcpName">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>Phone</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-pcp-phone" data-property="gp-entity-form-EmergencyInfo.pcpPhone">
+        </div>
+        <div class="col-sm-4 form-group">
+          <label>Medication Prescriber</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-prescriber-name" data-property="gp-entity-form-EmergencyInfo.prescriberName">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>Phone</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-prescriber-phone" data-property="gp-entity-form-EmergencyInfo.prescriberPhone">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label>Current Speciality Physician </label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-spec-name" data-property="gp-entity-form-EmergencyInfo.specName">
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>Phone</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-spec-phone" data-property="gp-entity-form-EmergencyInfo.specPhone">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label>Preferred Hospital</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-hospital" data-property="gp-entity-form-EmergencyInfo.hospital">
+        </div>
+        <div class="col-sm-3 form-group">
+          <label>Pharmacy</label>
+          <input type="text" class="form-control input-field input-sm" id="emerg-pharmacy" data-property="gp-entity-form-EmergencyInfo.pharmacy">
+        </div>
+      </div>
+      <br>
+      <div class="row"><div class="col-sm-12"><h4>Diagnosis</h4></div></div>
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <input type="text" class="form-control input-field input-sm" id="emerg-dx-1" data-property="gp-entity-form-EmergencyInfo.dx1" placeholder="1.">
+        </div>
+        <div class="col-sm-4 form-group">
+          <input type="text" class="form-control input-field input-sm" id="emerg-dx-2" data-property="gp-entity-form-EmergencyInfo.dx2" placeholder="2.">
+        </div>
+        <div class="col-sm-4 form-group">
+          <input type="text" class="form-control input-field input-sm" id="emerg-dx-3" data-property="gp-entity-form-EmergencyInfo.dx3" placeholder="3.">
+        </div>
+      </div>
+      <br>          
+
+      <hr>
+  <br>          
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label>Please list any allergies, including medication allergies / sensitivities:</label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 form-group">
+      <label>Allergy</label>
+      <input type="text" id="emerg-allergy-1" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.allergy1">
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Level</label>
+      <input type="text" id="emerg-allergy-level-1" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.allergyLevel1">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 form-group">
+      <label>Allergy</label>
+      <input type="text" id="emerg-allergy-2" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.allergy2">
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Level</label>
+      <input type="text" id="emerg-allergy-level-2" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.allergyLevel2">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 form-group">
+      <label>Allergy</label>
+      <input type="text" id="emerg-allergy-3" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.allergy3">
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Level</label>
+      <input type="text" id="emerg-allergy-level-3" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.allergyLevel3">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label>Additional Information </label>
+        <textarea class="form-control input-field input-sm" rows="3" id="emerg-allergy-info" data-property="gp-entity-form-EmergencyInfo.allergyInfo"></textarea>
+      </div>
+    </div>
+  </div>
+  <br>  
+                <hr>
+                <br>          
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group">
+                      <label>What medications do you take (include non-prescription medications, herbal medicines, and supplements</label>
+                    </div>
+                  </div>
+                </div>
+  <div class="row">
+    <div class="col-sm-4 form-group">
+      <label>Medication/Supplement/Herb</label>
+      <input type="text" id="emerg-med-1" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.med1">
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Dose</label>
+      <input type="text" id="emerg-dose-1" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.dose1">
+    </div>
+    <div class="col-sm-2 form-group">
+      <label>Frequency</label>
+      <input type="text" id="emerg-freq-1" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.freq1">
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Prescriber</label>
+      <input type="text" id="emerg-prescriber-1" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.prescriber1">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 form-group">
+      <label>Medication/Supplement/Herb</label>
+      <input type="text" id="emerg-med-2" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.med2">
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Dose</label>
+      <input type="text" id="emerg-dose-2" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.dose2">
+    </div>
+    <div class="col-sm-2 form-group">
+      <label>Frequency</label>
+      <input type="text" id="emerg-freq-2" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.freq2">
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Prescriber</label>
+      <input type="text" id="emerg-prescriber-2" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.prescriber2">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 form-group">
+      <label>Medication/Supplement/Herb</label>
+      <input type="text" id="emerg-med-3" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.med3">
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Dose</label>
+      <input type="text" id="emerg-dose-3" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.dose3">
+    </div>
+    <div class="col-sm-2 form-group">
+      <label>Frequency</label>
+      <input type="text" id="emerg-freq-3" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.freq3">
+    </div>
+    <div class="col-sm-3 form-group">
+      <label>Prescriber</label>
+      <input type="text" id="emerg-prescriber-3" class="form-control input-field" data-property="gp-entity-form-EmergencyInfo.prescriber3">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label>Additional Information </label>
+        <textarea class="form-control input-field input-sm" rows="3" id="emerg-med-info" data-property="gp-entity-form-EmergencyInfo.medInfo"></textarea>
+      </div>
+    </div>
+  </div>
+  <br>
+                <br>
+                <div class="row"><div class="col-sm-10 col-sm-offset-1"><hr class="hr-gold"></div></div>
+                <div class="row">
+                  <div class="col-sm-5 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Patient</label>
+                      <input type="text" class="form-control input-field input-sm" id="emerg-sig-patient" data-property="gp-entity-form-EmergencyInfo.sigPatient">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label>Date</label>
+                      <input type="text" class="form-control input-date input-field input-sm" id="emerg-sig-date" data-property="gp-entity-form-EmergencyInfo.sigDate" data-field-type="date" placeholder="mm/dd/yyyy">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-5 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Authorized Representative</label>
+                      <input type="text" class="form-control input-field input-sm" id="emerg-sig-rep" data-property="gp-entity-form-EmergencyInfo.sigRep">
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label>Date</label>
+                      <input type="text" class="form-control input-date input-field input-sm" id="emerg-sig-rep-date" data-property="gp-entity-form-EmergencyInfo.sigRepDate" data-field-type="date" placeholder="mm/dd/yyyy">
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group">
+                      <label>Relationship to Patient</label>
+                      <input type="text" class="form-control input-field input-sm" id="emerg-sig-rel" data-property="gp-entity-form-EmergencyInfo.sigRel">
+                    </div>
+                  </div>
+                </div>
+                <div class="row sign-box">
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group has-warning">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" id="emerg-read-doc" class="input-checkbox" data-property="gp-entity-form-EmergencyInfo.readDoc">
+                          <b>* By checking this box and typing your name in the box below, you agree that you have read and understand this document.</b>
+                        </label>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div> 

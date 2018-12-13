@@ -1,0 +1,81 @@
+<div class="row">
+  {{if typeof offsetClass != 'undefined'}}
+    <div class="${offsetClass}">
+  {{else}}
+    <div class="col-sm-10 col-sm-offset-1">
+  {{/if}} 
+    {{if readonly === false}}
+      <img id="treatment-placeholder" src="assets/images/placeholder/treatment.jpg" class="img-responsive ${list && list.length > 0 ? 'initially-no-display' : ''}">
+    {{else}}
+      <div class="jumbotron ${list && list.length > 0 ? 'initially-no-display' : ''}"> <h3 class="text-center">No Treatments</h3> </div>
+    {{/if}}
+  </div>
+</div>
+
+<div class="list-item-wrapper" data-item-class="${itemClass}" data-item-prefix="${resource}" data-parent-id="${parentId}" data-parent-id-name="${parentIdName}">
+{{each(i, item) list}}
+  {{if typeof offsetClass != 'undefined'}}
+     <div class="panel-body well treatment ${offsetClass}" id="treatment-${id}">
+  {{else}}
+   <div class="panel-body well treatment col-sm-10 col-sm-offset-1" id="treatment-${id}">
+  {{/if}} 
+    <div class="panel-body">
+     <div class="row">
+       <div class="col-sm-2 form-group">
+         <label>Date</label>
+         <input data-id="${id}" type="text" class="form-control list-item-field input-masked" data-mask-type="date"  
+                id="${resource}-date--id${id}" data-field-type="date" >
+         <div class="help-block with-errors"></div>
+       </div>
+       <div class="col-sm-3 form-group">
+         <label>Type</label>
+         <select data-id="${id}" class="form-control list-item-field input-sm" id="${resource}-txType--id${id}">
+           <option value=''>Choose</option>
+            {{each(i, option) ["OT", "PT", "SPEECH", "Educational", "Neuropsychological", "Other"]}}
+            <option>${option}</option>
+           {{/each}}
+         </select>
+         <div class="help-block with-errors"></div>
+       </div>
+       <div class="col-sm-4 form-group">
+         <label>If other, please specify</label>
+         <input data-id="${id}" type="text" class="form-control list-item-field" id="${resource}-txTypeOther--id${id}"
+          maxlength="200">
+         <div class="help-block with-errors"></div>
+       </div>
+       <div class="col-sm-3">
+         {{if !readonly}}
+           <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete treatment-delete-control pull-right">x</button>
+         {{/if}}
+      </div>
+     </div>
+     <div class="row">
+       <div class="col-sm-4 form-group">
+         <label>Location</label>
+         <select data-id="${id}" class="form-control list-item-field input-sm" id="${resource}-txLocation--id${id}">  
+           <option>Choose</option>
+           {{each(i, option) ["Early Intervention Services", "School Services", "Outside Services", "Other"]}}
+              <option>${option}</option>
+           {{/each}}
+         </select>
+         <div class="help-block with-errors"></div>
+       </div>
+       <div class="col-sm-5 form-group">
+         <label>If other, please specify</label>
+         <input data-id="${id}" type="text" class="form-control list-item-field" id="${resource}-locationOther--id${id}"
+          maxlength="200">
+         <div class="help-block with-errors"></div>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-sm-10 form-group">
+         <label>Specifics Regarding Treatment</label>
+         <textarea data-id="${id}"  class="form-control list-item-field input-sm" rows="3" id="${resource}-txDetails--id${id}"
+          maxlength="1000"></textarea>
+         <div class="help-block with-errors"></div>
+       </div>
+     </div>
+   </div>
+ </div>
+{{/each}}
+</div>

@@ -1,0 +1,27 @@
+<div class="modal fade" id="modal-new-complaint" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="modal-new-complaint" aria-hidden="true">
+  <div class="modal-dialog narrow-modal-width">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" id="new-complaint-close" class="close" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">New ${app_practiceClientProperties['app.patient_label']} Complaint</h4>
+      </div>
+      <div class="modal-body">
+        <div id="new-complaint-form">
+          <h4>New ${app_practiceClientProperties['app.patient_label']} Complaint</h4> 
+          <form role="form">
+            <div class="form-group">
+              <label>Complaint</label>
+              <input class="form-control" type="text" id="new-complaint">
+              <div class="help-block with-errors"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="new-complaint-cancel" type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+        <button id="new-complaint-submit" type="button" class="btn btn-primary">Submit</button>
+      </div>
+      <div id="new-complaint-notification"></div>
+    </div>
+  </div>
+</div>

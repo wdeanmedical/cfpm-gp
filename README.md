@@ -1,2 +1,11 @@
-# cfpm-gp
-Care First Practice Manager - Open Source General Practice Edition 
+# CareFirst Practice Manager
+# General Practice Edition
+
+# version 1.0 12-DEC-2018
+
+Improvements:
+      
+Bug Fixes:
+
+
+wdeanmedical.com

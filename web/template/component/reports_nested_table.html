@@ -1,0 +1,50 @@
+<table class="table table-bordered table-hover table-condensed">
+  <thead class="text-center">
+  <tr>
+    <td>${app_practiceClientProperties['app.patient_label']} Name</td>
+  </tr>
+  </thead>
+  <tbody>
+  {{each(i, item) items}}
+  <tr id="${tableId}-${item.id}" name="${item.id}" data-row-key="${item.id}" data-table-name="${tableName}">
+    <td>${item.patientName}</td>
+  </tr>  
+  <tr>  
+	  <td colspan='6'>
+	    <table class="table table-bordered table-hover table-condensed">
+	    <thead class="text-center">
+	    <tr>
+    		<td>User Name</td>
+    		<td>Time Performed</td>
+    		<td>Clinician Name</td>
+    		<td>Field Name</td>
+    		<td>Activity</td>
+    		<td>Module</td>
+  		</tr>
+  		</thead>
+	    {{each(j, subItem) item.activityLog}}	    	
+	    <tr
+	     id="${tableId}-${subItem.id}" 
+    	 name="${subItem.id}"
+    	 data-row-key="${subItem.id}" 
+    	 data-table-name="${tableName}" 
+	    >
+	    	<td>${subItem.userName}</td>
+	    	<td>${subItem.timePerformed}</td>
+	    	<td>${subItem.clinicianName}</td>
+	    	<td>${subItem.fieldName}</td>
+	    	<td>${subItem.activity}</td>
+	    	<td>${subItem.module}</td>	    	
+	    </tr>
+	    {{/each}}
+	    </table>
+	  </td>  
+  </tr>
+  {{/each}}
+  <tr class="simple-data-table-footer">
+    <td class="simple-data-table-footer" colspan='6'>
+      <p><span>${title} ${items.length == 0 ? '0' : '1'}-<wbr>${items.length}</span></p>
+    </td>
+  </tr>
+  </tbody>
+</table>

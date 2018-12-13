@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+	  {{if portal}}
+	   <h2 class="title-white text-right"><i class="fa fa-folder-open fa-lg"></i> Files </h2>
+	   {{/if}}   
+	  {{if portal}}
+	    <div class="panel-top">Files</div>
+	   {{else}}
+	   <div class="panel-top">${app_practiceClientProperties['app.patient_label']} Files</div>
+	  {{/if}} 
+	  <div class="panel panel-default">
+	    <div class="panel-body">      
+	      <div class="col-sm-3">
+	        <a data-toggle="modal" id="new-patient-file" href="#modal-new-file" class="btn btn-success btn-block">Add File</a>
+	        <ul class="nav nav-pills nav-stacked msg-sidebar">
+	          <li></li>
+	          <li><a id="to-provider-folder" href="#files-to-provider" data-folder="toProvider" data-toggle="tab">Files To Provider </a></li>
+	          <li><a id="from-provider-folder" href="#files-from-provider" data-folder="fromProvider" data-toggle="tab">Files From Provider</a></li>
+	          {{if !portal}} 
+	           <li><a href="#files-deleted" data-folder="trash" data-toggle="tab">Trash</a></li>
+	         {{/if}}  
+	        </ul>
+	      </div><!-- col-2-end -->
+	      <div class="col-sm-9">
+	        <div class="tab-content">
+	          <div id="files-to-provider" class="tab-pane">
+	            <div class="panel-top">To Provider</div>
+	            <div class="table-responsive">
+	            </div>
+	          </div>
+	          <div id="files-from-provider" class="tab-pane">
+	            <div class="panel-top">From Provider</div>
+	            <div class="table-responsive">
+	            </div>
+	          </div>   
+	          <div id="files-deleted" class="tab-pane">
+	            <div class="panel-top">Deleted Files</div>
+	            <div class="table-responsive">
+	            </div>
+	          </div>                  
+	        </div><!-- tab-content-end -->
+	      </div><!-- col-10-end -->            
+	      <div class="pull-right" id="file-action">
+	        <a href="#" class="btn btn-default download" disabled>Download</a>
+	        <a href="#" class="btn btn-default delete" disabled>Delete</a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+  </div>
+</div>

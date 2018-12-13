@@ -1,0 +1,12 @@
+.DS_Store
+web/WEB-INF/classes/
+web/WEB-INF/data/uploads/
+
+web/cfpm-react/node_modules/
+web/cfpm-react/build/
+web/cfpm-react/.idea/
+wdm_files
+webapp*log
+wdm_tmp
+seed
+web/WEB-INF/jetty.xml

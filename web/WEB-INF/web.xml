@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+  xmlns="http://java.sun.com/xml/ns/j2ee" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+  http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+>
+  <display-name>WDean Medical</display-name>
+  <description>WDean Medical</description>
+  
+  <context-param>
+    <param-name>specialty</param-name>
+    <param-value>gp</param-value>
+  </context-param>
+  
+  <context-param>
+    <param-name>practice</param-name>
+    <param-value>10000</param-value>
+  </context-param>
+  
+
+  <context-param>
+    <param-name>webAppRootKey</param-name>
+    <param-value>website.root.wdm</param-value>
+	</context-param>
+	
+   <context-param>
+    <param-name>recoveryCodeExpiration</param-name>
+    <param-value>86400</param-value>
+  </context-param>
+  <context-param>
+    <param-name>activationCodeExpiration</param-name>
+    <param-value>604800</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/spring-servlet.xml</param-value>
+  </context-param> 
+  
+  <context-param>
+    <param-name>log4jConfigLocation</param-name>
+    <param-value>/WEB-INF/properties/log4j.properties</param-value>
+  </context-param> 
+  
+  <context-param>
+    <param-name>sessionTimeout</param-name>
+    <param-value>0</param-value>
+  </context-param> 
+  
+  <context-param>
+    <param-name>appSessionTimeout</param-name>
+    <param-value>720</param-value>
+  </context-param> 
+
+  <listener>
+    <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+  </listener>
+  
+  <servlet>
+    <servlet-name>AdminController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.AdminController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+    <servlet-name>AdminController</servlet-name>
+    <url-pattern>/admin/*</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>BillingController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.BillingController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+    <servlet-name>BillingController</servlet-name>
+    <url-pattern>/billing/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AppController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.AppController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>AppController</servlet-name>
+    <url-pattern>/app/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CalendarController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.CalendarController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>CalendarController</servlet-name>
+    <url-pattern>/cal/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LeadMgmtController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.LeadMgmtController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>LeadMgmtController</servlet-name>
+    <url-pattern>/leadmgmt/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MessageController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.MessageController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>MessageController</servlet-name>
+    <url-pattern>/msg/*</url-pattern>
+  </servlet-mapping>
+    
+  <servlet-mapping>
+    <servlet-name>ModuleController</servlet-name>
+    <url-pattern>/pm/*</url-pattern>
+    <url-pattern>/portal/*</url-pattern>
+    <url-pattern>/store/*</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>ModuleController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.ModuleController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+   </servlet>
+  
+  <servlet>
+    <servlet-name>PatientController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.PatientController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientController</servlet-name>
+    <url-pattern>/patient/*</url-pattern>
+  </servlet-mapping>
+
+   <servlet>
+    <servlet-name>PatientFileController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.PatientFileController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientFileController</servlet-name>
+    <url-pattern>/patientFile/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ReportController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.ReportController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReportController</servlet-name>
+    <url-pattern>/reports/*</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <servlet-name>SiteController</servlet-name>
+    <servlet-class>com.wdeanmedical.controller.SiteController</servlet-class>
+    <load-on-startup>3</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SiteController</servlet-name>
+    <url-pattern>/site/*</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+    <param-name>appHtml</param-name>
+    <param-value>/app.html</param-value>
+  </context-param>
+  
+  <!-- Spring Servlet Configuration -->
+  <servlet>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <servlet-class>
+      org.springframework.web.servlet.DispatcherServlet
+    </servlet-class>   
+    <load-on-startup>2</load-on-startup>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>/WEB-INF/spring-servlet.xml</param-value>
+    </init-param> 
+  </servlet> 
+  <listener>
+      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener> 
+
+  <welcome-file-list>
+    <welcome-file>app.html</welcome-file>
+  </welcome-file-list>
+
+
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location>
+   </error-page>
+
+</web-app>

@@ -1,0 +1,399 @@
+      <form role="form">
+          <div class="row">
+        <div class="panel-top" id="lead-mgmt-assigned-to-title">Assigned To</div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="lead-mgmt-location">Location</label>
+              <select class="form-control intake-field lead-mgmt-location" id="lead-mgmt-location" data-property="entity-form-SalesLead.facilityId"></select>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Team Members</label>
+              <select class="form-control selectpicker" multiple id="lead-mgmt-user" name="lead-mgmt-user" data-property="entity-form-SalesLead.salesAgentIds">
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <hr>
+        <div class="row">
+        <div class="panel-top" id="lead-mgmt-contact-info-title">Contact Information</div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="lead-mgmt-title">Title</label>
+              <select class="form-control intake-field lead-mgmt-title" id="lead-mgmt-title" data-property="entity-form-SalesLead.title">
+                <option>Choose</option>
+                <option>Mr.</option>
+                <option>Mrs.</option>
+                <option>Ms.</option>
+                <option>Dr.</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="lead-mgmt-first-name">* First Name</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-first-name" data-property="entity-form-SalesLead.firstName">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="lead-mgmt-middle-name">Middle Name</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-middle-name" data-property="entity-form-SalesLead.middleName">
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="lead-mgmt-last-name">* Last Name</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-last-name" data-property="entity-form-SalesLead.lastName">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="lead-mgmt-status">Status</label>
+              <select class="form-control intake-field lead-mgmt-status" id="lead-mgmt-status" data-property="entity-form-SalesLead.status"></select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="stage">Stage</label>
+              <select class="form-control intake-field lead-mgmt-stage" id="lead-mgmt-stage" data-property="entity-form-SalesLead.stage"></select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="age">Age</label>
+              <select class="form-control intake-field lead-mgmt-age-range" id="lead-mgmt-age-range" data-property="entity-form-SalesLead.ageRange"></select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="lead-mgmt-best-time">Best Time To Contact</label>
+              <input type="text" class="form-control intake-field lead-mgmt-best-time" id="lead-mgmt-best-time" placeholder="Day / Night" data-property="entity-form-SalesLead.bestTimeToContact">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="lead-mgmt-source">Lead Source</label>
+              <select class="form-control intake-field lead-mgmt-source" id="lead-mgmt-source" data-property="entity-form-SalesLead.source"></select>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="network-marketing-source">If Network Marketing</label>
+              <select class="form-control intake-field lead-mgmt-network-marketing-source" id="lead-mgmt-network-marketing-source" data-property="entity-form-SalesLead.networkMarketingSource"></select>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="lead-mgmt-referral-source-type">If Referred By</label>
+              <select class="form-control intake-field lead-mgmt-source-type" id="lead-mgmt-source-type" data-property="entity-form-SalesLead.sourceType"></select>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="form-group">
+             <label for="lead-mgmt-gender"> Gender</label>             
+               <select class="form-control intake-field lead-mgmt-gender" id="lead-mgmt-gender" data-property="entity-form-SalesLead.gender"></select>
+               <div class="help-block with-errors"></div>
+             </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label for="lead-mgmt-ssn"><span class="field-is-required-for-conversion">*</span> SSN</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-ssn" data-property="entity-form-SalesLead.ssn" disabled>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label for="lead-mgmt-drivers-license"><span class="field-is-required-for-conversion">*</span> Drivers License</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-drivers-license" data-property="entity-form-SalesLead.driversLicense" disabled>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label for="lead-mgmt-occupation">Occupation</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-occupation" data-property="entity-form-SalesLead.occupation">
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label for="lead-mgmt-dob"><span class="field-is-required-for-conversion">*</span> Date Of Birth</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-dob" placeholder="mm/dd/yyyy" data-property="entity-form-SalesLead.dob">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="lead-mgmt-email"><span class="field-is-required-for-conversion">*</span> Email</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-email" data-property="entity-form-SalesLead.email">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="lead-mgmt-primary-phone"><span class="field-is-required-for-conversion">*</span> Primary Phone</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-primary-phone" placeholder="(000) 000-0000" data-property="entity-form-SalesLead.primaryPhone">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="lead-mgmt-secondary-phone">Secondary Phone</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-secondary-phone" placeholder="(000) 000-0000" data-property="entity-form-SalesLead.secondaryPhone">
+            </div>
+          </div>
+        </div>
+        <hr>
+        
+        <div class="row">
+        <div class="panel-top" id="lead-mgmt-goals-title">Interests and Goals</div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="goal">Primary Interest Or Goal</label>
+              <select class="form-control intake-field  lead-mgmt-goal" id="lead-mgmt-goal" data-property="entity-form-SalesLead.goal"></select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="lead-mgmt-notes">Notes</label>
+              <textarea class="form-control intake-field lead-mgmt-goal" rows="3" id="lead-mgmt-notes" data-property="entity-form-SalesLead.note"></textarea>
+            </div>
+          </div>
+        </div>
+        <hr>
+        
+        <div class="row">
+        <div class="panel-top" id="lead-mgmt-addresses-title">Addresses</div>
+          <div class="col-sm-8">
+            <div class="form-group">
+              <label for="primary-address"><span class="field-is-required-for-conversion">*</span> Primary Address</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-primary-address" data-property="entity-form-SalesLead.streetAddress1">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="primary-address-type">Address Type</label>
+              <select class="form-control intake-field lead-mgmt-primary-address-type" id="lead-mgmt-primary-address-type" data-property="entity-form-SalesLead.addressType"></select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="primary-address-city"><span class="field-is-required-for-conversion">*</span> City</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-primary-city" data-property="entity-form-SalesLead.city">
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="lead-mgmt-primary-us-state"><span class="field-is-required-for-conversion">*</span> State</label>
+              <select class="form-control intake-field lead-mgmt-primary-us-state" id="lead-mgmt-primary-us-state" data-property="entity-form-SalesLead.usState"></select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="primary-address-postal-code"><span class="field-is-required-for-conversion">*</span> Zip Code</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-primary-postal-code" data-property="entity-form-SalesLead.postalCode">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="form-group">
+              <label for="secondary-address">Secondary Address</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-secondary-address" data-property="entity-form-SalesLead.altStreetAddress1">
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="secondary-address-type">Address Type</label>
+              <select class="form-control intake-field lead-mgmt-secondary-address-type" id="lead-mgmt-secondary-address-type" data-property="entity-form-SalesLead.altAddressType"></select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="secondary-address-city">City</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-secondary-city" data-property="entity-form-SalesLead.altCity">
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="lead-mgmt-secondary-us-state">State</label>
+              <select class="form-control intake-field lead-mgmt-secondary-us-state" id="lead-mgmt-secondary-us-state" data-property="entity-form-SalesLead.altUSState"></select>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="secondary-address-zip">Zip Code</label>
+              <input type="text" class="form-control intake-field" id="lead-mgmt-secondary-postal-code" data-property="entity-form-SalesLead.altPostalCode">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="panel-top" id="lead-mgmt-actions-title">Actions</div>
+        <div id="lead-mgmt-action-list" class="table-responsive container-scroll" style="background-color:white"></div> 
+        <button id="lead-mgmt-new-action-btn" type="button" class="btn btn-default pull-right">New Action</button>
+        <br> 
+        <br> 
+        <br>
+        <div id="lead-mgmt-new-action-panel" class="panel panel-default initially-no-display">
+          <div class="panel-heading">
+            <h4 class="panel-title">Action</h4>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="lead-mgmt-action-date">Date</label>
+                  <input id="lead-mgmt-action-date" type="text" class="form-control input-sm" readonly="readonly">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label for="lead-mgmt-action-name">Action</label>
+                  <input id="lead-mgmt-action-name" type="text" class="form-control input-sm">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-sm-7">
+              <div class="form-group">
+                <label>Team Member</label>
+                <input id="lead-mgmt-action-user" type="text" class="form-control input-sm" readonly="readonly">
+              </div>
+            </div>
+          </div>
+         <div class="row">
+           <div class="col-sm-12">
+            <div class="form-group">
+              <label for="lead-mgmt-action-notes">Notes</label>
+              <textarea class="form-control" rows="3" id="lead-mgmt-action-notes"></textarea>
+            </div>
+           </div>
+         </div>
+         <div class="pull-right">
+           <button id="lead-mgmt-action-cancel-btn" type="button" class="btn btn-default">Cancel</button>
+           <button id="lead-mgmt-action-save-btn" type="button" class="btn btn-primary">Save</button>
+           <button id="lead-mgmt-action-update-btn" type="button" class="btn btn-primary">Update</button>
+           <button id="lead-mgmt-action-delete-btn" type="button" class="btn btn-primary">Delete</button>
+         </div>
+        </div>
+       </div> 
+       
+      <hr>
+      <div class="panel-top" id="lead-mgmt-tasks-title">Tasks</div>
+      <div id="lead-mgmt-task-list" class="table-responsive container-scroll" style="background-color:white"></div> 
+        <button id="lead-mgmt-new-task-btn" type="button" class="btn btn-default pull-right">New Task</button>
+        <br> 
+        <br> 
+        <br>
+        <div id="lead-mgmt-new-task-panel" class="panel panel-default initially-no-display">
+        <div class="panel-heading">
+          <h4 class="panel-title">Task</h4>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="lead-mgmt-task-due-date">Due Date</label>
+                <input id="lead-mgmt-task-due-date" type="text" class="form-control input-sm" placeholder="mm/dd/yyyy">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label>Time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <small>enabled</small> <input type="checkbox" id="lead-mgmt-task-due-time-enabled" value="true">
+                </label>
+                <div class="input-group bootstrap-timepicker timepicker">
+                  <input id="lead-mgmt-task-due-time" class="form-control input-small input-timepicker" type="text"/>
+                  <span id="lead-mgmt-task-due-time-btn" class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label for="lead-mgmt-task-name">Task</label>
+                <input id="lead-mgmt-task-name" type="text" class="form-control input-sm">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-sm-5">
+              <div class="form-group">
+                <label>Team Members</label>
+                <select class="form-control selectpicker" multiple id="lead-mgmt-task-user"></select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <label for="lead-mgmt-task-notes">Notes</label>
+                <textarea class="form-control" rows="3" id="lead-mgmt-task-notes"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="pull-right">
+            <button id="lead-mgmt-task-cancel-btn" type="button" class="btn btn-default">Cancel</button>
+            <button id="lead-mgmt-task-save-btn" type="button" class="btn btn-primary">Save</button>
+            <button id="lead-mgmt-task-update-btn" type="button" class="btn btn-primary">Update</button>
+            <button id="lead-mgmt-task-complete-btn" type="button" class="btn btn-success">Complete</button>
+            <button id="lead-mgmt-task-delete-btn" type="button" class="btn btn-danger">Delete</button>
+         </div>
+       </div>
+    </div>
+     
+    <div id="lead-mgmt-patient-intake-setup" class="row initially-no-display">
+      <div class="panel-top" id="lead-mgmt-addresses-title">Client Intake Setup</div>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label for="lead-mgmt-source">Client Portal</label>
+          <div class="checkbox">
+            <label><input type="checkbox" id="new-patient-send-portal-invite" name="new-patient-send-portal-invite" class="input-checkbox-group" value="true" checked="checked">Send Portal Invitation</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="form-group">
+          <label for="lead-mgmt-source">Prepayment Amount</label>
+          <input type="text" class="form-control intake-field" id="new-patient-prepayment-amount">
+        </div>
+      </div>
+      <div class="col-sm-6 col-sm-offset-1">
+        <div class="form-group">
+          <label for="lead-mgmt-referral-source-type">Intake Forms</label>
+          <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="privacy" checked="checked">Notice Privacy</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="agreement" checked="checked">Intial Consulation &amp; Scope of Service Agreement</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="consent" checked="checked">Consent For Medical Services</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="info" checked="checked">Client Information</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="authorization" checked="checked">Authorization to Release Protected Health Information</label></div>
+          <div class="checkbox"><label><input type="checkbox" name="forms" class="input-checkbox-group" value="billing" checked="checked">Billing Information</label></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal-footer">      
+     <button id="lead-mgmt-delete" class="btn btn-default">Delete</button>
+     <button id="lead-mgmt-convert-to-patient" class="btn btn-default">Convert to Client</button>
+     <button id="lead-mgmt-cancel" class="btn btn-default">Close</button>
+   </div>
+  
+  </form>

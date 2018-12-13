@@ -1,0 +1,27 @@
+<div class="modal fade" id="modal-new-diagnosis" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="modal-new-diagnosis" aria-hidden="true">
+  <div class="modal-dialog narrow-modal-width">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" id="new-diagnosis-close" class="close" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">New ${app_practiceClientProperties['app.patient_label']} diagnosis</h4>
+      </div>
+      <div class="modal-body">
+        <div id="new-diagnosis-form">
+          <h4>New ${app_practiceClientProperties['app.patient_label']} diagnosis</h4> 
+          <form role="form">
+            <div class="form-group">
+              <label>diagnosis</label>
+              <input class="form-control" type="text" id="new-diagnosis">
+              <div class="help-block with-errors"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="new-diagnosis-cancel" type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+        <button id="new-diagnosis-submit" type="button" class="btn btn-primary">Submit</button>
+      </div>
+      <div id="new-diagnosis-notification"></div>
+    </div>
+  </div>
+</div>

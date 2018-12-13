@@ -1,0 +1,27 @@
+<table id="${tableName}-table" class="table table-hover table-bordered table-condensed simple-data-table">
+  <thead>
+  <tr>
+    {{each(i, column) columns}} <th>${column.title}</th> {{/each}}
+  </tr>
+  </thead>
+  <tbody>
+  {{each(i, item) items}}
+    <tr id="${tableName}-${item.id}" class="clickable-table-row" name="${item.id}" data-row-key="${item.id}" data-table-name="${tableName}">
+    {{each(j, column) columns}} 
+      <td id="${tableName}-${item.id}-${j}" ${column.width ? 'width='+column.width : ''}>
+        <div class="form-group data-table-form-group">
+          <input name="${item.id}" data-id="${tableName}-${item.id}-${j}" type="text" class="form-control list-item-field" 
+               value="{{html app_getColumnValue(column, item)}}" data-property="${instanceName}.${column.field}" maxlength="250">
+          <div class="help-block with-errors data-table-help-block"></div>
+        </div>
+      </td>
+    {{/each}}
+    </tr>
+  {{/each}}
+  <tr class="simple-data-table-footer">
+    <td class="simple-data-table-footer" colspan='${columns.length}'>
+      <button id="add-item-btn" type="button" class="btn btn-success pull-right">Add Item</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

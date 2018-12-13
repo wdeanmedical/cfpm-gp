@@ -1,0 +1,14 @@
+{{if choose}}<option value=''>choose</option>{{/if}}
+{{each options}}
+  {{if collection == 'app_cptModifiers'}}
+    <option value='${id}'>${code}</option>
+  {{else collection == 'app_programs'}}
+    <option value='${code}'>${code}</option>
+  {{else collection == 'app_practiceForms'}}
+    <option value='${id}'>${title}</option>
+  {{else collection == 'app_apptTypes'}}
+    <option value='${name}'>${name}</option>
+  {{else}}
+    <option value='${id}'>${name}</option>
+  {{/if}}
+{{/each}}

@@ -1,0 +1,108 @@
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      EXAM
+    </div>
+  </div>
+  <div style="margin-bottom:100px;margin-top:100px"><img src="assets/images/encounter/human-body-outline1.png" width="350"> <img src="assets/images/encounter/lungs.png" width="350"> <img src="assets/images/encounter/exam_shape.png" width="350"></div>
+  <table class="form-table" width="100%">
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">CVS</span><br>
+          <span class="item-label">HS I+II</span>
+          <div class="basic-info-input">
+            ${form.hs}
+          </div><span class="item-label">RHYTHM</span>
+          <div class="form-radio">
+            <input class="input-checkbox" name="${formPrefix}-heart-rhythm" type="radio" value="regular"><label class="checkbox-label">Regular</label>
+          </div>
+          <div class="form-radio">
+            <input class="input-checkbox" name="${formPrefix}-heart-rhythm" type="radio" value="irregular">Irregular
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-label">
+          LABS
+        </div><br>
+        <table>
+          <tr>
+            <th>Hb</th>
+            <th>GLUCOSE</th>
+            <th>URINE DIP(+)</th>
+          </tr>
+          <tr>
+            <td align="center">${form.lab.hb}</td>
+            <td align="center">&gt;${form.lab.glucose}</td>
+            <td align="center">&gt;${form.lab.urineDip}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table><br>
+  <table class="form-table" width="100%">
+    <tr>
+      <td>
+        <div class="item-label">
+          DIAGNOSIS
+        </div>
+        <div class="basic-info-input">
+          ${form.diagnosis}
+        </div>
+      </td>
+    </tr>
+  {{if form.dxCodes.length > 0}} 
+    <tr>
+      <td>
+      <div class="item-wrapper-basic-info">
+        <table class="form-table">
+        <tr>
+          <th>DX CODE</th>
+          <th>MODIFIER</th>
+        </tr>
+        {{each(i, item) form.dxCodes}}  
+          <tr>
+            <td align="center">${ item.icd9 ? item.icd9.code : ''}</td>
+            <td>${item.icd9 ? item.icd9.codeText : '' }</td>
+          </tr>
+        {{/each}}
+        </table>
+      </div>
+      </td>
+    </tr>
+  {{/if}}
+  </table>{{if form.txCodes.length > 0}} {{/if}}
+  <table class="form-table" width="100%">
+    <tr>
+      <td>
+        <div class="item-wrapper-text-area">
+          <span class="item-label">TREATMENT PLAN</span>
+          <p class="paragraph-input">${form.treatmentPlan}</p>
+        </div>
+      </td>
+    </tr>
+  {{if form.txCodes.length > 0}}
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <table class="form-table">
+            <tr>
+              <th>TX CODE</th>
+              <th>MODIFIER</th>
+            </tr>
+            {{each(i, item) form.txCodes}}  
+            <tr>
+              <td align="center">${item.cpt ? item.cpt.code : ''}</td>
+              <td>${item.cptModifier ? cptModifier.description : ''}</td>
+            </tr>
+            {{/each}}   
+          </table>
+        </div>
+      </td>
+    </tr>
+    {{/if}}   
+  </table>
+</div>

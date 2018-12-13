@@ -1,0 +1,132 @@
+{{each(i, item) list}}
+  {{if !_.isEmpty(offsetClass)}}
+   <div class="panel panel-default well ${offsetClass} patient-form-guardian" id="guardian-${id}">
+  {{else}}
+    <div class="panel panel-default well col-sm-10 col-sm-offset-1 patient-form-guardian" id="guardian-${id}">
+  {{/if}} 
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-2 form-group">
+        <label>* First Name</label>
+        <input data-id="${id}" type="text" class="form-control input-sm list-item-field first-name-field" value="${firstName}"
+        data-property="${instanceName}.firstName" {{if readonly == true}}readonly="readonly"{{/if}} maxlength="200">
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="col-sm-2 form-group">
+        <label>* Last Name</label>
+        <input data-id="${id}" type="text" class="form-control input-sm list-item-field last-name-field" value="${lastName}"
+        data-property="${instanceName}.lastName" {{if readonly == true}}readonly="readonly"{{/if}} maxlength="200">
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="col-sm-3 form-group">
+        <label>* Phone</label>
+        <input id="guardian-primary-phone-${id}" data-id="${id}" type="text" class="input-mask form-control input-sm list-item-field primary-phone-field" data-mask-type="phone" placeholder="000 000-0000"
+        value="${primaryPhone}" data-property="${instanceName}.primaryPhone"  {{if readonly == true}}readonly="readonly"{{/if}} maxlength="200">
+       <div class="help-block with-errors"></div>
+       <div class="form-group">
+         <label>Other Phone</label>
+         <input id="guardian-secondary-phone-${id}" data-id="${id}" type="text" class="form-control input-sm list-item-field input-mask" placeholder="000 000-0000" data-mask-type="phone" value="${secondaryPhone}" 
+         data-property="${instanceName}.secondaryPhone" {{if readonly == true}}readonly="readonly"{{/if}} maxlength="200">
+         <div class="help-block with-errors"></div>
+       </div>
+     </div>
+      <div class="col-sm-3 form-group">
+        <label>* Email Address</label>
+        <input data-id="${id}"  data-after-update="guardian_afterEmailUpdate"  type="text" class="form-control input-sm list-item-field email-field" value="${email}" data-property="${instanceName}.email"
+        {{if readonly == true}}readonly="readonly"{{/if}} maxlength="200">
+        <div class="help-block with-errors"></div>
+        {{if readonly == false}}
+         <div class="form-group">
+           <div class="pull-right">
+           <button type="button" data-id="${id}" class="btn btn-danger btn-sm guardian-replace-with-existing-btn pull-right initially-no-display">Replace With Existing</button>
+          <div class="help-block with-errors"></div>
+          </div>
+         </div>
+       {{/if}}
+      </div>
+      <div class="col-sm-1 form-group">
+        <div class="checkbox guardian-use-this-email">
+          <label>
+            <input data-id="${id}" type="checkbox" data-instance-name="${instanceName}" name="use-this-email"   
+            {{if typeof emailGuardianId != 'undefined' && emailGuardianId == id }}checked="checked"{{/if}} 
+            class="input-checkbox-group use-this-email-checkbox"> <b>default</b>
+          </label>
+        </div>
+      </div>
+       <div class="form-group pull-right">
+         {{if readonly == false}}
+         <button type="button" data-id="${id}" class="btn btn-danger btn-sm guardian-delete-control list-item-delete ">x</button>
+         {{/if}}
+       </div>
+    </div>
+    <div class="row guardian-same-as-client">
+     <div>
+       <span class="inline-h4">Address</span>
+       <label class="pull-right"><input data-id="${id}" data-instance-name="${instanceName}" type="checkbox" data-field-type="addressSameAsClient" data-property="${instanceName}.addressSameAsClient" 
+         {{if addressSameAsClient == true}}checked="checked"{{/if}} class="input-checkbox-group same-as-client-checkbox">
+         Same as client
+       </label>
+     </div>
+     <div class="col-sm-3 form-group">
+       <label>* Street Address</label>
+       <input data-id="${id}" type="text" class="form-control input-sm list-item-field street-address-1-field address-field" data-field-type="streetAddress1" value="${streetAddress1}" 
+       data-property="${instanceName}.streetAddress1" {{if readonly == true || addressSameAsClient == true}}readonly="readonly"{{/if}} maxlength="200">
+       <div class="help-block with-errors"></div>
+     </div>
+     <div class="col-sm-2 form-group">
+       <label>* City</label>
+       <input data-id="${id}" type="text" class="form-control input-sm list-item-field city-field address-field" data-field-type="city" value="${city}" data-property="${instanceName}.city"
+       {{if readonly == true || addressSameAsClient == true}}readonly="readonly"{{/if}} maxlength="200">
+       <div class="help-block with-errors"></div>
+     </div>
+     <div class="col-sm-3 form-group">
+       <label>* State</label>
+       <select data-id="${id}" id="guardian-us-state-${id}" class="form-control input-sm address-field list-item-field input-us-state us-state-field" 
+       data-value="${usState}" data-property="${instanceName}.usState" data-field-type="usState" {{if readonly == true || addressSameAsClient == true}}disabled="disabled"{{/if}}></select>
+       <div class="help-block with-errors"></div>
+     </div>
+     <div class="col-sm-2 form-group">
+       <label>* Zip Code</label>
+       <input id="guardian-postal-code-${id}" data-id="${id}" type="text" class="form-control input-sm address-field list-item-field postal-code-field" 
+       value="${postalCode}" data-field-type="postalCode" data-property="${instanceName}.postalCode" {{if readonly == true || addressSameAsClient == true}}readonly="readonly"{{/if}}>
+       <div class="help-block with-errors"></div>
+     </div>
+     <script>$("#guardian-postal-code-${id}").mask("99999");</script> 
+   </div>
+   <div class="row">
+     <div class="col-sm-2 form-group">
+       <label>Profession</label>
+       <input data-id="${id}" type="text" class="form-control input-sm list-item-field" value="${profession}" data-property="${instanceName}.profession"
+       {{if readonly == true}}readonly="readonly"{{/if}} maxlength="200">
+       <div class="help-block with-errors"></div>
+     </div>
+     <div class="col-sm-3 form-group">
+       <label>* Relation To Client</label>
+       <input data-id="${id}" type="text" class="form-control input-sm list-item-field relation-field" placeholder="Mother, Father..." 
+       value="${relation}" data-update-extra="${updateExtra}" data-property="${instanceName}.relation" {{if readonly == true}}readonly="readonly"{{/if}} maxlength="200">
+       <div class="help-block with-errors"></div>
+     </div>
+     <div class="col-sm-2 form-group">
+       <label>Marital Status</label>
+       <select data-id="${id}" id="guardian-marital-status-${id}" class="form-control input-sm list-item-field input-marital-status" 
+       value="${maritalStatus}" data-property="${instanceName}.maritalStatus" data-field-type="maritalStatus" {{if readonly == true}}disabled="disabled"{{/if}}></select>
+       <div class="help-block with-errors"></div>
+     </div>
+     <div class="col-sm-2 form-group">
+       <label>If other:</label>
+       <input data-id="${id}" type="text" class="form-control input-sm list-item-field" value="${maritalOther}" 
+       data-property="${instanceName}.maritalOther" {{if readonly == true}}readonly="readonly"{{/if}} maxlength="200">
+       <div class="help-block with-errors"></div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-sm-10 form-group">
+       <label>Please share with us what you hope to gain from this evaluation, therapy, or consultation</label>
+       <textarea data-id="${id}" class="form-control input-sm list-item-field" rows="3" data-property="${instanceName}.goals"
+       {{if readonly == true}}readonly="readonly"{{/if}} maxlength="200">${goals}</textarea>
+       <div class="help-block with-errors"></div>
+     </div>
+   </div>
+  </div>
+</div>
+{{/each}}

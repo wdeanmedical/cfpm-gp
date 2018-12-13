@@ -1,0 +1,155 @@
+<div id="reports-view">
+  <div class="container-fluid">
+    <div id="report-chart-header"></div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div id="chart-col-1" class="col-sm-4">
+        <a id="report-activity-log-btn" href="#" class="pc-tile">
+          <div class="panel panel-default panel-body panel-blue-1">
+            <i class="fa fa-pencil-square-o fa-3x"></i> Activity Log<i class="fa fa-circle pull-right"></i>
+         </div>
+        </a>
+      </div>
+      <div id="chart-col-2" class="col-sm-4">
+        <a id="report-clinician-activity-btn" href="#" class="pc-tile panel-blue-1">
+          <div class="panel panel-default panel-body panel-blue-1">
+            <i class="fa fa-user-md fa-3x"></i> &nbsp;Clinician Activity<i class="fa fa-circle pull-right"></i>
+          </div>
+        </a>
+      </div>
+        <div id="chart-col-2" class="col-sm-4">
+        <a id="report-patient-activity-btn" href="#" class="pc-tile panel-blue-1">
+          <div class="panel panel-default panel-body panel-blue-1">
+            <i class="fa fa-user-md fa-3x"></i> &nbsp;Patient Activity<i class="fa fa-circle pull-right"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+       <div id="chart-col-3" class="col-sm-4">
+        <a id="report-wait-list-btn" href="#" class="pc-tile">
+          <div class="panel panel-default panel-body panel-blue-1">
+            <i class="fa fa-list fa-3x"></i> &nbsp;Wait List<i class="fa fa-circle pull-right"></i>
+          </div>
+        </a>
+    </div>
+    </div>
+    <!--
+    <div class="row">
+      <div id="chart-col-1" class="col-sm-4">
+        <a id="" href="#" class="pc-tile disabled">
+          <div class="panel panel-default panel-body panel-blue-2">
+            <i class="fa fa-folder fa-3x"></i> &nbsp;Custom<i class="fa fa-circle-o pull-right"></i>
+         </div>
+        </a>
+      </div>
+      <div id="chart-col-2" class="col-sm-4">
+        <a id="" href="#" class="pc-tile disabled">
+          <div class="panel panel-default panel-body panel-blue-2">
+            <i class="fa fa-folder fa-3x"></i> &nbsp;Custom<i class="fa fa-circle-o pull-right"></i>
+          </div>
+        </a>
+      </div>
+      <div id="chart-col-3" class="col-sm-4">
+        <a id="" href="#" class="pc-tile disabled">
+          <div class="panel panel-default panel-body panel-blue-2">
+            <i class="fa fa-folder fa-3x"></i> &nbsp;Custom<i class="fa fa-circle-o pull-right"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div id="chart-col-1" class="col-sm-4">
+        <a id="" href="#" class="pc-tile disabled">
+          <div class="panel panel-default panel-body panel-blue-3">
+            <i class="fa fa-folder fa-3x"></i> &nbsp;Custom<i class="fa fa-circle-o pull-right"></i>
+         </div>
+        </a>
+      </div>
+      <div id="chart-col-2" class="col-sm-4">
+        <a id="" href="#" class="pc-tile disabled">
+          <div class="panel panel-default panel-body panel-blue-3">
+            <i class="fa fa-folder fa-3x"></i> &nbsp;Custom<i class="fa fa-circle-o pull-right"></i>
+          </div>
+        </a>
+      </div>
+      <div id="chart-col-3" class="col-sm-4">
+        <a id="" href="#" class="pc-tile disabled">
+          <div class="panel panel-default panel-body panel-blue-3">
+            <i class="fa fa-folder fa-3x"></i> &nbsp;Custom<i class="fa fa-circle-o pull-right"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+    -->
+  </div>
+</div>
+  
+<div id="report-view" class="initially-no-display">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="report-view-header" class="panel-top"></div>
+        <div class="panel panel-default">
+          <div id="activity-log-report-filter" class="panel-body">                             
+            <div class="modal-body noPrint">
+              <h5 class="modal-sub-title">Filter By</h5>
+                <div class="panel panel-default">
+                  <div class="panel-body search-panel">
+                  <form class="form-horizontal container-fluid">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div id="report-date-from-form-group" class="form-group">
+                          <label class="col-sm-4 control-label">Date From</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form-control input-sm" id="report-date-from" placeholder="mm/dd/yyyy">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-4 control-label">${app_practiceClientProperties['app.patient_label']} Full Name</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control input-sm" id="report-patient-search-full-name">
+                      </div>                                   
+                     </div>                  
+                     <div id="report-clinician-form-group" class="form-group">
+                      <label class="col-sm-4 control-label">Clinician Full Name</label>
+                      <div class="col-sm-7">
+                        <input type="text" class="form-control input-sm" id="report-clinician-search-full-name">
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div id="report-date-to-form-group" class="form-group">
+                        <label class="col-sm-4 control-label">Date To</label>
+                        <div class="col-sm-7">
+                          <input type="text" class="form-control input-sm" id="report-date-to" placeholder="mm/dd/yyyy">
+                        </div>
+                        </div>
+                        <div id="report-activity-form-group" class="form-group">
+                          <label class="col-sm-4 control-label">Activity</label>
+                           <div class="col-sm-7">
+                             <input type="text" class="form-control input-sm" id="report-activity">
+                           </div>
+                        </div>                                
+                        <div class="form-group">                                    
+                          <div class="pull-right search-btn">
+                            <a id="report-csv-btn" type="button" class="btn btn-primary initially-no-display"><i class="fa fa-file-excel-o"></i>  Export</a>
+                            <a id="report-clear-btn" class="btn btn-default">Clear</a>
+                            <a id="report-print-btn" class="btn btn-primary initially-no-display">Print</a>
+                            <a id="report-run-btn" class="btn btn-success">Run</a>
+                          </div>
+                        </div>
+                      </div>                                  
+                   </div>
+                  </form>             
+                </div>
+              </div>
+            </div>                      
+            <div id="report-content" class="table-responsive container-scroll"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

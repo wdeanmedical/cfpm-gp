@@ -1,0 +1,186 @@
+<div id="form-wrapper-basic-info">
+  <div class="page-title-background">
+    <div class="page-title">
+      MEDICAL HISTORY
+    </div>
+  </div>
+  <table class="form-table">
+   {{each(i, item) form.medicationList}}  
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">MEDICATION</span>
+          <div class="basic-info-input">
+            ${medication}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DOSE</span>
+          <div class="basic-info-input">
+            ${dose}
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">FREQUENCY</span>
+          <div class="basic-info-input">
+            ${frequency}
+          </div>
+        </div>
+      </td>
+    </tr>
+    {{/each}}
+    <tr>
+      <td colspan="3">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">PAST SURGERIES AND MEDICAL CONDITIONS</span>
+          <div class="basic-info-input">
+            ${form.pastSM}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">FAMILY HISTORY</span>
+          <div style="margin-top:20px">
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-fam-hist" type="checkbox" value="cancer"><label class="checkbox-label">Cancer</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-fam-hist" type="checkbox" value="rrbetes"><label class="checkbox-label">Diabetes</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-fam-hist" type="checkbox" value="heart_problems"><label class="checkbox-label">Heart problems</label>
+            </div>
+          </div>
+          <div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-fam-hist" type="checkbox" value="hepatitis"><label class="checkbox-label">Hepatitis</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-fam-hist" type="checkbox" value="high_bp"><label class="checkbox-label">High BP</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="input-checkbox-group" name="${formPrefix}-fam-hist" type="checkbox" value="hiv"><label class="checkbox-label">HIV</label>
+            </div>
+          </div>
+          <div>
+            <div class="form-group">
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="${formPrefix}-fam-hist" type="checkbox" value="tb"><label class="checkbox-label">Tuberculosis</label>
+              </div>
+              <div class="form-checkbox">
+                <input class="input-checkbox-group" name="${formPrefix}-fam-hist" type="checkbox" value="other"><label class="checkbox-label">Other-specify</label>
+              </div>
+              <div class="form-checkbox">
+                ${form.famHistOther ? form.famHistOther : '___________________'}
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">FAMILY HISTORY NOTES</span>
+          <div class="basic-info-input">
+            ${form.famHistNotes}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="item-label">
+          ALLERGIES
+        </div><br>
+        <table width="100%">
+          <tr>
+            <th><span class="item-label">FOOD</span></th>
+            <th><span class="item-label">DRUG</span></th>
+            <th><span class="item-label">ENVIRO</span></th>
+          </tr>
+          <tr>
+            <td align="center">${form.allergFood}</td>
+            <td align="center">${form.allergDrug}</td>
+            <td align="center">${form.allergEnv}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">COMPLETED FD VACCINATION RECORD?</span>
+          <div style="margin-top:20px">
+            <div class="form-radio">
+             <input name="${formPrefix}-vacc" type="radio" class="input-checkbox" value="true"><label class="checkbox-label">Yes</label>
+            </div>
+            <div class="form-radio">
+              <input name="${formPrefix}-vacc" type="radio" class="input-checkbox" value="false"><label class="checkbox-label">No</label>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td colspan="2">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">NOTES</span>
+          <div class="basic-info-input">
+            ${form.vaccNotes}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SMOKING</span><br>
+          <span class="item-label">PACKS/DAY</span> <span class="item-label">YEARS SMOKED</span> <span class="item-label">YEARS QUIT</span><br>
+          <span class="basic-info-input" style="left:20px">${form.smokePksDay}</span> <span class="basic-info-input" style="left:100px">${form.yearsSmoked}</span> <span class="basic-info-input" style="left:200px">${form.smokeYearsQuit}</span>
+        </div>
+      </td>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">ETOH UNITS / WEEK</span>
+          <div class="basic-info-input">
+            ${form.etohUnitsWeek}
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">SUBSTANCES</span>
+          <div style="margin-top:20px">
+            <div class="form-checkbox">
+              <input name="${formPrefix}-subst" type="checkbox" class="input-checkbox-group" value="smoke"><label class="checkbox-label">Smoke</label>
+            </div>
+            <div class="form-checkbox">
+              <input name="${formPrefix}-subst" type="checkbox" class="input-checkbox-group" value="drink"><label class="checkbox-label">Drink</label>
+            </div>
+            <div class="form-checkbox">
+             <input name="${formPrefix}-subst" type="checkbox" class="input-checkbox-group" value="drugs"><label class="checkbox-label">Drugs</label>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="item-wrapper-basic-info">
+          <span class="item-label">DRUGS CURRENTLY USED</span>
+          <div class="basic-info-input">
+            ${form.currentDrugs}
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,130 @@
+<div class="panel-body">
+  <form data-form-key="${formKey}" data-instance-id="${id}" id="${formName}" name="${formName}" role="form">
+    <div class="row text-center">
+      <div class="col-xs-2">
+        <div class="form-group">
+          <label class="control-label">G</label> <input class="form-control input-sm input-field" id="${formPrefix}-g" type="text">
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <div class="form-group">
+          <label class="control-label">P</label> <input class="form-control input-sm input-field" id="${formPrefix}-p" type="text">
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <div class="form-group">
+          <label class="control-label">T</label> <input class="form-control input-sm input-field" id="${formPrefix}-t" type="text">
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <div class="form-group">
+          <label class="control-label">A</label> <input class="form-control input-sm input-field"  id="${formPrefix}-a" type="text">
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <div class="form-group">
+          <label class="control-label">L</label> <input class="form-control input-sm input-field" id="${formPrefix}-l" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <label class="control-label">Pregnant</label>
+        <div class="form-group">
+         <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-preg-status" type="radio" value="yes">Yes</label>
+          <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-preg-status" type="radio" value="no">No</label>
+           <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-preg-status" type="radio" value="dk">DK</label>
+          <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-preg-status" type="radio" value="post_partum">Post Partum</label>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label class="control-label">Breastfeeding</label>
+        <div class="form-group">
+         <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-breastfeeding" type="radio" value="yes">Yes</label>
+          <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-breastfeeding" type="radio" value="no">No</label>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label class="control-label">Months</label> <input class="form-control input-sm input-field" id="${formPrefix}-breastfeeding-months" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="control-label">When was the last period?</label> <input class="form-control input-sm input-field" id="${formPrefix}-last-period" type="text">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="control-label">Age at first period</label> <input class="form-control input-sm input-field" id="${formPrefix}-age-first-period" type="text">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="control-label">Pap smear ever</label>
+        <div class="form-group">
+         <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-pap-smear-status" type="radio" value="yes">Yes</label>
+          <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-pap-smear-status" type="radio" value="no">No</label>
+          <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-pap-smear-status" type="radio" value="dk">DK</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label class="control-label">Birth Control</label>
+        <div class="form-group">
+         <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-birth-control-status" type="radio" value="yes">Yes</label>
+          <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-birth-control-status" type="radio" value="no">No</label>
+          <label class="radio-inline"><input class="input-checkbox" name="${formPrefix}-birth-control-status" type="radio" value="dk">DK</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label class="control-label">Type</label> <input class="form-control input-sm input-field" id="${formPrefix}-birth-control-type" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label class="sub-title">Other Past Gynocological History</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <div class="form-group">
+          <div class="checkbox">
+            <label><input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="venereal_warts">Venereal Warts</label>
+          </div>
+          <div class="checkbox">
+            <label><input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="herpes_genital">Herpes Genital</label>
+          </div>
+          <div class="checkbox">
+            <label><input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="syphilis">Syphilis</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <div class="form-group">
+          <div class="checkbox">
+            <label><input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="pid">PID</label>
+          </div>
+          <div class="checkbox">
+            <label><input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="endometriosis">Endometriosis</label>
+          </div>
+          <div class="checkbox">
+            <label><input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="chlamyrr">Chlamyrr</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <div class="form-group">
+          <div class="checkbox">
+            <label><input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="gonorrhea">Gonorrhea</label>
+          </div>
+          <div class="checkbox">
+            <label><input class="input-checkbox-group" name="${formPrefix}-history" type="checkbox" value="other">Other-specify</label>
+          </div>
+        </div><input class="form-control input-sm input-field input-sm" id="${formPrefix}-history-other" type="text">
+      </div>
+    </div>
+  </form>
+</div>

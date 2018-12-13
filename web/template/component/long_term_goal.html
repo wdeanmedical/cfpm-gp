@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-sm-10">
+  {{each(i, item) list}}
+    <div class="panel panel-default well eval-long-term-goal" id="eval-long-term-goal-${id}">
+      <div class="panel-body">
+        {{if readonly == false}}
+          <button type="button" data-id="${id}" class="btn btn-danger btn-sm list-item-delete-top long-term-goal-delete-control pull-right">x</button>
+        {{/if}}
+        <div class="row">
+          <label class="indent-10px">Goal ${(typeof ordinal === "undefined") ? i+1 : ordinal} </label>
+        {{if readonly == false}}
+          <input type="text" class="input-sm goal-bank-search-field" id="ltg-goal-bank-search-${id}" placeholder="goal bank..." style="width:600px">
+    <script>
+    $('#ltg-goal-bank-search-${id}').typeahead (
+      { hint: true, highlight: true, minLength: 3 },
+      { name: 'descriptions', displayKey: 'value', source: util_substringMatcher(app_ltgDescriptions) }); 
+    $('.twitter-typeahead').css({ "display": "inline"});
+    $('#ltg-goal-bank-search-${id}').on('typeahead:selected', function(ev, suggestion) {
+      $('#ltg-desc-${id}').val(suggestion.value);  
+      $('#ltg-goal-bank-search-${id}').typeahead('val', '');  
+      form_updateListItem($('#ltg-desc-${id}'));
+    });
+    </script>
+        {{/if}}
+    <p>
+          <div class="col-sm-11">
+            <div class="form-group">
+              <textarea id="ltg-desc-${id}" data-id="${id}" rows="6" class="form-control input-sm list-item-field" data-property="${instanceName}.description" {{if readonly == true}}readonly="readonly"{{/if}}>${description}</textarea>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+   {{/each}}
+  </div>
+</div>

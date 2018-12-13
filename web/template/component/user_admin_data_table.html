@@ -1,0 +1,39 @@
+<table class="table table-bordered table-hover table-condensed">
+  <thead class="text-center">
+  <tr>
+    <td>Last Name</td>
+    <td>First Name</td>
+    <td>Primary Contact Number</td>
+    <td>User ID</td>
+    <td>Status</td>
+    <td>View Details</td>
+    <td>Change Status</td>
+    <td>Delete</td>
+  </tr>
+  </thead>
+  <tbody>
+  {{each(i, item) items}}
+  <tr 
+    id="${tableId}-${item.id}" 
+    class="clickable-table-row" 
+    name="${item.id}"
+    data-row-key="${item.id}" 
+    data-table-name="${tableName}" 
+  >
+    <td>${item.lastName}</td>
+    <td>${item.firstName}</td>
+    <td>${item.primaryPhone}</td>
+    <td>${item.username}</td>
+    <td>${util_clientStatusLabel(item.status)}</td>
+    <td><a class="btn btn-default btn-sm btn-block user-admin-user-details" name="${item.id}">View Details</a></td>
+    <td><a class="btn btn-default btn-sm btn-block user-admin-change-user-status" name="${item.id}">${item.status == 1 ? 'Deactivate' : 'Activate'}</a></td>
+    <td><a class="btn btn-default btn-sm btn-block user-admin-delete-user" name="${item.id}">Delete</a></td>
+  </tr>
+  {{/each}}
+  <tr class="simple-data-table-footer">
+    <td class="simple-data-table-footer" colspan='8'>
+      <p><span>${title} ${items.length == 0 ? '0' : '1'}-<wbr>${items.length}</span></p>
+    </td>
+  </tr>
+  </tbody>
+</table>
